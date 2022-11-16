@@ -32,6 +32,13 @@ export default function Home() {
         <Link href={"/resources"}>Resources</Link>
         <Link href={"/registration"}>Registration</Link>
       </div>
+
+      <div className={styles.background}>
+        <Image src="" />
+        {/* <svg width="400" height="110">
+          <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+        </svg> */}
+      </div>
         
       </main>
 
