@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
+
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,14 +15,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={globals.header}>
-        jhmun
-      </div>
+      <Link href={"/registration"}>
+        <div className={styles.header}>
+          Delegate Registration for JHMUN 2023 is now Open!
+        </div>
+      </Link>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          JHMUN
-        </h1>
+      <Link href={"/"}>
+      <Image src="/logo.svg" width={400} height={100}/>
+      </Link>
+
+      <div className={styles.menu}>
+        <Link href={"/committees"}>Committees</Link>
+        <Link href={"/about"}>About</Link>
+        <Link href={"/resources"}>Resources</Link>
+        <Link href={"/registration"}>Registration</Link>
+      </div>
+        
       </main>
 
       <footer className={styles.footer}>
