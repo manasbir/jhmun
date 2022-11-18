@@ -1,3 +1,5 @@
+$main-color: #1A3A16;
+
 .container {
   padding: 2rem;
 }
@@ -5,30 +7,55 @@
 .main {
   position: relative;
   min-height: 100vh;
-  padding: 2.5rem;
+  padding: .5rem;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
 .menu {
-  margin: 3rem;
-  cursor: pointer;
-  pointer-events: auto;
+  margin: 2.5rem;
   flex-direction: row;
+  display: flex;
   font-size: 20px;
-  flex: 2;
-  justify-content: space-between;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 50vw;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: -1;
 }
 
-.menu a {
-  padding: 45px;
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: -1;
 }
 
+.cover {
+  position: relative;
+  width: 100vw;
+  min-height: 90vh;
+  z-index: -1;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  h1 {
+    position: absolute;
+    top: 25%;
+    font-size: 3rem;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  img {
+    width: 100%;
+    opacity: 50%;
+  }
+}
 
 .header {
-  background-color: #1A3A16;
+  background-color: $main-color;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,8 +66,12 @@
   color: white;
   padding-top: 0.65rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  cursor: pointer;
-  pointer-events: auto;
+}
+
+.text {
+  background-color: black;
+  z-index: 7;
+  height: 100vh;
 }
 
 
@@ -61,15 +92,10 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
 .title a:hover,
 .title a:focus,
 .title a:active {
-  text-decoration: underline;
+  cursor: pointer;
 }
 
 .title {
@@ -87,15 +113,6 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -136,11 +153,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -155,8 +167,5 @@
   }
   .code {
     background: #111;
-  }
-  .logo img {
-    filter: invert(1);
   }
 }

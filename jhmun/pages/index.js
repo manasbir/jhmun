@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
+import { useEffect, useState } from "react";
+
 
 export default function Home() {
-
-
 
   return (
     <div className={styles.container}>
       <Head>
         <title>JHMUN</title>
         <meta name="description" content="Johnston Heights Model UN" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/design/MUN EAGLE.svg" />
       </Head>
 
       <Link href={"/registration"}>
@@ -21,23 +21,29 @@ export default function Home() {
         </div>
       </Link>
 
-      <main className={styles.main}>
-      <Link href={"/"}>
-      <Image src="/logo.svg" width={400} height={100}/>
-      </Link>
+      
 
-      <div className={styles.menu}>
-        <Link href={"/committees"}>Committees</Link>
-        <Link href={"/about"}>About</Link>
-        <Link href={"/resources"}>Resources</Link>
-        <Link href={"/registration"}>Registration</Link>
+      <main className={styles.main}> 
+
+      <div className={styles.logo}> 
+          <Link href={"/"}>
+            <Image src="/design/MUN EAGLE.svg" width={70} height={58}/>
+          </Link>
+          </div>
+        <div className={styles.menu}>
+          <Link href={"/committees"}>Committees</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/resources"}>Resources</Link>
+          <Link href={"/registration"}>Registration</Link>
+        </div>
+
+      <div className={styles.cover}>
+        <img src="/design/peakpx (1).jpg"/>
+        <h1>Johnston Heights Model United Nations 2023</h1>
       </div>
 
-      <div className={styles.background}>
-        <Image src="" />
-        {/* <svg width="400" height="110">
-          <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-        </svg> */}
+      <div className={styles.text}>
+
       </div>
         
       </main>
