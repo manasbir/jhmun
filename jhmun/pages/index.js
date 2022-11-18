@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import mainText from '../public/text/mainpage';
 
 
 export default function Home() {
@@ -42,7 +43,19 @@ export default function Home() {
         <h1>Johnston Heights Model United Nations 2023</h1>
       </div>
 
-      <div className={styles.text}>
+      <div className={styles.background}>
+        <svg>
+          <rect className={styles.rects}/>
+        </svg>
+
+        <div className={styles.text}>
+          <img src="/design/Website Background.png" className={styles.backgroundimg}/>
+          <p>{mainText}</p>
+        </div>
+
+        <svg>
+          <rect className={styles.rects}/>
+        </svg>
 
       </div>
         
