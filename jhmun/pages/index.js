@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 import { Suspense, useEffect, useState } from "react";
-import mainText from '../public/text/mainpage';
+import mainText from './texts/mainpage';
 
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
 
       <div className={styles.logo}> 
           <Link href={"/"}>
-            <Image src="/design/MUN EAGLE.svg" width={70} height={58}/>
+            <Image src="/design/Icons & Buttons/MUN EAGLE.svg" width={70} height={58}/>
           </Link>
           </div>
         <div className={styles.menu}>
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
       <div className={styles.cover}>
-        <img src="/design/peakpx (1).jpg"/>
+        <img src="/design/Images/Home page background.jpg"/>
         <h1>Johnston Heights Model United Nations 2023</h1>
       </div>
 
@@ -49,8 +49,8 @@ export default function Home() {
         </svg>
 
         <div className={styles.text}>
-          <img src="/design/Website Background.png" className={styles.backgroundimg}/>
-          <p>{mainText}</p>
+          <img src="/design/Images/Pagraphs Background.png" className={styles.backgroundimg}/>
+          {mainText()}
         </div>
 
         <svg>
