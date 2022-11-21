@@ -8,6 +8,8 @@ import mainText from './texts/mainpage';
 
 export default function Home() {
 
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,29 +18,27 @@ export default function Home() {
         <link rel="icon" href="/design/MUN EAGLE.svg" />
       </Head>
 
-
-
       <main className={styles.main}> 
-
-      <div className={styles.header}>
-        <div className={styles.logo}> 
+        <div className={styles.logo}>
           <Link href={"/"}>
-            <Image src="/design/Icons & Buttons/MUN EAGLE.svg" width={70} height={58}/>
-          </Link>
-        </div>
+            <img src="/design/Icons & Buttons/MUN EAGLE.svg"/>
+          </Link>  
+        </div>    
+
         <div className={styles.menu}>
-          <Link href={"/committees"}>Committees</Link>
-          <Link href={"/about"}>About</Link>
-          <Link href={"/resources"}>Resources</Link>
-          <Link href={"/registration"}>Registration</Link>
+          <Link href={"/committees"}>COMMITTEES</Link>
+          <Link href={"/about"}>ABOUT</Link>
+          <Link href={"/resources"}>RESOURCES</Link>
+          <Link href={"/registration"}>REGISTRATION</Link>
         </div>
-      </div>
+
 
       <div className={styles.cover}>
         <h1>JOHNSTON HEIGHTS MODEL UNITED NATIONS 2023</h1>
         <p>Inclusive and Accessible Model UN experience</p>
         <hr></hr>
         <p>February 11th, 2023 | The First Annual Session | Johnston Heights Secondary School</p>
+        <Link href={"/registration"}><button>REGISTER NOW</button></Link>
       </div>
 
       <div className={styles.background}>
@@ -49,7 +49,6 @@ export default function Home() {
         </div>
 
       </div>
-        
       </main>
 
       <footer className={styles.footer}>

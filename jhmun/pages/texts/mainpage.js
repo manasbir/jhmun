@@ -13,6 +13,7 @@ export default function mainText () {
         Secratary General
         <br></br>
         Johnston Heights Model United Nation
+        <br></br>
         </p>
     )
 }
