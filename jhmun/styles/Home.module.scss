@@ -4,7 +4,7 @@ $main-color: #1A3A16;
   src: url("../public/design/Fonts/Lato-Regular (paragraph fonts, make sure the spacing is correct).ttf");
 }
 @font-face {
-  font-family: "Din";
+  font-family: "Din Condensed";
   src: url("../public/design/Fonts/Din Condnesed Bold (Title fonts (keep in mind the spacing between characters is 5%).ttf");
 }
 
@@ -50,6 +50,11 @@ $main-color: #1A3A16;
   justify-content: center;
   flex-direction: column;
   display: flex;
+  background-image: url("../public/design/Images/MUNHomepagebackground.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   h1 {
     position: absolute;
     top: 25%;
@@ -92,30 +97,42 @@ $main-color: #1A3A16;
   width: 100vw;
 }
 
-.rects {
-  position: relative;
-  z-index: 25;
-  width: 25vw;
-  min-height: 100vh;
-  fill: red;
-  opacity: 100%;
-}
-
 .text {
-  position: absolute;
-  left: 25vw;
-  z-index: 3;
-  width: 50vw;
+  position: relative;
+  left: 0;
+  width: 100vw;
   color: white;
   align-items: center;
   justify-content: center;
+  background-image: url("../public/design/Images/Pagraphs Background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   p {
+    margin-left: 25%;
+    margin-right: 25%;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 40px;
     font-family: "Lato", ;
   }
+  h1 {
+    margin-left: 25%;
+    margin-right: 25%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: "Din Condensed", "Lato";
+  }
+}
+
+.head {
+  font-size: 24px;
+  font-family: "Din", ;
+  font-weight: 700;
 }
 
 .backgroundimg {

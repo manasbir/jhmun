@@ -7,6 +7,11 @@ export default function mainText () {
         ​ Sincerely,<br></br>
         <img src={"/design/Icons & Buttons/sig.svg"}/>​ 
         <br></br>
-        Krishna Verma</p>
+        Krishna Verma
+        <br></br>
+        Secratary General
+        <br></br>
+        Johnston Heights Model United Nation
+        </p>
     )
 }

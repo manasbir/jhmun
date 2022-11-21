@@ -39,23 +39,15 @@ export default function Home() {
         </div>
 
       <div className={styles.cover}>
-        <img src="/design/Images/Home page background.jpg"/>
         <h1>Johnston Heights Model United Nations 2023</h1>
       </div>
 
       <div className={styles.background}>
-        <svg>
-          <rect className={styles.rects}/>
-        </svg>
 
         <div className={styles.text}>
-          <img src="/design/Images/Pagraphs Background.png" className={styles.backgroundimg}/>
+          <h1>Dear Delegates and Faculty Advisors,</h1>
           {mainText()}
         </div>
-
-        <svg>
-          <rect className={styles.rects}/>
-        </svg>
 
       </div>
         
