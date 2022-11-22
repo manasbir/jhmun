@@ -51,34 +51,25 @@ $black: #1e1e1e;
   display: flex;
   justify-content: space-evenly;
 
-  font-family: "DIN Condensed", "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: $black;
-}
-
-@keyframes fadeIn {
-  0% { opacity: .5; }
-  100% { opacity: 1; }
+  a {
+    font-family: "DIN Condensed", "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $black;
+  }
 }
 
 @keyframes fadeOut {
   0% { opacity: 1; }
   100% { opacity: .5; }
 }
-  
 
-.isHover {
-  animation: fadeIn 0.25s;
-  opacity: 100%;
-}
-
-.notHover {
-  animation: fadeOut 0.25s;
-  opacity: 50%;
+@keyframes fadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
 }
 
 .logo {
@@ -152,10 +143,15 @@ $black: #1e1e1e;
   } 
 }
 
+@keyframes changeColor {
+  0% { color: $white; background-color: transparent; }
+  100% { color: 0e2b26; background-color: $white; }
+}
+
 .cover button:hover {
+  animation: changeColor 0.5s;
   background-color: $white;
   color: #0e2b26;
-  cursor: pointer;
 }
 
 .background {
@@ -185,7 +181,7 @@ $black: #1e1e1e;
     width: 90%;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 40px;
     font-family: "Lato";
     padding-bottom: 18px;
@@ -195,8 +191,8 @@ $black: #1e1e1e;
     text-align: left;
     width: 90%;
     font-style: normal;
-    font-weight: 750;
-    font-size: 36px;
+    font-weight: 700;
+    font-size: 32px;
     line-height: 40px;
     font-family: "Din Condensed", "Lato";
   }
