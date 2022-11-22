@@ -60,6 +60,27 @@ $black: #1e1e1e;
   color: $black;
 }
 
+@keyframes fadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: .5; }
+}
+  
+
+.isHover {
+  animation: fadeIn 0.25s;
+  opacity: 100%;
+}
+
+.notHover {
+  animation: fadeOut 0.25s;
+  opacity: 50%;
+}
+
 .logo {
   position: absolute;
   align-items: left;

@@ -7,7 +7,20 @@ import mainText from './texts/mainpage';
 
 
 export default function Home() {
+  const [isHover, setIsHover] = useState(0);
+  const [isCommitteesHovered, setIsCommitteesHovered] = useState(false);
+  const [isAboutHovered, setIsAboutHovered] = useState(false);
+  const [isResourcesHovered, setIsResourcesHovered] = useState(false);
+  const [isRegistration, setIsRegistrationHovered] = useState(false);
 
+  function isHovered(x) {
+    if (x == isHover) {
+      return true;
+    } else if (isHover == 0) {
+      return true;
+    }
+    return false;
+  }
 
 
   return (
@@ -29,10 +42,36 @@ export default function Home() {
         </div>    
 
         <div className={styles.menu}>
-          <Link href={"/committees"}>COMMITTEES</Link>
-          <Link href={"/about"}>ABOUT</Link>
-          <Link href={"/resources"}>RESOURCES</Link>
-          <Link href={"/registration"}>REGISTRATION</Link>
+          <Link 
+          onMouseEnter={() => setIsHover(1)} 
+          onMouseLeave={() => setIsHover(0)}
+          className={isHovered(1) ? styles.isHover : styles.notHover}
+          href={"/committees"}>
+            COMMITTEES
+          </Link>
+
+          <Link 
+          onMouseEnter={() => setIsHover(2)} 
+          onMouseLeave={() => setIsHover(0)}
+          className={isHovered(2) ? styles.isHover : styles.notHover}
+          href={"/about"}>ABOUT
+          </Link>
+
+          <Link 
+          onMouseEnter={() => setIsHover(3)} 
+          onMouseLeave={() => setIsHover(0)}
+          className={isHovered(3) ? styles.isHover : styles.notHover}
+          href={"/resources"}>
+            RESOURCES
+          </Link>
+
+          <Link 
+          onMouseEnter={() => setIsHover(4)} 
+          onMouseLeave={() => setIsHover(0)}
+          className={isHovered(4) ? styles.isHover : styles.notHover}
+          href={"/registration"}>
+            REGISTRATION
+          </Link>
         </div>
 
 
