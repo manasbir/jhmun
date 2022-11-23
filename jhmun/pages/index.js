@@ -8,7 +8,7 @@ import mainText from './texts/mainpage';
 
 export default function Home() {
   const [isHover, setIsHover] = useState(0);
-  const [isCommitteesHovered, setIsCommitteesHovered] = useState(false);
+  const [isCommitteesHovered, setIsComHovered] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isResourcesHovered, setIsResourcesHovered] = useState(false);
   const [isRegistration, setIsRegistrationHovered] = useState(false);
@@ -43,31 +43,31 @@ export default function Home() {
 
         <div className={styles.menu}>
           <Link 
-          onMouseEnter={() => setIsHover(1)} 
-          onMouseLeave={() => setIsHover(0)}
+          onMouseEnter={() => setIsComHovered(true)} 
+          onMouseLeave={() => setIsComHovered(false)}
           className={isHovered(1) ? styles.isHover : styles.notHover}
           href={"/committees"}>
             COMMITTEES
           </Link>
 
           <Link 
-          onMouseEnter={() => setIsHover(2)} 
-          onMouseLeave={() => setIsHover(0)}
+          onMouseEnter={() => setIsAboutHovered(true)} 
+          onMouseLeave={() => setIsAboutHovered(false)}
           className={isHovered(2) ? styles.isHover : styles.notHover}
           href={"/about"}>ABOUT
           </Link>
 
           <Link 
-          onMouseEnter={() => setIsHover(3)} 
-          onMouseLeave={() => setIsHover(0)}
+          onMouseEnter={() => setIsResourcesHovered(true)} 
+          onMouseLeave={() => setIsResourcesHovered(false)}
           className={isHovered(3) ? styles.isHover : styles.notHover}
           href={"/resources"}>
             RESOURCES
           </Link>
 
           <Link 
-          onMouseEnter={() => setIsHover(4)} 
-          onMouseLeave={() => setIsHover(0)}
+          onMouseEnter={() => setIsRegistrationHovered(true)} 
+          onMouseLeave={() => setIsRegistrationHovered(false)}
           className={isHovered(4) ? styles.isHover : styles.notHover}
           href={"/registration"}>
             REGISTRATION
