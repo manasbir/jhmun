@@ -11,7 +11,32 @@ export default function Home() {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
 
 
+  const handleComHover = () => {
+    if (isCommitteesHovered) {
+      return (
+        <div className={styles.dropdown}>
+          <Link href="/committees">COMMITTEES OVERVIEW</Link>
+          <Link href="/committees/hcc">HISTORICAL CRISIS COMMITTEE</Link>
+          <Link href="/committees/sochum">SOCIAL, HUMANITARIAN, AND CULTURAL COMMITTEE</Link>
+          <Link href="/committees/unodc">UN OFFICE ON DRUGS & CRIME COMMITTEE</Link>
+          <Link href="/committees/undp">UN DEVELOPMENT PROGRAMME COMMITTEE</Link>
+        </div>
 
+      )
+    }
+  }
+
+  const handleAboutHover = () => {
+    if (isAboutHovered) {
+      return (
+        <div className={styles.dropdown}>
+          <Link href="/about">ABOUT US</Link>
+          <Link href="/about/team">SECRETARIAT</Link>
+          <Link href="/about/faq">SCHEDULE</Link>
+        </div>
+      )
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -37,12 +62,15 @@ export default function Home() {
           onMouseLeave={() => setIsComHovered(false)}
           href={"/committees"}>
             COMMITTEES
+
+          {handleComHover()}
           </Link>
 
           <Link 
           onMouseEnter={() => setIsAboutHovered(true)} 
           onMouseLeave={() => setIsAboutHovered(false)}
           href={"/about"}>ABOUT
+          {handleAboutHover()}
           </Link>
 
           <Link 
