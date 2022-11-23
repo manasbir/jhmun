@@ -90,7 +90,7 @@ export default function Home() {
         <p>Inclusive and Accessible Model UN experience</p>
         <hr></hr>
         <p>February 11th, 2023 | The First Annual Session | Johnston Heights Secondary School</p>
-        <Link href={"/registration"}><button>REGISTER NOW</button></Link>
+        <button><Link href={"/registration"}>REGISTER NOW</Link></button>
       </div>
 
       <div className={styles.background}>
