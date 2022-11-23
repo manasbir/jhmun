@@ -14,11 +14,79 @@ $black: #1e1e1e;
   src: url("../public/design/Fonts/MinionPro-Regular (submenu and footer font).otf");
 }
 
+@keyframes gradient {
+	0% {
+		background-color: #1e1e1e;
+	}
+	50% {
+		background-color: red;
+	}
+	100% {
+		background-color: $primary-color;
+	}
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  95% {
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bruh {
+  min-width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  position: relative;
+	animation: gradient 3s infinite;
+	min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 100%;
+    height: 100%;
+    margin-top: -10%;
+    animation: spin 2s infinite;
+  }
+  h1 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 0;
+  }
+}
+
 .container {
-  max-width: max(100%, 100vw);
+  //max-width: max(100vw);
   // background-color: $secondary-color;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
 .main {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
   position: relative;
   min-height: 100vh;
   align-items: center;
@@ -47,7 +115,7 @@ $black: #1e1e1e;
   // padding: 3%;
   margin: 3%;
   width: 40%;
-
+  align-items: center;
   position: relative;
   flex-direction: row;
   display: flex;
@@ -55,6 +123,8 @@ $black: #1e1e1e;
   color: $black;
 
   a {
+    color: inherit;
+    text-decoration: none;
     font-family: "DIN Condensed", "Lato";
     font-style: normal;
     font-weight: 700;
@@ -98,10 +168,13 @@ $black: #1e1e1e;
   margin: .5em;
   font-size: 1.25rem;
   text-align: left;
+  text-decoration: none;
   }
 }
 
 .cover {
+
+  z-index: 10;
   
   position: relative;
   width: 100%;
@@ -162,6 +235,10 @@ $black: #1e1e1e;
     line-height: 24px;
     text-align: center;
     color: $white;
+    a {
+      color:inherit;
+      text-decoration: none;
+    }
   } 
 }
 
@@ -235,8 +312,13 @@ $black: #1e1e1e;
   line-height: 24px;
   text-align: center;
   color: $black;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
 
   p {
+    width: 100%;
     margin: 1%;
   }
 
