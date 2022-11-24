@@ -104,6 +104,17 @@ $black: #1e1e1e;
   }
 }
 
+
+@keyframes fadeOut {
+  0% { color:rgba(30,30,30,1); }
+  100% { color: rgba(30,30,30,.25); }
+}
+
+@keyframes fadeIn {
+  0% { color:rgba(30,30,30,.25); }
+  100% { color: rgba(30, 30, 30, 1); }
+}
+
 .container {
   //max-width: max(100vw);
   // background-color: $secondary-color;
@@ -129,12 +140,15 @@ $black: #1e1e1e;
 }
 
 .logo {
-  left: 1rem;
-  top: 1rem;
+  left: 1.25rem;
+  top: 1.25rem;
   position: absolute;
+  max-width: fit-content;
   z-index: 30;
-  height: 5rem;
+  height: 4.5rem;
+  animation: fadeIn 1.5s;
   img {
+    animation: fadeIn 1.5s;
     height: 100%;
     width: 100%;
   }
@@ -145,6 +159,7 @@ $black: #1e1e1e;
 }
 
 .menu {
+  animation: fadeIn 1s;
   margin: 3%;
   margin-top: 3.25%;
   width: 40%;
@@ -156,6 +171,7 @@ $black: #1e1e1e;
   color: $black;
 
   a {
+    animation: fadeIn 1s;
     color: inherit;
     text-decoration: none;
     font-family: "DIN Condensed", "Lato";
@@ -167,24 +183,25 @@ $black: #1e1e1e;
   }
 }
 
-@keyframes fadeOut {
-  0% { color:rgba(30,30,30,1); }
-  100% { color: rgba(30,30,30,.25); }
-}
-
-@keyframes fadeIn {
-  100% { color: rgba(30, 30, 30, 1); }
-}
 
 .menu:hover {
-  animation: fadeOut .5s forwards;
+  animation: fadeOut .25s forwards;
+}
+
+.menu :not(:hover) {
+  animation: fadeIn .5s forwards;
 }
 
 .menu a:hover {
   animation: fadeIn .25s forwards;
 }
 
+.menu:hover a:not(:hover) {
+  animation: fadeOut .25s forwards;
+}
+
 .dropdown {
+  margin-top: auto + 50px;
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -274,7 +291,8 @@ $black: #1e1e1e;
     border: 1px solid $white;
   }
   button {
-    animation: loadIn 6s;
+    //animation: loadIn 6s;
+    animation-iteration-count: 1;
     padding: 15px;
     padding-bottom: 7.5px;
     margin-top: 7%;
@@ -312,10 +330,19 @@ $black: #1e1e1e;
   100% { color: 0e2b26; background-color: $white; }
 }
 
+@keyframes changeColor2 {
+  0% { color: 0e2b26; background-color: $white; }
+  100% { color: $white; background-color: transparent; }
+}
+
 .cover button:hover {
   animation: changeColor 0.5s;
   background-color: $white;
   color: #0e2b26;
+}
+
+.cover button:not(:hover) {
+  animation: changeColor2 0.5s;
 }
 
 .background {
@@ -360,7 +387,7 @@ $black: #1e1e1e;
     width: 90%;
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 1.75rem;
     line-height: 40px;
     font-family: "Din Condensed", "Lato";
   }
@@ -368,7 +395,7 @@ $black: #1e1e1e;
 
 
 .footer {
-  padding: 0.75%;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -389,13 +416,13 @@ $black: #1e1e1e;
   p {
     width: 100%;
     margin: 1%;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
   }
 
   img {
     height: 100px;
     width: 100px;
-    margin: 1%;
+    margin: 1.5%;
   }
 }
 
