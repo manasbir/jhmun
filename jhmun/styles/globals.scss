@@ -1,13 +1,15 @@
-html,
+$primary-color: #1A3A16;
 
-body {
+html,body {
+  // ::selection {
+  //   background-color: #4169e1;
+  //   color: white;
+  // }
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-$main-color: #1A3A16;
 @font-face {
   font-family: "Lato";
   src: url("../public/design/Fonts/Lato-Regular (paragraph fonts, make sure the spacing is correct).ttf");

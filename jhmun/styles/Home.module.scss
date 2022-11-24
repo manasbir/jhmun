@@ -91,6 +91,7 @@ $black: #1e1e1e;
   flex-direction: column;
   align-items: center;
   img {
+    animation: loadIn 3s;
     width: 200px;
     height: 200px;
     margin-top: -10%;
@@ -128,11 +129,11 @@ $black: #1e1e1e;
 }
 
 .logo {
-  left: 1.5rem;
-  top: 1.25rem;
+  left: 1rem;
+  top: 1rem;
   position: absolute;
   z-index: 30;
-  height: 6rem;
+  height: 5rem;
   img {
     height: 100%;
     width: 100%;
@@ -144,8 +145,8 @@ $black: #1e1e1e;
 }
 
 .menu {
-  // padding: 3%;
   margin: 3%;
+  margin-top: 3.25%;
   width: 40%;
   align-items: center;
   position: relative;
@@ -204,13 +205,35 @@ $black: #1e1e1e;
   }
 }
 
-.cover {
+@keyframes loadIn {
+  0% { 
+    opacity: 0; 
+    //transform: translateY(-0.5em);
+  }
+  100% { 
+    opacity: 1; 
+    //transform: translateY(0);
+  }
+}
 
+@keyframes loadIn2 {
+  0% { 
+    background-position: 00 00;
+  }
+  100% { 
+    background-position: 50 50;
+  }
+
+}
+
+.cover {
+  background-color: #1A3A16;
+  animation: loadIn2 2s;
   z-index: 10;
   
   position: relative;
   width: 100%;
-  min-height: 97.5vh;
+  min-height: 102.5vh;
 
   color: $white;
   flex-direction: column;
@@ -222,17 +245,19 @@ $black: #1e1e1e;
   background-repeat: no-repeat;
   background-attachment: fixed;
   h1 {
+    animation: loadIn 2s;
     margin-top: 20%;
-    margin-bottom: 1%;
+    margin-bottom: 0%;
     font-family: 'DIN Condensed';
     font-style: normal;
     font-weight: 750;
-    font-size: 70px;
+    font-size: 4rem;
     line-height: 60px;
     text-align: center;
     letter-spacing: 0.05em;
   }
   p {
+    animation: loadIn 2s;
     margin: 0;
     font-family: 'Minion Pro';
     font-style: normal;
@@ -242,12 +267,14 @@ $black: #1e1e1e;
     text-align: center;
   }
   hr {
+    animation: loadIn 2s;
     position: relative;
-    width: 80%;
+    width: 60%;
     height: 0px;
     border: 1px solid $white;
   }
   button {
+    animation: loadIn 6s;
     padding: 15px;
     padding-bottom: 7.5px;
     margin-top: 7%;
@@ -271,8 +298,10 @@ $black: #1e1e1e;
     }
   } 
   a {
+    animation: loadIn 2s;
+    margin-top: 5%;
     margin-left: 50%;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     max-height: fit-content;
     max-width: fit-content;
   }
@@ -299,6 +328,10 @@ $black: #1e1e1e;
 }
 
 .text {
+  ::selection {
+    background-color: $primary-color;
+    color: $white;
+  }
   background-image: url("../public/design/Images/Text backgrounds.png");
   background-position: center;
   background-size: cover;
@@ -356,7 +389,7 @@ $black: #1e1e1e;
   p {
     width: 100%;
     margin: 1%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
   }
 
   img {
