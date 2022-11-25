@@ -24,6 +24,30 @@ export default function Committees() {
         names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
+    } else if (committee == "unsc") {
+        div = styles.unsc;
+        title = "United Nations Security Council";
+        div2 = styles.unscText;
+        text = committeeName("unsc");
+        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
+        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
+    } else if (committee == "unhrc") {
+        div = styles.unhrc;
+        title = "United Nations Human Rights Council";
+        div2 = styles.unhrcText;
+        text = committeeName("unhrc");
+        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
+        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
+    } else if (committee == "unep") {
+        div = styles.unep;
+        title = "United Nations Environment Programme";
+        div2 = styles.unepText;
+        text = committeeName("unep");
+        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
+        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
     }
 
     const staff = () => {
@@ -56,7 +80,7 @@ export default function Committees() {
                 <meta name="description" content="JHMUN HCC" />
                 <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
             </Head>
-            <div className={div}>
+            <div className={div} style={{backgroundImage: "../../../public/design/Images/people/manas.png"}}>
                 <h1>{title}</h1>
             </div>
             <div className={styles.background}>
