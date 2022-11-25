@@ -175,7 +175,7 @@ export default function Committees() {
                       }
 
                       hr {
-                        width: 90%;
+                        width: 100%;
                         border: 1px solid $white;
                         }
 
@@ -191,7 +191,6 @@ export default function Committees() {
                     <Link href={`/committess/${committee}/matrix`}><button>COUNTRY MATRIX</button></Link>
                     <Link href={`/committess/${committee}/backgrounder`}><button>BACKGROUNDER</button></Link>
                     </div>
-                    <hr></hr>
                     {staff()}
                 </div>
 
