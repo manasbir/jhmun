@@ -157,11 +157,11 @@ $black: #1e1e1e;
 
 @keyframes changeColor {
     0% { color: $white; background-color: transparent; }
-    100% { color: 0e2b26; background-color: $white; }
+    100% { color: #0e2b26; background-color: $white; }
   }
   
   @keyframes changeColor2 {
-    0% { color: 0e2b26; background-color: $white; }
+    0% { color: #0e2b26; background-color: $white; }
     100% { color: $white; background-color: transparent; }
   }
 
@@ -176,6 +176,7 @@ $black: #1e1e1e;
 }
 
 .staff {
+  max-width: 75%;
     display: flex;
     flex-direction: column;
 }
@@ -187,14 +188,17 @@ $black: #1e1e1e;
     flex-direction: row;
     justify-content: space-around;
     padding: 10%;
+
     img {
-        width: 20rem;
-        height: 20rem;
+        margin: 0%;
+        width: 20vw;
+        height: 20vw;
         object-fit: cover;
     }
 }
 
 .cardText {
-    min-width: 100%;
-    margin: 4rem;
+  margin-left: 10%;
+  // background-color: red;
+    min-width: 90%;
 }

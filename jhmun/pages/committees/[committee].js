@@ -15,6 +15,8 @@ export default function Committees() {
     let names = [];
     let images = [];
     let descriptions = [];
+    let image;
+    let image2;
 
     if (committee == "hcc") {
         div = styles.hcc;
@@ -24,6 +26,10 @@ export default function Committees() {
         names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
+
+        // fix
+        image = "/design/Images/Soviet Union Committees Background.png"
+        image2 = "/design/Images/Soviet Union background.png"
     } else if (committee == "unsc") {
         div = styles.unsc;
         title = "United Nations Security Council";
@@ -80,11 +86,105 @@ export default function Committees() {
                 <meta name="description" content="JHMUN HCC" />
                 <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
             </Head>
-            <div className={div} style={{backgroundImage: "../../../public/design/Images/people/manas.png"}}>
+            <div className={"background"}>
+                <style jsx>{`
+                    @keyframes loadIn2 {
+                        0% { 
+                        background-position: 00 00;
+                        }
+                        100% { 
+                        background-position: 100 100;
+                        }
+                    
+                    }
+
+                    .background {
+                        margin: 0;
+                        background-color: #1A3A16;
+                        animation: loadIn2 2s;
+                        z-index: 10;
+                        
+                        position: relative;
+                        width: 100vw;
+                        
+                        color: $white;
+                        flex-direction: column;
+                        display: flex;
+                        align-items: center;
+                        
+                        background-image: url("${image}");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                    
+                        padding: 10%;
+                        white-space: nowrap;
+                    }
+                    h1 {
+                        color: white;
+                        animation: loadIn 2s;
+                        font-family: 'DIN Condensed';
+                        font-style: normal;
+                        font-weight: 750;
+                        font-size: 4rem;
+                        line-height: 60px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                    }
+                `}</style>
                 <h1>{title}</h1>
             </div>
             <div className={styles.background}>
-                <div className={div2}>
+                <div className={"text"}>
+                    <style jsx>{`
+                    .text {
+                        background-image: url("${image2}");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                        position: relative;
+                        left: 15%;
+                        width: 70%;
+                        color: $white;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                      }
+                      h1 {
+                        padding-top: 50px;
+                        text-align: left;
+                        width: 90%;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.75rem;
+                        line-height: 40px;
+                        font-family: "Din Condensed", "Lato";
+                      }
+
+                      p {
+                        align-items: center;
+                        width: 90%;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 1.1rem;
+                        line-height: 35px;
+                        font-family: "Lato";
+                        padding-bottom: 18px;
+                      }
+
+                      hr {
+                        width: 90%;
+                        border: 1px solid $white;
+                        }
+
+                      ::selection {
+                        background-color: $primary-color;
+                        color: $white;
+                      }
+
+                    `}</style>
                     <h1>Committee Description:</h1>
                     {text}
                     <div className={styles.buttons}>

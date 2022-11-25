@@ -32,10 +32,38 @@ html,body {
   src: url("../public/design/Fonts/Din Condnesed Bold (Title fonts (keep in mind the spacing between characters is 5%).ttf");
 }
 
+@keyframes loadIn {
+  0% { 
+    opacity: 0; 
+    //transform: translateY(-0.5em);
+  }
+  100% { 
+    opacity: 1; 
+    //transform: translateY(0);
+  }
+}
+
 h1 {
+  color: white;
+  animation: loadIn 2s;
   font-family: "Din Condensed";
   font-size: 5rem;
   font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+p {
+  align-items: center;
+    width: 90%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 35px;
+    font-family: "Lato";
+    padding-bottom: 18px;
+    color: white;
 }
 
 a {
