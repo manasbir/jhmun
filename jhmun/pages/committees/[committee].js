@@ -55,7 +55,7 @@ export default function committees() {
             <Head>
                 <title>{title}</title>
                 <meta name="description" content="JHMUN HCC" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
             </Head>
             <div className={div}>
                 <h1>{title}</h1>
