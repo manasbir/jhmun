@@ -1,9 +1,8 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../styles/Committess.module.scss'
 import committeeName from '../texts/committees.js';
-import { IMAGES_MANIFEST } from 'next/dist/shared/lib/constants';
 
 export default function committees() { 
     const router = useRouter()
