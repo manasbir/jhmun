@@ -186,15 +186,15 @@ $black: #1e1e1e;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 10%;
     img {
         width: 20rem;
         height: 20rem;
         object-fit: cover;
-        margin: 2rem;
     }
 }
 
 .cardText {
     min-width: 100%;
-    margin: 2rem;
+    margin: 4rem;
 }

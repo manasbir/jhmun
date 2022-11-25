@@ -18,7 +18,6 @@ export default function committees() {
     let descriptions = [];
 
     if (committee == "hcc") {
-        // alert("hcc")
         div = styles.hcc;
         title = "Historical Crisis Committee";
         div2 = styles.hccText;
@@ -53,6 +52,11 @@ export default function committees() {
 
     return (
         <div className={styles.container}>
+            <Head>
+                <title>{title}</title>
+                <meta name="description" content="JHMUN HCC" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className={div}>
                 <h1>{title}</h1>
             </div>
