@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from '../../styles/Committess.module.scss'
 import committeeName from '../texts/committees.js';
 
-export default function committees() { 
+export default function Committees() { 
     const router = useRouter()
     const { committee } = router.query
 
