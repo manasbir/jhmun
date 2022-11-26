@@ -8,10 +8,9 @@ export default function Committees() {
     const router = useRouter()
     const { committee } = router.query
 
-    let div;
     let title;
-    let div2;
-    let text;
+    let text = committeeName(committee);
+    console.log(committee);
     let names = [];
     let images = [];
     let descriptions = [];
@@ -19,42 +18,35 @@ export default function Committees() {
     let image2;
 
     if (committee == "hcc") {
-        div = styles.hcc;
         title = "Historical Crisis Committee";
-        div2 = styles.hccText;
-        text = committeeName("hcc");
         names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-
-        // fix
         image = "/design/Images/Soviet Union Committees Background.png"
         image2 = "/design/Images/Soviet Union background.png"
-    } else if (committee == "unsc") {
-        div = styles.unsc;
-        title = "United Nations Security Council";
-        div2 = styles.unscText;
-        text = committeeName("unsc");
+    } else if (committee == "sochum") {
+        title = "Social Humanitarian Cultural Committee";
         names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-    } else if (committee == "unhrc") {
-        div = styles.unhrc;
-        title = "United Nations Human Rights Council";
-        div2 = styles.unhrcText;
-        text = committeeName("unhrc");
+        image = "/design/Images/Rohingya Committees Background.png";
+        image2 = "/design/Images/Rohingya Muslims background.png";
+    } else if (committee == "unodc") {
+        title = "United Nations Office on Drugs and Crime";
         names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-    } else if (committee == "unep") {
-        div = styles.unep;
-        title = "United Nations Environment Programme";
-        div2 = styles.unepText;
-        text = committeeName("unep");
+        image = "/design/Images/Doctors Committee Background.png";
+        image2 = "/design/Images/MUN doctors background.png";
+    } else if (committee == "undp") {
+        title = "United Nations Development Programme";
         names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
+        image = "/design/Images/Palestine Israel Committees Background.png";
+        image2 = "/design/Images/Palestine Israel Committees Background.png";
     }
+
 
     const staff = () => {
         let staff = [];

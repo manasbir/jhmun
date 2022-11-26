@@ -261,6 +261,8 @@ $black: #1e1e1e;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  align-items: center;
   h1 {
     animation: loadIn 2s;
     margin-top: 20%;
@@ -291,7 +293,9 @@ $black: #1e1e1e;
     border: 1px solid $white;
   }
   button {
-    //animation: loadIn 6s;
+    position: relative;
+
+    animation: loadIn 6s;
     animation-iteration-count: 1;
     padding: 15px;
     padding-bottom: 7.5px;
@@ -317,9 +321,7 @@ $black: #1e1e1e;
   } 
   a {
     animation: loadIn 2s;
-    margin-top: 5%;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-top: 2%;
     max-height: fit-content;
     max-width: fit-content;
   }
@@ -336,6 +338,7 @@ $black: #1e1e1e;
 }
 
 .cover button:hover {
+  cursor: pointer;
   animation: changeColor 0.5s;
   background-color: $white;
   color: #0e2b26;
