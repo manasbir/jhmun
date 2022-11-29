@@ -91,10 +91,10 @@ export default function Committees() {
                     }
 
                     .background {
-                        margin: 0;
+                        margin-top: -1.25rem;
                         background-color: #1A3A16;
                         animation: loadIn2 2s;
-                        z-index: 10;
+                        z-index: 0;
                         
                         position: relative;
                         width: 100vw;
@@ -143,6 +143,7 @@ export default function Committees() {
                         align-items: center;
                         display: flex;
                         flex-direction: column;
+                        border-radius: 1rem;
                       }
                       h1 {
                         padding-top: 50px;
@@ -183,8 +184,10 @@ export default function Committees() {
                     <Link href={`/committess/${committee}/matrix`}><button>COUNTRY MATRIX</button></Link>
                     <Link href={`/committess/${committee}/backgrounder`}><button>BACKGROUNDER</button></Link>
                     </div>
-                    {staff()}
                 </div>
+            <div className={styles.background}>
+            {staff()}
+            </div>
 
                 
             </div>

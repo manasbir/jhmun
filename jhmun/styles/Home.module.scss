@@ -140,12 +140,12 @@ $black: #1e1e1e;
 }
 
 .logo {
-  left: 1.25rem;
-  top: 1.25rem;
-  position: absolute;
+  margin: 0.5rem;
+  position: relative;
+  float: left;
   max-width: fit-content;
   z-index: 30;
-  height: 4.5rem;
+  height: 4rem;
   animation: fadeIn 1.5s;
   img {
     animation: fadeIn 1.5s;
@@ -158,17 +158,29 @@ $black: #1e1e1e;
   cursor: pointer;
 }
 
+.header {
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.25rem;
+  z-index: 10;
+}
+
 .menu {
   animation: fadeIn 1s;
-  margin: 3%;
-  margin-top: 3.25%;
-  width: 40%;
+  border-radius: 1em;
+  margin: 2em;
+  width: 30%;
   align-items: center;
   position: relative;
   flex-direction: row;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: $black;
+  z-index: 10;
 
   a {
     animation: fadeIn 1s;
@@ -244,9 +256,9 @@ $black: #1e1e1e;
 }
 
 .cover {
+  margin-top: -1.25rem;
   background-color: #1A3A16;
   animation: loadIn2 2s;
-  z-index: 10;
   
   position: relative;
   width: 100%;
@@ -256,7 +268,7 @@ $black: #1e1e1e;
   flex-direction: column;
   display: flex;
 
-  background-image: url("../public/design/Images/MUNHomepagebackground.jpeg");
+  background-image: url("../public/design/Images/Green JHSS.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -294,7 +306,7 @@ $black: #1e1e1e;
   }
   button {
     position: relative;
-
+    border-radius: 10px;
     animation: loadIn 6s;
     animation-iteration-count: 1;
     padding: 15px;
@@ -302,7 +314,7 @@ $black: #1e1e1e;
     margin-top: 7%;
     align-items: center;
     position: relative;
-    min-width: 100px;
+    min-width: 120px;
     min-height: 20px;
     width: fit-content;
     background-color: transparent;
@@ -355,6 +367,7 @@ $black: #1e1e1e;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  padding: 2rem;
 }
 
 .text {
@@ -362,6 +375,7 @@ $black: #1e1e1e;
     background-color: $primary-color;
     color: $white;
   }
+  border-radius: 1rem;
   background-image: url("../public/design/Images/Text backgrounds.png");
   background-position: center;
   background-size: cover;

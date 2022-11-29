@@ -48,13 +48,14 @@ function MyApp({ Component, pageProps }) {
         <meta name="author" content="JHMUN" />
         <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN"/>
       </Head>
+        <div className={styles.header}>
+
 
       <div className={styles.logo}>
           <Link href={"/"}>
             <img src="/design/Icons & Buttons/MUN EAGLE.svg"/>
           </Link>  
         </div>    
-
         <div className={styles.menu}>
           <Link 
           onMouseEnter={() => setIsComHovered(true)} 
@@ -80,6 +81,7 @@ function MyApp({ Component, pageProps }) {
           href={"/registration"}>
             REGISTRATION
           </Link>
+        </div>
         </div>
 
       <main className={styles.main}> 
