@@ -90,8 +90,8 @@ function MyApp({ Component, pageProps }) {
 
       </main>
       <footer className={styles.footer}>
-        <img src="/design/Icons & Buttons/MUN EAGLE.svg"/>
-        <p>Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir">Manasbir Bagri</a>, Website & Logo Designed by Gordon Li</p>
+        <p>Copyright © Johnston Heights Model United Nations 2023 </p> 
+        <p> Website Created by <a href="https://github.com/manasbir">Manasbir Bagri</a>, Website & Logo Designed by Gordon Li</p>
       </footer>
       </div>
   )

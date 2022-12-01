@@ -140,9 +140,7 @@ $black: #1e1e1e;
 }
 
 .logo {
-  margin: 0.5rem;
   position: relative;
-  float: left;
   max-width: fit-content;
   z-index: 30;
   height: 4rem;
@@ -159,6 +157,7 @@ $black: #1e1e1e;
 }
 
 .header {
+  padding: 1.5rem;
   background-color: $white;
   width: 100%;
   display: flex;
@@ -171,8 +170,9 @@ $black: #1e1e1e;
 
 .menu {
   animation: fadeIn 1s;
-  border-radius: 1em;
-  margin: 2em;
+//   margin: 2.5rem;
+  margin-right: 1rem;
+  margin-bottom: -0.5rem;
   width: 30%;
   align-items: center;
   position: relative;
@@ -412,11 +412,14 @@ $black: #1e1e1e;
 
 
 .footer {
-  padding: 1%;
+  background-color: grey;
+  width: 100%;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-size: 1.5rem;
   align-items: center;
+  justify-content: space-between;
 
   font-family: 'Minion Pro';
   font-style: normal;
@@ -424,6 +427,7 @@ $black: #1e1e1e;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
+  
   color: $black;
   a {
     text-decoration: none;
@@ -431,16 +435,9 @@ $black: #1e1e1e;
   }
 
   p {
+    max-width: fit-content;
     width: 100%;
-    margin: 1%;
-    margin-bottom: 2%;
     color: $black;
-  }
-
-  img {
-    height: 100px;
-    width: 100px;
-    margin: 1.5%;
   }
 }
 
