@@ -7,7 +7,6 @@ import { Suspense, useEffect, useState } from "react";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
-
   const [isCommitteesHovered, setIsComHovered] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
 

@@ -116,7 +116,7 @@ export default function Committees() {
                     h1 {
                         color: white;
                         animation: loadIn 2s;
-                        font-family: 'DIN Condensed';
+                        font-family: 'Roboto Condensed';
                         font-style: normal;
                         font-weight: 750;
                         font-size: 4rem;
