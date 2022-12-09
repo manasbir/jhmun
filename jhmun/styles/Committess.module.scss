@@ -2,17 +2,26 @@ $primary-color: #1A3A16;
 $white: white;
 $black: #1e1e1e;
 @font-face {
-  font-family: "Lato";
-  src: url("../public/design/Fonts/Lato-Regular (paragraph fonts, make sure the spacing is correct).ttf");
+  font-family: "Roboto Serif";
+  src: url("../public/design/Fonts/RobotoSerif-VariableFont_GRAD\,opsz\,wdth\,wght.ttf");
 }
 @font-face {
-  font-family: "Din Condensed";
-  src: url("../public/design/Fonts/Din Condnesed Bold (Title fonts (keep in mind the spacing between characters is 5%).ttf");
+  font-family: "Roboto";
+  src: url("../public/design/Fonts/Roboto-Regular.ttf");
 }
 @font-face {
-  font-family: "Minion Pro";
-  src: url("../public/design/Fonts/MinionPro-Regular (submenu and footer font).otf");
+  font-family: "Roboto Bold";
+  src: url("../public/design/Fonts/RobotoCondensed-Bold.ttf");
 }
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../public/design/Fonts/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../public/design/Fonts/BebasNeue-Regular.ttf");
+}
+
 
 @keyframes loadIn {
     0% { 
@@ -36,13 +45,13 @@ $black: #1e1e1e;
 }
 
 .background {
-    background-color: $primary-color;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2rem;
+  width: 100%;
+  background-color: $primary-color;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons {
@@ -54,8 +63,7 @@ $black: #1e1e1e;
     button {
         //animation: loadIn 6s;
         animation-iteration-count: 1;
-        padding: 15px;
-        padding-bottom: 7.5px;
+        padding: 1rem;
         align-items: center;
         position: relative;
         min-width: 100px;
@@ -70,6 +78,7 @@ $black: #1e1e1e;
         line-height: 24px;
         text-align: center;
         color: $white;
+        margin-bottom: 2rem;
         a {
           color:inherit;
           text-decoration: none;
@@ -98,15 +107,16 @@ $black: #1e1e1e;
 }
 
 .staff {
-  margin-top: 4%;
   border-top: #ffffff 2px solid;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 2rem;
 }
 
 .card {
-    min-width: 100%;
+    max-width: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -128,6 +138,4 @@ $black: #1e1e1e;
 .cardText {
   align-items: left;
   margin-left: 10%;
-  // background-color: red;
-    min-width: 60%;
 }

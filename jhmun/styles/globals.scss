@@ -25,6 +25,10 @@ html,body {
   font-family: Roboto, system-ui
 }
 @font-face {
+  font-family: "Roboto Serif";
+  src: url("../public/design/Fonts/RobotoSerif-VariableFont_GRAD\,opsz\,wdth\,wght.ttf");
+}
+@font-face {
   font-family: "Roboto";
   src: url("../public/design/Fonts/Roboto-Regular.ttf");
 }
@@ -51,7 +55,7 @@ html,body {
 h1 {
   color: white;
   animation: loadIn 2s;
-  font-family: "Din Condensed";
+  font-family: "Roboto Serif";
   font-size: 5rem;
   font-weight: 700;
   line-height: 60px;
@@ -66,7 +70,7 @@ p {
     font-weight: 300;
     font-size: 1.1rem;
     line-height: 35px;
-    font-family: "Lato";
+    font-family: "Roboto";
     padding-bottom: 18px;
     color: white;
 }
@@ -74,6 +78,7 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: "Bebas Neue";
 }
 
 Link :hover{
