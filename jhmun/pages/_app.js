@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
 
           <div className={styles.logo}>
             <Link href={"/"}>
-              <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+              <img src={`${isMenuScroll ? "/design/Icons & Buttons/MUN Eagle Green.svg" : "/design/Icons & Buttons/MUN Eagle White.svg"}`}/>
             </Link>  
           </div>    
           <div className={"menu"}>
@@ -95,13 +95,13 @@ function MyApp({ Component, pageProps }) {
           <style jsx>{`
 
             @keyframes fadeOut {
-              0% { color: ${isMenuScroll ? "rgba(0, 0, 0,1)": "rgba(255, 255, 255,1)"}; }
-              100% { color: ${isMenuScroll ? "rgba(0, 0, 0,.25)": "rgba(255, 255, 255,.25)"}; }
+              0% { color: ${isMenuScroll ? "rgba(57,120,76,.25)": "rgba(255, 255, 255,1)"}; }
+              100% { color: ${isMenuScroll ? "rgba(57,120,76,1)": "rgba(255, 255, 255,.25)"}; }
             }
 
             @keyframes fadeIn {
-              0% { color: ${isMenuScroll ? "rgba(0, 0, 0,.25)": "rgba(255, 255, 255,.25)"}; }
-              100% { color: ${isMenuScroll ? "rgba(0, 0, 0,1)": "rgba(255, 255, 255,1)"}; }
+              0% { color: ${isMenuScroll ? "rgba(57,120,76,.25)": "rgba(255, 255, 255,.25)"}; }
+              100% { color: ${isMenuScroll ? "rgba(57,120,76,1)": "rgba(255, 255, 255,1)"}; }
             }
             .header {
               top: 0;
@@ -113,13 +113,13 @@ function MyApp({ Component, pageProps }) {
               flex-direction: row;
               align-items: center;
               justify-content: space-between;
-              border-radius: 0 0 1.25rem 1.25rem;
               z-index: 10;
+              ${isMenuScroll ? "box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" : ""}
+              border-radius: 0 0 1.25rem 1.25rem;
             }
             .menu {
                 animation: fadeIn 1s;
                 margin-right: 1rem;
-                margin-bottom: -0.5rem;
                 width: 30%;
                 align-items: center;
                 position: relative;
@@ -129,13 +129,21 @@ function MyApp({ Component, pageProps }) {
                 color: white;
                 z-index: 10;
 
-              color: ${isMenuScroll ? "rgba(0,0,0,1)" : "rgba(255, 255, 255, 1)"};
+              color: ${isMenuScroll ? "rgba(57,120,76,1)" : "rgba(255, 255, 255, 1)"};
               text-decoration: none;
               font-style: normal;
               font-weight: 500;
               font-size: 1.2rem;
               text-align: center;
               letter-spacing: 0.05em;
+
+              a:hover {
+                animation: fadeIn .25s;
+              }
+
+              a:not(:hover) {
+                animation: fadeOut .25s forwards;
+              }
             }
 
             .menu:hover {
@@ -147,10 +155,10 @@ function MyApp({ Component, pageProps }) {
             }
 
             .menu a:hover {
-              animation: fadeIn .25s forwards;
+              animation: fadeIn .25s;
             }
 
-            .menu:hover a:not(:hover) {
+            .menu a:not(:hover) {
               animation: fadeOut .25s forwards;
             }
 

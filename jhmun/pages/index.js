@@ -22,10 +22,9 @@ export default function Home() {
     
       <div className={styles.cover}>
         <h1>JOHNSTON HEIGHTS MODEL UNITED NATIONS 2023</h1>
-        <p>Inclusive and Accessible Model UN experience</p>
         <hr></hr>
-        <p>February 11th, 2023 | The First Annual Session | Johnston Heights Secondary School</p>
-        <Link href={"/registration"}><button>APPLY</button></Link>
+        <p><i>February 11th, 2023</i></p>
+        <Link href={"/registration"}><button>Apply</button></Link>
       </div>
 
       <div className={styles.background}>
@@ -33,6 +32,7 @@ export default function Home() {
           <h1>Dear Delegates and Faculty Advisors,</h1>
           {mainText()}
         </div>
+        <img src={"/design/Images/people/manas.png"}></img>
       </div>
     </div>
   )

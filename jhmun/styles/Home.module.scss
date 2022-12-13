@@ -1,4 +1,5 @@
-$primary-color: #1A3A16;
+$primary-color: #10451D;
+$secondary-color: #39784C;
 $white: white;
 $black: #1e1e1e;
 @font-face {
@@ -123,13 +124,33 @@ $black: #1e1e1e;
 
 
 @keyframes fadeOut {
-  0% { color:rgb(255, 255, 255,1); }
-  100% { color: rgba(255,255,255,.25); }
+  0% { opacity: 100%; }
+  100% { opacity: 25%; }
+}
+
+@keyframes fadeOut2 {
+  0% { opacity: 100%; }
+  100% { opacity: 50%; }
 }
 
 @keyframes fadeIn {
-  0% { color:rgba(255,255,255,.25); }
-  100% { color: rgba(255, 255, 255, 1); }
+  0% { opacity: 25%; }
+  100% { opacity: 100%; }
+}
+
+@keyframes fadeIn2 {
+  0% { opacity: 50%; }
+  100% { opacity: 100%; }
+}
+
+@keyframes fadeOut3 {
+  0% { color: #39784C; }
+  100% { color: #39784C50; }
+}
+
+@keyframes fadeIn3 {
+  0% { color: #39784C50; }
+  100% { color: #39784C; }
 }
 
 .container {
@@ -169,19 +190,16 @@ $black: #1e1e1e;
   }
 }
 
-.logo img:hover{
+.logo :hover{
   cursor: pointer;
+  animation: fadeOut2 1.5s;
+  opacity: 50%;
 }
 
-@keyframes fadeIn {
-  0% { color: rgba(255, 255, 255,.25); }
-  100% { color: rgba(255, 255, 255,1); }
+.logo :not(:hover) {
+  animation: fadeIn2 1.5s;
 }
 
-@keyframes fadeOut {
-  0% { color: rgba(255, 255, 255, 1); }
-  100% { color: rgba(255, 255, 255, .25); }
-}
 
 .dropdown {
   margin-top: auto + 50px;
@@ -193,25 +211,26 @@ $black: #1e1e1e;
   justify-content: stretch;
   position: absolute;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: $primary-color;
+  background-color: $white;
   padding: .5em;
-  color:rgba(255, 255, 255, 0.25);
+  color: #39784C50;
 
   a {
-  margin: .5em;
-  font-size: 1.1rem;
-  text-align: left;
-  text-decoration: none;
+    margin: .5em;
+    font-size: 1.1rem;
+    text-align: left;
+    text-decoration: none;
   }
 }
 
-.dropdown :hover {
-  animation: fadeIn .25s;
-  color: white;
+.dropdown a:hover {
+  animation: fadeIn3 .25s;
+  color: #39784C;
 }
 
 .dropdown a:not(:hover) {
-  animation: fadeOut .25s;
+  animation: fadeOut3 .25s;
+  color: #39784C50;
 }
 
 
@@ -270,7 +289,7 @@ $black: #1e1e1e;
     letter-spacing: 0.05em;
   }
   p {
-    margin: .5rem;
+    margin: 0;
     animation: loadIn 2s;
     font-family: 'Roboto Condensed';
     font-style: normal;
@@ -280,7 +299,7 @@ $black: #1e1e1e;
     text-align: center;
   }
   hr {
-    margin-top: -0.5rem;
+    margin: 0.5rem;
     animation: loadIn 2s;
     position: relative;
     width: 60%;
@@ -342,13 +361,20 @@ $black: #1e1e1e;
 }
 
 .background {
-  background-color: $primary-color;
+  background-color: $white;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
   width: 100%;
-  padding: 2rem;
+
+  img {
+    padding-top: 6rem;
+    padding-right: 3rem;
+    width: 25%;
+    object-fit: contain;
+  }
 }
 
 .text {
@@ -356,38 +382,37 @@ $black: #1e1e1e;
     background-color: $primary-color;
     color: $white;
   }
-  border-radius: 1rem;
-  background-image: url("../public/design/Images/Text backgrounds.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  color: $primary-color;
   position: relative;
-  left: 15%;
+  left: 0%;
   width: 70%;
   color: $white;
   align-items: center;
   display: flex;
   flex-direction: column;
   p {
+    color: $primary-color;
     align-items: center;
     width: 90%;
-    font-style: normal;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 1.1rem;
-    line-height: 35px;
-    font-family: "Roboto";
-    padding-bottom: 18px;
   }
   h1 {
+    color: $primary-color;
     padding-top: 50px;
     text-align: left;
     width: 90%;
     font-style: normal;
     font-weight: 700;
     font-size: 1.75rem;
-    line-height: 40px;
     font-family: "Roboto Bold";
+  }
+  img {
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    width: 10rem;
   }
 }
 
