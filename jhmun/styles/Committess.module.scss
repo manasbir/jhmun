@@ -1,4 +1,5 @@
 $primary-color: #10451D;
+$primary-color-faded: #10451D50;
 $secondary-color: #39784C;
 $white: white;
 $black: #1e1e1e;
@@ -9,6 +10,10 @@ $black: #1e1e1e;
 @font-face {
   font-family: "Roboto";
   src: url("../public/design/Fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto B";
+  src: url("../public/design/Fonts/Roboto-Bold.ttf");
 }
 @font-face {
   font-family: "Roboto Bold";
@@ -27,11 +32,11 @@ $black: #1e1e1e;
 @keyframes loadIn {
     0% { 
       opacity: 0; 
-      //transform: translateY(-0.5em);
+      transform: translateY(-0.5em);
     }
     100% { 
       opacity: 1; 
-      //transform: translateY(0);
+      transform: translateY(0);
     }
   }
   
@@ -45,46 +50,82 @@ $black: #1e1e1e;
   
 }
 
-.background {
-  width: 100%;
-  background-color: $primary-color;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@keyframes fadeIn {
+    0% { 
+      opacity: .5;
+    }
+    100% { 
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% { 
+      opacity: 1;
+    }
+    100% {
+      opacity: .5;
+    }
+  }
+
+@keyframes fadeIn2 {
+  0% { color: $primary-color-faded; }
+  100% { color: $primary-color; }
+}
+@keyframes fadeOut2 {
+  0% { color: $primary-color; }
+  100% { color: $primary-color-faded; }
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 60%;
+.button {
+  button{
+  margin-top: 3rem;
+  position: relative;
+  border-radius: 10px;
+  animation: loadIn 3s;
+  animation-iteration-count: 1;
+  padding: 15px;
+  align-items: center;
+  position: relative;
+  min-width: 150px;
+  min-height: 20px;
+  width: fit-content;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 24px;
+  text-align: center;
+  color: $white;
+  }
+  a {
+    color:inherit;
+    text-decoration: none;
+  }
+}
 
-    button {
-        //animation: loadIn 6s;
-        animation-iteration-count: 1;
-        padding: 1rem;
-        align-items: center;
-        position: relative;
-        min-width: 100px;
-        min-height: 20px;
-        width: fit-content;
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        font-family: 'Roboto Condensed';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 1.2rem;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-        margin-bottom: 2rem;
-        a {
-          color:inherit;
-          text-decoration: none;
-        }
-    } 
+@keyframes changeColor {
+0% { color: $white; background-color: transparent; }
+100% { color: #0e2b26; background-color: $white; }
+}
+
+@keyframes changeColor2 {
+0% { color: #0e2b26; background-color: $white; }
+100% { color: $white; background-color: transparent; }
+}
+
+
+.button button:hover {
+  cursor: pointer;
+  animation: changeColor 0.5s;
+  background-color: $white;
+  color: #0e2b26;
+}
+
+.button button:not(:hover) {
+  animation: changeColor2 0.5s;
 }
 
 @keyframes changeColor {
@@ -107,36 +148,115 @@ $black: #1e1e1e;
     animation: changeColor2 0.5s;
 }
 
-.staff {
-  border-top: #ffffff 2px solid;
-  width: 100%;
+.submenu {
+  width: 15vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 2rem;
+  justify-content: space-evenly;
+  color: $primary-color;
+  font-style: normal;
+  a{
+  font-family: Roboto;
+  }
+}
+
+.submenu :hover {
+  animation: fadeOut2 0.5s;
+  color: $primary-color-faded;
+}
+
+.submenu a:hover {
+  cursor: pointer;
+  animation: fadeIn2 0.5s;
+  font-family: "Roboto B";
+  color: $primary-color;
+}
+
+.submenu a:not(:hover) {
+  animation: fadeOut2 0.5s;
+  color: $primary-color-faded;
+}
+
+.submenu :not(:hover) {
+  animation: fadeIn2 0.5s;
+  color: $primary-color;
+}
+
+.description {
+  animation: loadIn 1.5s;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: space-around;
+}
+
+.text { // description text
+  width: 70%;
+  h1{
+    font-family: "Roboto B";
+    font-size: 2rem;
+    text-align: left;
+    animation: loadIn 3s;
+    animation-iteration-count: 1;
+    color: $primary-color;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 1.2rem;
+    text-align: left;
+    animation: loadIn 3s;
+    animation-iteration-count: 1;
+    color: $primary-color;
+  }
+}
+
+.staff {
+  animation: loadIn 1.5s;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
 }
 
 .card {
-    max-width: 100%;
+    animation: loadIn 1.5s;
+    left: 10vw;
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 5%;
-    text-align: left;
-
+    padding: 2rem;
+    align-items: left;
+    justify-content: space-between;
     img {
-        width: 20vw;
-        height: 20vw;
+        width: 20rem;
+        height: 20rem;
         object-fit: cover;
-    }
-    h1 {
-      text-align: left;
-      font-size: 2rem;
     }
 }
 
 .cardText {
   align-items: left;
-  margin-left: 10%;
+  text-align: left;
+  h1 {
+    margin: 0;
+    font-family: "Roboto Bold";
+    text-align: left;
+    font-size: 2rem;
+    color: $primary-color;
+  }
+  p {
+    font-family: Roboto;
+    text-align: left;
+    font-size: 1.2rem;
+    color: $primary-color;
+  }
+  h2 {
+    margin: 0;
+    font-family: "Roboto Bold";
+    text-align: left;
+    font-size: 1.5rem;
+    color: $primary-color;
+  }
 }

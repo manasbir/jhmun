@@ -302,7 +302,7 @@ $black: #1e1e1e;
     margin: 0.5rem;
     animation: loadIn 2s;
     position: relative;
-    width: 60%;
+    width: 60vw;
     height: 0px;
     border: 1px solid $white;
   }
@@ -341,11 +341,11 @@ $black: #1e1e1e;
 
 @keyframes changeColor {
   0% { color: $white; background-color: transparent; }
-  100% { color: 0e2b26; background-color: $white; }
+  100% { color: #0e2b26; background-color: $white; }
 }
 
 @keyframes changeColor2 {
-  0% { color: 0e2b26; background-color: $white; }
+  0% { color: #0e2b26; background-color: $white; }
   100% { color: $white; background-color: transparent; }
 }
 
@@ -418,6 +418,8 @@ $black: #1e1e1e;
 
 
 .footer {
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, .25);
   width: 100%;
   padding: 1rem;
   padding-bottom: 0rem;
@@ -433,7 +435,7 @@ $black: #1e1e1e;
   line-height: 24px;
   text-align: center;
   
-  color: $black;
+  color: $primary-color;
   a {
     font-family: 'Roboto';
     font-style: normal;

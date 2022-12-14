@@ -3,53 +3,55 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../styles/Committess.module.scss'
 import committeeName from '../texts/committees.js';
+import { useEffect, useState } from "react";
 
-export default function Committees() { 
-    const router = useRouter()
-    const { committee } = router.query
+export default function Committees() {
+    const router = useRouter();
+    const { committee } = router.query;
+
 
     let title;
+    let subTitle;
     let text = committeeName(committee);
     console.log(committee);
+    let roles = [];
     let names = [];
     let images = [];
-    let images2 = [];
     let descriptions = [];
     let image;
-    let image2;
 
     if (committee == "hcc") {
         title = "Historical Crisis Committee";
-        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        subTitle = "Berlin Crisis of 1960";
+        roles = ["Director", "Co-Director"];
+        names = ["Manasbir Bagri", "ma friend"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        images2 = ["/design/Images/Text backgrounds.png", "/design/Images/Text backgrounds.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-        image = "/design/Images/Dark Berline Wall.png"
-        image2 = "/design/Images/Green Berlin.png"
+        descriptions = ["wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them", "hello madam"];
+        image = "/design/Images/Dark Berline Wall.png";
     } else if (committee == "sochum") {
         title = "Social Humanitarian Cultural Committee";
-        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        subTitle = "Uyghur Muslims Disenfranchisement";
+        roles = ["Director", "Co-Director"];
+        names = ["Manasbir Bagri", "ma friend"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        images2 = ["/design/Images/Text backgrounds.png", "/design/Images/Text backgrounds.png"];
         descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-        image = "/design/Images/Rohingya Committees Background.png";
-        image2 = "/design/Images/Rohingya Muslims background.png";
+        image = "/design/Images/sochum.png";
     } else if (committee == "unodc") {
         title = "United Nations Office on Drugs and Crime";
-        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        subTitle = "Organ Trafficking";
+        roles = ["Director", "Co-Director"];
+        names = ["Manasbir Bagri", "ma friend"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        images2 = ["/design/Images/Text backgrounds.png", "/design/Images/Text backgrounds.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-        image = "/design/Images/Doctors Committee Background.png";
-        image2 = "/design/Images/MUN doctors background.png";
+        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"];
+        image = "/design/Images/Dark Doctors.png";
     } else if (committee == "undp") {
         title = "United Nations Development Programme";
-        names = ["Manasbir Bagri | Director", "ma friend | CO-DIRECTOR"];
+        subTitle = "Palestine, Israel Dispute";
+        roles = ["Director", "Co-Director"];
+        names = ["Gordon Li", "ma friend"];
         images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        images2 = ["/design/Images/Text backgrounds.png", "/design/Images/Text backgrounds.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-        image = "/design/Images/Palestine Israel Committees Background.png";
-        image2 = "/design/Images/Palestine Israel Committees Background.png";
+        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"];
+        image = "/design/Images/Palestine Israel.png";
     }
 
 
@@ -57,37 +59,13 @@ export default function Committees() {
         let staff = [];
         for (let i = 0; i < names.length; i++) {
             staff.push(
-            <div className={"card"}>
-                <style jsx>{`
-                    .card {
-                        width: 70vw;
-                        position: relative;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        padding: 5%;
-                        text-align: left;
-                        background: url("${images2[i]}");  
-                        background-position: center;
-                        background-size: auto 100%;
-                        background-attachment: fixed;
-                        margin-top: 2rem;
-                        border-radius: 1rem;
-                    }
-                    img {
-                        width: 20vw;
-                        object-fit: cover;
-                    }
-                    h1 {
-                        text-align: left;
-                        font-size: 2rem;
-                    }
-                `}</style>
-                <img src={images[i]}/>
+            <div className={styles.card}>
                 <div className={styles.cardText}>
                     <h1>{names[i]}</h1>
+                    <h2><i>{roles[i]}</i></h2>
                     <p>{descriptions[i]}</p>
                 </div>
+                <img src={images[i]}/>
             </div>
             )
         }
@@ -124,11 +102,13 @@ export default function Committees() {
                         z-index: 0;
                         
                         position: relative;
-                        width: 100vw;
+                        width: 100%;
+                        height: 110vh;
                         
                         flex-direction: column;
                         display: flex;
                         align-items: center;
+                        justify-content: center;
                         
                         background-image: url("${image}");
                         background-position: center;
@@ -142,72 +122,56 @@ export default function Committees() {
                     h1 {
                         color: white;
                         animation: loadIn 2s;
-                        font-family: 'Roboto Condensed';
+                        font-family: 'Roboto Bold';
                         font-style: normal;
                         font-weight: 750;
                         font-size: 4rem;
                         line-height: 60px;
                         text-align: center;
                         letter-spacing: 0.05em;
+                        margin: 0;
+                    }
+                    hr {
+                        width: 60vw;
+                        height: 0px;
+                        border: 1px solid white;
+                    }
+                    p {
+                        margin: 0;
+                        text-align: center;
+                        color: white;
+                        animation: loadIn 2s;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        line-height: 30px;
+                        font-style: italic;
                     }
                 `}</style>
                 <h1>{title}</h1>
+                <hr></hr>
+                <p>{subTitle}</p>
+                <div className={styles.button}>
+                <Link
+                href={`/committees/${committee}/backgrounder`}
+                ><button>Backgrounder</button></Link>
+                </div>
             </div>
-            <div className={styles.background}>
-                <div className={"text"}>
-                    <style jsx>{`
-                    .text {
-                        margin-top: 2rem;
-                        background-image: url("${image2}");
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                        position: relative;
-                        width: 70%;
-                        color: white;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        border-radius: 1rem;
-                      }
-                      h1 {
-                        padding-top: 50px;
-                        text-align: left;
-                        width: 90%;
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 1.75rem;
-                        line-height: 40px;
-                        font-family: "Roboto";
-                      }
-
-                      p {
-                        align-items: center;
-                        width: 90%;
-                        font-style: normal;
-                        font-weight: 300;
-                        font-size: 1.1rem;
-                        line-height: 35px;
-                        font-family: "Roboto";
-                        padding-bottom: 18px;
-                      }
-
-                      .text::selection {
-                        background-color: $primary-color;
-                        color: white;
-                      }
-                    `}</style>
+                <div className={styles.description}>
+                <div className={styles.submenu}>
+                    <Link href={"/committees/hcc"}>Historical Crisis Committee</Link>
+                    <Link href={"/committees/sochum"}>Social, Humanitarian & Cultural Committee</Link>
+                    <Link href={"/committees/unodc"}>United Nations Office on Drugs and Crime</Link>
+                    <Link href={"/committees/undp"}>United Nations Development Programme</Link>
+                </div>
+                <div className={styles.text}>
                     <h1>Committee Description:</h1>
                     {text}
-                    <div className={styles.buttons}>
-                    <Link href={`/committess/${committee}/matrix`}><button>COUNTRY MATRIX</button></Link>
-                    <Link href={`/committess/${committee}/backgrounder`}><button>BACKGROUNDER</button></Link>
                     </div>
                 </div>
                 {staff()}
             </div>
-        </div>
     )
     
 }
