@@ -26,13 +26,15 @@ export default function Home() {
         <p><i>February 11th, 2023</i></p>
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
-
+      <div className={styles.texts}>
+      <h1><i>&quot;¡Me gusta comer la hamburguesa con leche!&quot;</i></h1>
       <div className={styles.background}>
         <div className={styles.text}>
-          <h1>Dear Delegates and Faculty Advisors,</h1>
+          <h2>Dear Delegates and Faculty Advisors,</h2>
           {mainText()}
         </div>
         <img src={"/design/Images/people/manas.png"}></img>
+        </div>
       </div>
     </div>
   )
