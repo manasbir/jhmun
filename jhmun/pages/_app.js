@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
         <div className={styles.dropdown}>
           <Link href="/about">ABOUT US</Link>
           <Link href="/about/secretariat">SECRETARIAT</Link>
-          <Link href="/about/faq">SCHEDULE</Link>
+          <Link href="/about/conference">CONFERENCE</Link>
         </div>
       )
     }
