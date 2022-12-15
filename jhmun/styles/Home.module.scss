@@ -371,11 +371,10 @@ $black: #1e1e1e;
 }
 
 .dropdown a:hover {
-  animation: fadeIn3 .25s;
   color: #39784C;
 }
 
-.dropdown a:not(:hover) {
+.dropdown :not(:hover) {
   animation: fadeOut4 .25s;
   color: #39784C50;
 }
@@ -417,13 +416,13 @@ $black: #1e1e1e;
   align-items: center;
 
 
-  background-image: url("../public/design/Images/background.png");
+  background-image: url("../public/design/Images/JHSS dark.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
   background-blend-mode: multiply;
 
   z-index: 0;
