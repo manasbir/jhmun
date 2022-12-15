@@ -31,6 +31,28 @@ return (
                 Through fierce debate and persuasive negotiation, delegates will deepen their understanding of the multifaceted relationships that link states, expand their perspectives on global conflicts and construct comprehensive and applicable Resolution Papers. The skills, experiences, and networks nurtured through JHMUN will supplement everyone&#39;s growth as global citizens. Our conference prioritizes accessibility and is completely free to every prospective high-school delegate.
             </p>
         </div>
+        <div className={styles.text}>
+            <h2>Contact Us</h2>
+            <a href="https://www.instagram.com/jhmun2023/" target="_blank">
+            <div className={styles.socials}>
+                <img src="/design/Icons & Buttons/insta.svg"/>
+                @jhmun2023
+                </div>
+            </a>
+            <a href="mailto:jhmun@gmail.com" target="_blank">
+            <div className={styles.socials}>
+                <img src="/design/Icons & Buttons/gmail.svg"/>
+                jhmun@gmail.com
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Johnston+Heights+Secondary+School/@49.1799062,-122.8010459,17z/data=!4m10!1m2!2m1!1sjohnston+heights!3m6!1s0x5485d74048d730e3:0xf4ea6ac459ca5f91!8m2!3d49.1822047!4d-122.7970244!15sChBqb2huc3RvbiBoZWlnaHRzkgELaGlnaF9zY2hvb2zgAQA!16zL20vMGRoNHdn" target="_blank">
+            <div className={styles.socials}>
+                <img src="/design/Icons & Buttons/maps.svg"/>
+                Johnston Heights, 15350 99 Ave, Surrey, BC V3R 0R9
+                </div>
+            </a>
+
+        </div>
     </main>
     </div>
 )
