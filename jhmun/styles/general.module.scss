@@ -160,8 +160,8 @@ $black: #1e1e1e;
   align-items: center;
   justify-content: flex-start;
   color: $secondary-color;
-  margin: 2.5vw;
-  width: 25rem;
+  margin: 2vw;
+  width: 20rem;
   height: 30rem;
   background-color: $white;
   border-radius: 1em;
@@ -173,7 +173,7 @@ $black: #1e1e1e;
   img {
     margin-top: 0;
     margin-bottom: 1rem;
-    width: 23rem;
+    width: 18rem;
     object-fit: contain;
     border-radius: .5em;
   }
@@ -233,8 +233,8 @@ $black: #1e1e1e;
   align-items: center;
   justify-content: flex-start;
   color: white;
-  margin: 2.5vw;
-  width: 25rem;
+  margin: 2vw;
+  width: 20rem;
   height: 45rem;
   background-color: $primary-color;
   border-radius: 1em;
@@ -246,7 +246,7 @@ $black: #1e1e1e;
   img {
     margin-top: 0;
     margin-bottom: 1rem;
-    width: 23rem;
+    width: 18rem;
     object-fit: contain;
     border-radius: .5em;
   }
@@ -302,20 +302,21 @@ $black: #1e1e1e;
   align-items: center;
   justify-content: flex-start;
   color: white;
-  margin: 2.5vw;
-  width: 25rem;
+  margin: 2vw;
+  width: 20rem;
   height: 35rem;
   background-color: $primary-color;
   border-radius: 1em;
   box-shadow: 0 0 0.5em $black;
   transition: 0.5s;
+  margin-bottom: 4rem;
   &:hover {
     transform: scale(1.1);
   }
   img {
     margin-top: 0;
     margin-bottom: 1rem;
-    width: 23rem;
+    width: 18rem;
     object-fit: contain;
     border-radius: .5em;
   }

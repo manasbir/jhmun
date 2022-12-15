@@ -27,13 +27,13 @@ export default function Home() {
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
       <div className={styles.texts}>
-      <h1><i>&quot;¡Me gusta comer la hamburguesa con leche!&quot;</i></h1>
-      <div className={styles.background}>
-        <div className={styles.text}>
-          <h2>Dear Delegates and Faculty Advisors,</h2>
-          {mainText()}
-        </div>
-        <img src={"/design/Images/people/manas.png"}></img>
+        <h1><i>&quot;¡Me gusta comer la hamburguesa con leche!&quot;</i></h1>
+        <div className={styles.background}>
+          <div className={styles.text}>
+            <h2>Dear Delegates and Faculty Advisors,</h2>
+            {mainText()}
+          </div>
+          <img src={"/design/Images/people/manas.png"}></img>
         </div>
       </div>
     </div>
