@@ -11,15 +11,16 @@ function MyApp({ Component, pageProps }) {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
 
-  const setScroll = () => {
-    if (window.scrollY > 75) {
-      setIsMenuScroll(true);
-    } else {
-      setIsMenuScroll(false);
-    }
-  }
+
 
   useEffect(() => {
+    const setScroll = () => {
+      if (window.scrollY > 75) {
+        setIsMenuScroll(true);
+      } else {
+        setIsMenuScroll(false);
+      }
+    }
     window.addEventListener('scroll', setScroll);
   }, [])
 
@@ -60,9 +61,7 @@ function MyApp({ Component, pageProps }) {
               <img src={"/design/Icons & Buttons/MUN Eagle White.svg"}/>
             </Link>  
           </div>    
-          <div className={styles.menu1}
-          onScro
-          >
+          <div className={styles.menu1}>
             <Link
               onMouseEnter={() => setIsComHovered(true)} 
               onMouseLeave={() => setIsComHovered(false)}

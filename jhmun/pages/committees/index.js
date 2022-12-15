@@ -20,13 +20,13 @@ export default function Committees() {
                         <br></br>
                         Our 4 committees and corresponding topics are:
                         <br></br>
-                        <ul>
-                        <li>Historical Crisis Committee (HCC) | Fall of the Berlin Wall</li>
-                        <li>Social, Humanitarian & Cultural Committee (SOCHUM) | Uyghur Muslims Disenfranchisement </li>
-                        <li>United Nations Office on Drugs & Crime (UNODC) | Organ Trafficking</li>
-                        <li> United Nations development program (UNDP) | Palestine & Israel Dispute</li>
-                        </ul>
                         </p>
+                        <ul>
+                            <li>Historical Crisis Committee (HCC) | Fall of the Berlin Wall</li>
+                            <li>Social, Humanitarian & Cultural Committee (SOCHUM) | Uyghur Muslims Disenfranchisement </li>
+                            <li>United Nations Office on Drugs & Crime (UNODC) | Organ Trafficking</li>
+                            <li> United Nations development program (UNDP) | Palestine & Israel Dispute</li>
+                        </ul>
                 </div>
                 <div className={styles.committees}>
                 <Link href={"/committees/hcc"}>
