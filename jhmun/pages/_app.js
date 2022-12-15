@@ -11,7 +11,45 @@ function MyApp({ Component, pageProps }) {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
 
-  // when isMenuScroll is updated, console.log, isMenuScroll
+  const setScroll = () => {
+    if (window.scrollY > 75) {
+      setIsMenuScroll(true);
+    } else {
+      setIsMenuScroll(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', setScroll);
+  }, [])
+
+  const handleComHover = () => {
+    if (isCommitteesHovered) {
+      return (
+        <div className={styles.dropdown}>
+          <Link href="/committees">COMMITTEES OVERVIEW</Link>
+          <Link href="/committees/hcc">HISTORICAL CRISIS COMMITTEE</Link>
+          <Link href="/committees/sochum">SOCIAL, HUMANITARIAN, AND CULTURAL COMMITTEE</Link>
+          <Link href="/committees/unodc">UN OFFICE ON DRUGS & CRIME COMMITTEE</Link>
+          <Link href="/committees/undp">UN DEVELOPMENT PROGRAMME COMMITTEE</Link>
+        </div>
+
+      )
+    }
+  }
+
+  const handleAboutHover = () => {
+    if (isAboutHovered) {
+      return (
+        <div className={styles.dropdown}>
+          <Link href="/about">ABOUT US</Link>
+          <Link href="/about/team">SECRETARIAT</Link>
+          <Link href="/about/faq">SCHEDULE</Link>
+        </div>
+      )
+    }
+  }
+
   const handleMenuScroll = () => {
     console.log(isMenuScroll);
     if (!isMenuScroll) {
@@ -19,11 +57,11 @@ function MyApp({ Component, pageProps }) {
         <div className={styles.header1}>
           <div className={styles.logo}>
             <Link href={"/"}>
-              <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+              <img src={"/design/Icons & Buttons/MUN Eagle White.svg"}/>
             </Link>  
           </div>    
           <div className={styles.menu1}
-          onScroll={() => setIsMenuScroll(true)}
+          onScro
           >
             <Link
               onMouseEnter={() => setIsComHovered(true)} 
@@ -52,12 +90,10 @@ function MyApp({ Component, pageProps }) {
         <div className={styles.header2}>
           <div className={styles.logo}>
             <Link href={"/"}>
-              <img src={"/design/Icons & Buttons/MUN Eagle White.svg"}/>
+              <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
             </Link>  
           </div>    
-          <div className={styles.menu2}
-          onScroll={() => setIsMenuScroll(false)}
-          >
+          <div className={styles.menu2}>
             <Link
               onMouseEnter={() => setIsComHovered(true)} 
               onMouseLeave={() => setIsComHovered(false)}
@@ -84,32 +120,7 @@ function MyApp({ Component, pageProps }) {
   }
 
 
-  const handleComHover = () => {
-    if (isCommitteesHovered) {
-      return (
-        <div className={styles.dropdown}>
-          <Link href="/committees">COMMITTEES OVERVIEW</Link>
-          <Link href="/committees/hcc">HISTORICAL CRISIS COMMITTEE</Link>
-          <Link href="/committees/sochum">SOCIAL, HUMANITARIAN, AND CULTURAL COMMITTEE</Link>
-          <Link href="/committees/unodc">UN OFFICE ON DRUGS & CRIME COMMITTEE</Link>
-          <Link href="/committees/undp">UN DEVELOPMENT PROGRAMME COMMITTEE</Link>
-        </div>
 
-      )
-    }
-  }
-
-  const handleAboutHover = () => {
-    if (isAboutHovered) {
-      return (
-        <div className={styles.dropdown}>
-          <Link href="/about">ABOUT US</Link>
-          <Link href="/about/team">SECRETARIAT</Link>
-          <Link href="/about/faq">SCHEDULE</Link>
-        </div>
-      )
-    }
-  }
   return (
     <div className={styles.container}>
       <Head>

@@ -143,6 +143,15 @@ $black: #1e1e1e;
   100% { opacity: 100%; }
 }
 
+@keyframes menuFadeIn {
+  0% { color: #ffffff50; }
+  100% { opacity: #ffffff; }
+}
+
+@keyframes menuFadeOut {
+  100% { color: #ffffff50; }
+}
+
 @keyframes fadeOut3 {
   0% { color: #39784C; }
   100% { color: #39784C50; }
@@ -183,6 +192,7 @@ $black: #1e1e1e;
   z-index: 30;
   height: 4rem;
   animation: fadeIn 1.5s ease-in-out;
+  margin: 1em;
   img {
     animation: fadeIn 1.5s;
     height: 100%;
@@ -204,19 +214,19 @@ $black: #1e1e1e;
   top: 0;
   position: relative;
   height: rem;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0);
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0 0 1.25rem 1.25rem;
 }
 .menu1 {
   animation: fadeIn 1s;
   margin-right: 1rem;
+  color: #ffffff;
 
       width: 30%;
       align-items: center;
@@ -224,10 +234,8 @@ $black: #1e1e1e;
       flex-direction: row;
       display: flex;
       justify-content: space-between;
-      color: white;
       z-index: 10;
-
-    color: rgba(57,120,76,1);
+  a {
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -235,18 +243,85 @@ $black: #1e1e1e;
     text-align: center;
     letter-spacing: 0.05em;
   }
+}
 
-  .menu1:hover {
-    animation: fadeOut .25s forwards;
-  }
+.menu1:hover {
+  animation: menuFadeOut .5s forwards;
+  color: #ffffff50;
+}
+/* 
+.menu1 :not(:hover) {
+  animation: menuFadeIn .5s forwards;
+  color: #ffffff50;
+} */
 
-  .menu1 :not(:hover) {
-    animation: fadeIn .5s forwards;
-  }
+/*   .menu1 :not(:hover) {
+    animation: menuFadeIn .5s forwards;
+    color: #ffffff;
+  } */
 
+  //works
   .menu1 a:hover {
-    animation: fadeIn .25s;
+    animation: menuFadeIn .5s;
+    color: #ffffff;
   }
+
+  @keyframes menuLoading {
+    0% {
+      opacity: .25;
+      transform: translateY(-3em);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .header2 {
+    animation: menuLoading 1s ease-out;
+    top: 0;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 1.25rem 1.25rem;
+  }
+  .menu2 {
+    margin-right: 1rem;
+  
+    width: 30%;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    color: rgba(57,120,76,1);
+    a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    }
+    }
+  
+    .menu2:hover {
+      animation: fadeOut3 .25s ease-in-out;
+      color: #39784C50;
+    }
+  
+  
+    .menu2 a:hover {
+      animation: fadeIn3 .25s forwards;
+      color: #39784C;
+    }
 
 
 .dropdown {
@@ -261,6 +336,7 @@ $black: #1e1e1e;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: $white;
   padding: .5em;
+  border-radius: .5rem;
   color: #39784C50;
 
   a {
@@ -285,11 +361,11 @@ $black: #1e1e1e;
 @keyframes loadIn {
   0% { 
     opacity: 0; 
-    //transform: translateY(-0.5em);
+    transform: translateY(-0.5em);
   }
   100% { 
     opacity: 1; 
-    //transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -439,11 +515,15 @@ $black: #1e1e1e;
   display: flex;
   flex-direction: column;
   p {
-    color: $primary-color;
+    color: $secondary-color;
     align-items: center;
     width: 90%;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 200%;
+    text-align: left;
+
   }
   h1 {
     color: $primary-color;
@@ -454,6 +534,7 @@ $black: #1e1e1e;
     font-weight: 700;
     font-size: 1.75rem;
     font-family: "Roboto Bold";
+    
   }
   img {
     z-index: 3;
@@ -485,7 +566,7 @@ $black: #1e1e1e;
   
   color: $primary-color;
   a {
-    font-family: 'Roboto';
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
