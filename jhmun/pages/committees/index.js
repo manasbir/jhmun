@@ -35,7 +35,6 @@ export default function Committees() {
                         <div className={styles.committeeText}>
                             <h1>Historical Crisis Committee (HCC)</h1>
                             <h2>Berlin Crisis of 1961</h2>
-                            <p>Difficulty: Hard</p>
                         </div>
                     </div>
                 </Link>
@@ -45,7 +44,6 @@ export default function Committees() {
                         <div className={styles.committeeText}>
                             <h1>Social, Humanitarian & Cultural Committee (SOCHUM)</h1>
                             <h2>Uyghur Muslims Disenfranchisement</h2>
-                            <p>Difficulty: Medium</p>
                         </div>
                     </div>
                 </Link>
@@ -55,7 +53,6 @@ export default function Committees() {
                         <div className={styles.committeeText}>
                             <h1>United Nations Office on Drugs & Crime (UNODC)</h1>
                             <h2>Organ Trafficking</h2>
-                            <p>Difficulty: Medium</p>
                         </div>
                     </div>
                 </Link>
@@ -65,7 +62,6 @@ export default function Committees() {
                         <div className={styles.committeeText}>
                             <h1>United Nations development program (UNDP)</h1>
                             <h2>Palestine, Israel Dispute</h2>
-                            <p>Difficulty: Moderate</p>
                         </div>
                     </div>
                 </Link>        
