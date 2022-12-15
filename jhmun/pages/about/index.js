@@ -33,19 +33,19 @@ return (
         </div>
         <div className={styles.text}>
             <h2>Contact Us</h2>
-            <a href="https://www.instagram.com/jhmun2023/" target="_blank">
+            <a href="https://www.instagram.com/jhmun2023/" target="_blank" rel="noreferrer">
             <div className={styles.socials}>
                 <img src="/design/Icons & Buttons/insta.svg"/>
                 @jhmun2023
                 </div>
             </a>
-            <a href="mailto:jhmun@gmail.com" target="_blank">
+            <a href="mailto:jhmun@gmail.com" target="_blank" rel="noreferrer">
             <div className={styles.socials}>
                 <img src="/design/Icons & Buttons/gmail.svg"/>
                 jhmun@gmail.com
                 </div>
             </a>
-            <a href="https://www.google.com/maps/place/Johnston+Heights+Secondary+School/@49.1799062,-122.8010459,17z/data=!4m10!1m2!2m1!1sjohnston+heights!3m6!1s0x5485d74048d730e3:0xf4ea6ac459ca5f91!8m2!3d49.1822047!4d-122.7970244!15sChBqb2huc3RvbiBoZWlnaHRzkgELaGlnaF9zY2hvb2zgAQA!16zL20vMGRoNHdn" target="_blank">
+            <a href="https://www.google.com/maps/place/Johnston+Heights+Secondary+School/@49.1799062,-122.8010459,17z/data=!4m10!1m2!2m1!1sjohnston+heights!3m6!1s0x5485d74048d730e3:0xf4ea6ac459ca5f91!8m2!3d49.1822047!4d-122.7970244!15sChBqb2huc3RvbiBoZWlnaHRzkgELaGlnaF9zY2hvb2zgAQA!16zL20vMGRoNHdn" target="_blank" rel="noreferrer">
             <div className={styles.socials}>
                 <img src="/design/Icons & Buttons/maps.svg"/>
                 Johnston Heights, 15350 99 Ave, Surrey, BC V3R 0R9
