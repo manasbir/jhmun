@@ -15,7 +15,9 @@ export default function Secretariat() {
             Secretariat
         </h1>
         <div className={styles.people}>
-            
+            <div className={styles.person}>
+                <h1>Krishna Verma</h1>
+            </div>
         </div>
         </main>
         </div>

@@ -141,8 +141,7 @@ $black: #1e1e1e;
   align-items: center;
   justify-content: start;
   color: $secondary-color;
-  margin-left: 5vw;
-  margin-bottom: 3rem;
+  margin: 2.5vw;
   width: 25rem;
   height: 35rem;
   background-color: $white;
@@ -192,5 +191,46 @@ $black: #1e1e1e;
     text-align: left;
     width: 100%;
     margin: 0;
+  }
+}
+
+.people {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: $secondary-color;
+  margin: 2.5vw;
+  width: 25rem;
+  height: 35rem;
+  background-color: $white;
+  border-radius: 1em;
+  box-shadow: 0 0 0.5em $black;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  img {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 23rem;
+    object-fit: contain;
+    border-radius: .5em;
+  }
+}
+
+.person {
+  h1 {
+    font-family: "Roboto Bold";
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: $secondary-color;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+  p {
+
   }
 }

@@ -11,7 +11,7 @@ return (
     </Head>
     <main className={styles.main}>
         <h1 className={styles.title}>
-            About JHMUN
+            About Johnston Heights MUN
         </h1>
         <div className={styles.text}>
             <h2>What is Model United Nations</h2>

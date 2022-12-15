@@ -122,6 +122,15 @@ $black: #1e1e1e;
   }
 }
 
+@keyframes loadIn5 {
+  0% { 
+    opacity: 0.5; 
+  }
+  100% { 
+    opacity: 1; 
+  }
+}
+
 @keyframes loadInBackwards {
   0% { 
     opacity: .5; 
@@ -238,10 +247,9 @@ $black: #1e1e1e;
   border-radius: 0 0 1.25rem 1.25rem;
 }
 .menu1 {
-  animation: loadInBackwards 1s;
   margin-right: 1rem;
   color: #ffffff;
-
+  animation: loadIn5 .5s ease-out;
       width: 30%;
       align-items: center;
       position: relative;
@@ -308,7 +316,7 @@ $black: #1e1e1e;
   }
   .menu2 {
     margin-right: 1rem;
-  
+    animation: loadIn5 .5s ease-out;
     width: 30%;
     align-items: center;
     position: relative;
