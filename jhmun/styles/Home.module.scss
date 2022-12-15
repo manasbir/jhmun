@@ -168,7 +168,7 @@ $black: #1e1e1e;
 .main {
   box-sizing: border-box;
   width: 100%;
-  margin: 0;
+  margin-top: -7.5rem;
   position: relative;
   min-height: 100vh;
   align-items: center;
@@ -182,7 +182,7 @@ $black: #1e1e1e;
   max-width: fit-content;
   z-index: 30;
   height: 4rem;
-  animation: fadeIn 1.5s;
+  animation: fadeIn 1.5s ease-in-out;
   img {
     animation: fadeIn 1.5s;
     height: 100%;
@@ -199,6 +199,54 @@ $black: #1e1e1e;
 .logo :not(:hover) {
   animation: fadeIn2 1.5s;
 }
+
+.header1 {
+  top: 0;
+  position: relative;
+  height: rem;
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+.menu1 {
+  animation: fadeIn 1s;
+  margin-right: 1rem;
+
+      width: 30%;
+      align-items: center;
+      position: relative;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      z-index: 10;
+
+    color: rgba(57,120,76,1);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .menu1:hover {
+    animation: fadeOut .25s forwards;
+  }
+
+  .menu1 :not(:hover) {
+    animation: fadeIn .5s forwards;
+  }
+
+  .menu1 a:hover {
+    animation: fadeIn .25s;
+  }
 
 
 .dropdown {
@@ -258,7 +306,7 @@ $black: #1e1e1e;
 .cover {
   margin-top: -1.25rem;
   background-color: #1A3A16;
-  animation: loadIn2 2s;
+  animation: loadIn2 2s ease-in-out;
   
   position: relative;
   width: 100%;
@@ -280,7 +328,7 @@ $black: #1e1e1e;
   z-index: 0;
   h1 {
     margin: 0;
-    animation: loadIn 2s;
+    animation: loadIn 2s ease-in-out;
     font-family:'Roboto Bold';
     font-style: normal;
     font-weight: 900;
@@ -290,7 +338,7 @@ $black: #1e1e1e;
   }
   p {
     margin: 0;
-    animation: loadIn 2s;
+    animation: loadIn 2s ease-in-out;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 400;
@@ -300,7 +348,7 @@ $black: #1e1e1e;
   }
   hr {
     margin: 0.5rem;
-    animation: loadIn 2s;
+    animation: loadIn 2s ease-in-out;
     position: relative;
     width: 60vw;
     height: 0px;
@@ -309,7 +357,7 @@ $black: #1e1e1e;
   button {
     position: relative;
     border-radius: 10px;
-    animation: loadIn 6s;
+    animation: loadIn 6s ease-in-out;
     animation-iteration-count: 1;
     padding: 15px;
     align-items: center;
@@ -332,7 +380,7 @@ $black: #1e1e1e;
     }
   } 
   a {
-    animation: loadIn 2s;
+    animation: loadIn 2s ease-in-out;
     margin-top: 2%;
     max-height: fit-content;
     max-width: fit-content;
@@ -351,13 +399,13 @@ $black: #1e1e1e;
 
 .cover button:hover {
   cursor: pointer;
-  animation: changeColor 0.5s;
+  animation: changeColor 0.5s ease-in-out;
   background-color: $white;
   color: #0e2b26;
 }
 
 .cover button:not(:hover) {
-  animation: changeColor2 0.5s;
+  animation: changeColor2 0.5s ease-in-out;
 }
 
 .background {

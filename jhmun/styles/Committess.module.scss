@@ -199,7 +199,7 @@ $black: #1e1e1e;
     text-align: left;
     animation: loadIn 3s;
     animation-iteration-count: 1;
-    color: $primary-color;
+    color: $secondary-color;
   }
   p {
     font-family: Roboto;
@@ -207,7 +207,7 @@ $black: #1e1e1e;
     text-align: left;
     animation: loadIn 3s;
     animation-iteration-count: 1;
-    color: $primary-color;
+    color: $secondary-color;
   }
 }
 
@@ -244,19 +244,19 @@ $black: #1e1e1e;
     font-family: "Roboto Bold";
     text-align: left;
     font-size: 2rem;
-    color: $primary-color;
+    color: $secondary-color;
   }
   p {
     font-family: Roboto;
     text-align: left;
     font-size: 1.2rem;
-    color: $primary-color;
+    color: $secondary-color;
   }
   h2 {
     margin: 0;
     font-family: "Roboto Bold";
     text-align: left;
     font-size: 1.5rem;
-    color: $primary-color;
+    color: $secondary-color;
   }
 }
