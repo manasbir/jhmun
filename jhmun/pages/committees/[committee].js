@@ -169,7 +169,12 @@ export default function Committees() {
                 <div className={styles.button}>
                 <Link
                 href={`/committees/${committee}/backgrounder`}
-                ><button>Backgrounder</button></Link>
+                ><button>Backgrounder</button>
+                </Link>
+                <Link
+                href={`/committees/${committee}/country-matrix`}
+                ><button>Country Matrix</button>
+                </Link>
                 </div>
             </div>
                 <div className={styles.description}>

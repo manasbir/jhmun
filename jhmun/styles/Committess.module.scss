@@ -81,6 +81,7 @@ $black: #1e1e1e;
   animation: loadIn 2s ease-in-out;
   button{
   margin-top: 3rem;
+  margin: 2.5rem,;
   position: relative;
   border-radius: 10px;
   animation: loadIn 3s;
@@ -109,11 +110,11 @@ $black: #1e1e1e;
 
 @keyframes changeColor {
 0% { color: $white; background-color: transparent; }
-100% { color: #0e2b26; background-color: $white; }
+100% { color: #2c3433; background-color: $white; }
 }
 
 @keyframes changeColor2 {
-0% { color: #0e2b26; background-color: $white; }
+0% { color: #303030; background-color: $white; }
 100% { color: $white; background-color: transparent; }
 }
 
@@ -122,7 +123,7 @@ $black: #1e1e1e;
   cursor: pointer;
   animation: changeColor 0.5s;
   background-color: $white;
-  color: #0e2b26;
+  color: #303030;
 }
 
 .button button:not(:hover) {
@@ -131,18 +132,18 @@ $black: #1e1e1e;
 
 @keyframes changeColor {
     0% { color: $white; background-color: transparent; }
-    100% { color: #0e2b26; background-color: $white; }
+    100% { color: #303030; background-color: $white; }
   }
   
   @keyframes changeColor2 {
-    0% { color: #0e2b26; background-color: $white; }
+    0% { color: #303030; background-color: $white; }
     100% { color: $white; background-color: transparent; }
   }
 
 .buttons button:hover {
     animation: changeColor 0.5s;
     background-color: $white;
-    color: #0e2b26;
+    color: #303030;
 }
   
 .buttons button:not(:hover) {
