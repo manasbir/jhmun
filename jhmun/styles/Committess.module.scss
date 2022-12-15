@@ -78,6 +78,7 @@ $black: #1e1e1e;
 }
 
 .button {
+  animation: loadIn 2s ease-in-out;
   button{
   margin-top: 3rem;
   position: relative;

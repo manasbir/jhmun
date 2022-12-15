@@ -18,9 +18,9 @@ From my first experience as a delegate debating with others to now. I consider m
         <br></br>
         Krishna Verma
         <br></br>
-        Secratary General
+        Secretary General
         <br></br>
-        Johnston Heights Model United Nation
+        Johnston Heights Model United Nations
         <br></br>
         </p>
     )

@@ -86,6 +86,19 @@ export default function Committees() {
             </Head>
             <div className={"background"}>
                 <style jsx>{`
+                    @keyframes loadIn {
+                        0% { 
+                          opacity: 0; 
+                          transform: translateY(-0.5em);
+                        }
+                        100% { 
+                          opacity: 1; 
+                          transform: translateY(0);
+                        }
+                      }
+
+                    
+
                     @keyframes loadIn2 {
                         0% { 
                         background-position: 00 00;
@@ -121,7 +134,7 @@ export default function Committees() {
                     }
                     h1 {
                         color: white;
-                        animation: loadIn 2s;
+                        animation: loadIn 2s ease-in-out;
                         font-family: 'Roboto Bold';
                         font-style: normal;
                         font-weight: 750;
@@ -132,6 +145,7 @@ export default function Committees() {
                         margin: 0;
                     }
                     hr {
+                        animation: loadIn 2s ease-in-out;
                         width: 60vw;
                         height: 0px;
                         border: 1px solid white;
@@ -140,7 +154,7 @@ export default function Committees() {
                         margin: 0;
                         text-align: center;
                         color: white;
-                        animation: loadIn 2s;
+                        animation: loadIn 2s ease-in-out;
                         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                         font-style: normal;
                         font-weight: 500;

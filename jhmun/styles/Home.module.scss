@@ -157,6 +157,10 @@ $black: #1e1e1e;
   100% { color: #39784C50; }
 }
 
+@keyframes fadeOut4 {
+  100% { color: #39784C50; }
+}
+
 @keyframes fadeIn3 {
   0% { color: #39784C50; }
   100% { color: #39784C; }
@@ -192,7 +196,6 @@ $black: #1e1e1e;
   z-index: 30;
   height: 4rem;
   animation: fadeIn 1.5s ease-in-out;
-  margin: 1em;
   img {
     animation: fadeIn 1.5s;
     height: 100%;
@@ -211,9 +214,9 @@ $black: #1e1e1e;
 }
 
 .header1 {
+  padding: 1em;
   top: 0;
   position: relative;
-  height: rem;
   background-color: rgba(255, 255, 255, 0);
   width: 100%;
   display: flex;
@@ -278,6 +281,7 @@ $black: #1e1e1e;
   }
 
   .header2 {
+    padding: 1em;
     animation: menuLoading 1s ease-out;
     top: 0;
     position: fixed;
@@ -353,12 +357,12 @@ $black: #1e1e1e;
 }
 
 .dropdown a:not(:hover) {
-  animation: fadeOut3 .25s;
+  animation: fadeOut4 .25s;
   color: #39784C50;
 }
 
 
-@keyframes loadIn {
+@keyframes loadIn3 {
   0% { 
     opacity: 0; 
     transform: translateY(-0.5em);
@@ -374,9 +378,8 @@ $black: #1e1e1e;
     background-position: 00 00;
   }
   100% { 
-    background-position: 50 50;
+    background-position: 50 75;
   }
-
 }
 
 .cover {
@@ -386,7 +389,7 @@ $black: #1e1e1e;
   
   position: relative;
   width: 100%;
-  min-height: 102.5vh;
+  min-height: 105vh;
 
   display: flex;
   color: $white;
@@ -395,16 +398,19 @@ $black: #1e1e1e;
   align-items: center;
 
 
-  background-image: url("../public/design/Images/JHSS dark.png");
+  background-image: url("../public/design/Images/background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+
   z-index: 0;
   h1 {
     margin: 0;
-    animation: loadIn 2s ease-in-out;
+    animation: loadIn3 2s ease-in-out;
     font-family:'Roboto Bold';
     font-style: normal;
     font-weight: 900;
@@ -414,7 +420,7 @@ $black: #1e1e1e;
   }
   p {
     margin: 0;
-    animation: loadIn 2s ease-in-out;
+    animation: loadIn3 2s ease-in-out;
     font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 400;
@@ -424,7 +430,7 @@ $black: #1e1e1e;
   }
   hr {
     margin: 0.5rem;
-    animation: loadIn 2s ease-in-out;
+    animation: loadIn3 2s ease-in-out;
     position: relative;
     width: 60vw;
     height: 0px;
@@ -433,7 +439,7 @@ $black: #1e1e1e;
   button {
     position: relative;
     border-radius: 10px;
-    animation: loadIn 6s ease-in-out;
+    animation: loadIn3 6s ease-in-out;
     animation-iteration-count: 1;
     padding: 15px;
     align-items: center;
