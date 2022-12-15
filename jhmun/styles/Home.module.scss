@@ -122,6 +122,17 @@ $black: #1e1e1e;
   }
 }
 
+@keyframes loadInBackwards {
+  0% { 
+    opacity: .5; 
+    transform: translateY(1em);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
 
 @keyframes fadeOut {
   0% { opacity: 100%; }
@@ -227,7 +238,7 @@ $black: #1e1e1e;
   border-radius: 0 0 1.25rem 1.25rem;
 }
 .menu1 {
-  animation: fadeIn 1s;
+  animation: loadInBackwards 1s;
   margin-right: 1rem;
   color: #ffffff;
 
