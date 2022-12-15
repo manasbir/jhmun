@@ -28,7 +28,7 @@ return (
                 The secretariat is excited to host the first annual session of JHMUN on February 11th, 2023. Our mission is to facilitate the development of public speaking, efficient researching, and critical thinking skills. Designed especially with the developing delegate in mind, we understand that this is a learning experience. JHMUN is an excellent opportunity for delegates to discuss past and present geopolitical issues in an academically stimulating environment. 
                 <br></br>
                 <br></br>
-                Through fierce debate and persuasive negotiation, delegates will deepen their understanding of the multifaceted relationships that link states, expand their perspectives on global conflicts and construct comprehensive and applicable Resolution Papers. The skills, experiences, and networks nurtured through JHMUN will supplement everyone's growth as global citizens. Our conference prioritizes accessibility and is completely free to every prospective high-school delegate.
+                Through fierce debate and persuasive negotiation, delegates will deepen their understanding of the multifaceted relationships that link states, expand their perspectives on global conflicts and construct comprehensive and applicable Resolution Papers. The skills, experiences, and networks nurtured through JHMUN will supplement everyone&#39;s growth as global citizens. Our conference prioritizes accessibility and is completely free to every prospective high-school delegate.
             </p>
         </div>
     </main>
