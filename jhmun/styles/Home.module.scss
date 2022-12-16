@@ -556,6 +556,7 @@ $black: #1e1e1e;
   position: relative;
   width: 100%;
   height: 110vh;
+  min-height: 50em;
 
   display: flex;
   color: $white;
@@ -571,8 +572,11 @@ $black: #1e1e1e;
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat; */
-  background-size: 100% 100%;
+  background-size: 100%;
   background-attachment: fixed;
+  -moz-appearace:none;
+  -webkit-appearace:none;
+  appearance:none;
 
   background-color: rgba(0, 0, 0, 0.2);
   h1 {
