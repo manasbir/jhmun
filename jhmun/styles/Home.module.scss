@@ -249,13 +249,14 @@ $black: #1e1e1e;
   margin-right: 1rem;
   color: #ffffff;
   animation: loadIn5 .5s ease-out;
-      width: 30%;
-      align-items: center;
-      position: relative;
-      flex-direction: row;
-      display: flex;
-      justify-content: space-between;
-      z-index: 10;
+  width: 30%;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: right;
+  z-index: 10;
   a {
     text-decoration: none;
     font-style: normal;
@@ -263,6 +264,9 @@ $black: #1e1e1e;
     font-size: 1.2rem;
     text-align: center;
     letter-spacing: 0.05em;
+    line-height: 200%;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
