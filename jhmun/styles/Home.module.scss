@@ -517,14 +517,15 @@ $black: #1e1e1e;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+  align-items: flex-end;
   width: 100%;
   padding-left: 15vw;
   padding-right: 15vw;
   padding-top: 3rem;
 
   img {
+    min-width: 500px;
     width: 15vw;
     object-fit: cover;
     border-radius: 10px;
