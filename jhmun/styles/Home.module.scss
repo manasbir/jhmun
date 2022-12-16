@@ -487,6 +487,7 @@ $black: #1e1e1e;
   -webkit-appearace:none;
   appearance:none;
 
+  background-blend-mode: color;
   background-color: rgba(0, 0, 0, 0.2);
   h1 {
     margin: 0;
@@ -576,6 +577,8 @@ $black: #1e1e1e;
   -webkit-appearace:none;
   appearance:none;
 
+
+  background-blend-mode: color;
   background-color: rgba(0, 0, 0, 0.2);
   h1 {
     margin: 0;
