@@ -131,7 +131,7 @@ function MyApp({ Component, pageProps }) {
   } else {
       return (
         <div className={styles.header3}>
-          <div className={styles.logo}>
+          <div className={styles.logo2}>
             <Link href={"/"}>
               <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
             </Link>  
