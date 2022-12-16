@@ -128,9 +128,6 @@ export default function Committees() {
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-attachment: fixed;
-                    
-                        padding: 10%;
-                        white-space: nowrap;
                     }
                     h1 {
                         color: white;
@@ -143,6 +140,7 @@ export default function Committees() {
                         text-align: center;
                         letter-spacing: 0.05em;
                         margin: 0;
+                        overflow-wrap: break-word;
                     }
                     hr {
                         animation: loadIn 2s ease-in-out;

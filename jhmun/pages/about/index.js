@@ -11,7 +11,7 @@ return (
     </Head>
     <main className={styles.main}>
         <h1 className={styles.title}>
-            About Johnston Heights MUN
+            About JHMUN
         </h1>
         <div className={styles.text}>
             <h2>What is Model United Nations</h2>
@@ -20,6 +20,7 @@ return (
                 <br></br>
                 <br></br>
                 Model United Nations committees follow a format that is meant to uphold its universal principal of academic rigour. Delegates choose a available delegation through the <b>Country Matrix</b>. It is then beneficial to write Position Papers on your delegations stance. Position Papers are mandatory for award considerations and are also a opportunity for delegates to become accustomed to their delegations stance. During committees sessions, students are upheld to timed speeches and follow the mandates of the chair. For guidance regarding Rules of Procedures, go to our <b>Resources Page</b>.  
+                Model United Nations committees follow a format that is meant to uphold its universal principal of academic rigour. Delegates may choose an available delegation through the <a href={"/committees"}>Country Matrix</a>. It is then beneficial to write Position Papers on your delegations stance. Position Papers are mandatory for award considerations and are also a opportunity for delegates to become accustomed to their delegations stance. During committees sessions, students are upheld to timed speeches and follow the mandates of the chair. For guidance regarding Rules of Procedures, go to our <a href={"/resources"}>Resources Page</a>.  
             </p>
             </div>
         <div className={styles.text2}>
