@@ -349,6 +349,14 @@ $black: #1e1e1e;
       color: #39784C;
     }
 
+    .logo2 {
+      
+      position: relative;
+      object-fit: cover;
+      img {
+        height: 100%;
+      }
+    }
 
     .header3 {
       padding: 1em;
@@ -358,9 +366,9 @@ $black: #1e1e1e;
       background-color: rgba(255, 255, 255, 1);
       width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       z-index: 10;
       border-bottom: 1px solid rgb(213, 213, 213);
       box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
@@ -375,6 +383,7 @@ $black: #1e1e1e;
       justify-content: right;
       z-index: 10;
       color: rgba(57,120,76,1);
+      width: 100%;
       a {
       text-decoration: none;
       font-style: normal;
@@ -383,8 +392,8 @@ $black: #1e1e1e;
       text-align: center;
       letter-spacing: 0.05em;
       line-height: 200%;
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
       }
       }
     

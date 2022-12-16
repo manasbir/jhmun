@@ -20,13 +20,14 @@ function MyApp({ Component, pageProps }) {
         setIsMobile(false);
       }
     }
+    window.addEventListener('resize', setMobile);
     },[])
 
 
 
   useEffect(() => {
     const setScroll = () => {
-      if (window.scrollY > 75) {
+      if (window.scrollY > 100) {
         setIsMenuScroll(true);
       } else {
         setIsMenuScroll(false);
@@ -64,69 +65,70 @@ function MyApp({ Component, pageProps }) {
 
   const handleMenuScroll = () => {
     if (!isMobile) {
-    if (!isMenuScroll) {
-      return (
-        <div className={styles.header1}>
-          <div className={styles.logo}>
-            <Link href={"/"}>
-              <img src={"/design/Icons & Buttons/MUN Eagle White.svg"}/>
-            </Link>  
-          </div>    
-          <div className={styles.menu1}>
-            <Link
-              onMouseEnter={() => setIsComHovered(true)} 
-              onMouseLeave={() => setIsComHovered(false)}
-              href={"/committees"}>
-                COMMITTEES
-              {handleComHover()}
-            </Link>
+      if (!isMenuScroll) {
+        return (
+          <div className={styles.header1}>
+            <div className={styles.logo}>
+              <Link href={"/"}>
+                <img src={"/design/Icons & Buttons/MUN Eagle White.svg"}/>
+              </Link>  
+            </div>    
+            <div className={styles.menu1}>
+              <Link
+                onMouseEnter={() => setIsComHovered(true)} 
+                onMouseLeave={() => setIsComHovered(false)}
+                href={"/committees"}>
+                  COMMITTEES
+                {handleComHover()}
+              </Link>
 
-            <Link 
-              onMouseEnter={() => setIsAboutHovered(true)} 
-              onMouseLeave={() => setIsAboutHovered(false)}
-              href={"/about"}>
-                ABOUT
-              {handleAboutHover()}
-            </Link>
+              <Link 
+                onMouseEnter={() => setIsAboutHovered(true)} 
+                onMouseLeave={() => setIsAboutHovered(false)}
+                href={"/about"}>
+                  ABOUT
+                {handleAboutHover()}
+              </Link>
 
-            <Link href={"/resources"}>RESOURCES</Link>
+              <Link href={"/resources"}>RESOURCES</Link>
 
-            <Link href={"/registration"}>REGISTRATION</Link>
+              <Link href={"/registration"}>REGISTRATION</Link>
+            </div>
           </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className={styles.header2}>
-          <div className={styles.logo}>
-            <Link href={"/"}>
-              <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
-            </Link>  
-          </div>    
-          <div className={styles.menu2}>
-            <Link
-              onMouseEnter={() => setIsComHovered(true)} 
-              onMouseLeave={() => setIsComHovered(false)}
-              href={"/committees"}>
-                COMMITTEES
-              {handleComHover()}
-            </Link>
+        )
+      } else {
+        return (
+          <div className={styles.header2}>
+            <div className={styles.logo}>
+              <Link href={"/"}>
+                <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+              </Link>  
+            </div>    
+            <div className={styles.menu2}>
+              <Link
+                onMouseEnter={() => setIsComHovered(true)} 
+                onMouseLeave={() => setIsComHovered(false)}
+                href={"/committees"}>
+                  COMMITTEES
+                {handleComHover()}
+              </Link>
 
-            <Link 
-              onMouseEnter={() => setIsAboutHovered(true)} 
-              onMouseLeave={() => setIsAboutHovered(false)}
-              href={"/about"}>
-                ABOUT
-              {handleAboutHover()}
-            </Link>
+              <Link 
+                onMouseEnter={() => setIsAboutHovered(true)} 
+                onMouseLeave={() => setIsAboutHovered(false)}
+                href={"/about"}>
+                  ABOUT
+                {handleAboutHover()}
+              </Link>
 
-            <Link href={"/resources"}>RESOURCES</Link>
+              <Link href={"/resources"}>RESOURCES</Link>
 
-            <Link href={"/registration"}>REGISTRATION</Link>
+              <Link href={"/registration"}>REGISTRATION</Link>
+            </div>
           </div>
-        </div>
-      )
-    }} else {
+        )
+      }
+  } else {
       return (
         <div className={styles.header3}>
           <div className={styles.logo}>
@@ -134,7 +136,7 @@ function MyApp({ Component, pageProps }) {
               <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
             </Link>  
           </div>    
-          <div className={styles.menu2}>
+          <div className={styles.menu3}>
             <Link
               onMouseEnter={() => setIsComHovered(true)} 
               onMouseLeave={() => setIsComHovered(false)}
