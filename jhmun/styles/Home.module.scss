@@ -478,7 +478,7 @@ $black: #1e1e1e;
   align-items: center;
 
 
-  background-image: url("../public/design/Images/JHSS dark.png");
+  background-image: url("../public/design/Images/JHSS dark.png") !important;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -516,7 +516,7 @@ $black: #1e1e1e;
   button {
     position: relative;
     border-radius: 10px;
-    animation: loadIn3 4s ease-in-out;
+    animation: loadIn3 2s ease-in-out;
     animation-iteration-count: 1;
     padding: 15px;
     align-items: center;
@@ -599,7 +599,7 @@ $black: #1e1e1e;
   button {
     position: relative;
     border-radius: 10px;
-    animation: loadIn3 4s ease-in-out;
+    animation: loadIn3 2s ease-in-out;
     animation-iteration-count: 1;
     padding: 15px;
     align-items: center;
