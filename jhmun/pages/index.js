@@ -33,7 +33,7 @@ export default function Home() {
             <h2>Dear Delegates and Faculty Advisors,</h2>
             {mainText()}
           </div>
-          <img src={"/design/Images/people/manas.png"}></img>
+          <img src={"/design/Images/people/krisha.png"}></img>
         </div>
       </div>
     </div>
