@@ -546,6 +546,89 @@ $black: #1e1e1e;
   }
 }
 
+.coverMobile {
+  animation: loadIn2 2s ease-in-out;
+  
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  min-height: 50em;
+
+  display: flex;
+  color: $white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  background-image: url("../public/design/Images/JHSS dark mobile.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  h1 {
+    margin: 0;
+    animation: loadIn3 2s ease-in-out;
+    font-family:'Roboto Bold';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  p {
+    margin: .5rem;
+    animation: loadIn3 2s ease-in-out;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28px;
+    text-align: center;
+  }
+  hr {
+    margin: 0.5rem;
+    animation: loadIn3 2s ease-in-out;
+    position: relative;
+    width: 60vw;
+    height: 0px;
+    border: 1px solid $white;
+  }
+  button {
+    position: relative;
+    border-radius: 10px;
+    animation: loadIn3 6s ease-in-out;
+    animation-iteration-count: 1;
+    padding: 15px;
+    align-items: center;
+    position: relative;
+    min-width: 150px;
+    min-height: 20px;
+    width: fit-content;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 24px;
+    text-align: center;
+    color: $white;
+    a {
+      color:inherit;
+      text-decoration: none;
+    }
+  } 
+  a {
+    animation: loadIn 2s ease-in-out;
+    margin-top: 2%;
+    max-height: fit-content;
+    max-width: fit-content;
+  }
+}
+
 @keyframes changeColor {
   0% { color: $white; background-color: transparent; }
   100% { color: #303030; background-color: $white; }
