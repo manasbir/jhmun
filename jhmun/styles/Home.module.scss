@@ -407,7 +407,6 @@ $black: #1e1e1e;
 
 .cover {
   margin-top: -1.25rem;
-  background-color: $primary-color;
   animation: loadIn2 2s ease-in-out;
   
   position: relative;
@@ -428,7 +427,6 @@ $black: #1e1e1e;
   background-attachment: fixed;
 
   background-color: rgba(0, 0, 0, 0.2);
-  background-blend-mode: multiply;
 
   z-index: 0;
   h1 {
