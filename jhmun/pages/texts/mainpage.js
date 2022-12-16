@@ -1,4 +1,4 @@
-
+import styles from '../../styles/Home.module.scss'
 export default function mainText () {
     return (
         <p>
@@ -14,7 +14,7 @@ From my first experience as a delegate debating with others to now. I consider m
 
 <br></br><br></br>
         Sincerely,<br></br>
-        <img src={"/design/Icons & Buttons/sig.svg"} style={{marginBottom: -15}}/>
+        <img src={"/design/Icons & Buttons/sig.svg"} className={styles.sig}/>
         <br></br>
         Krishna Verma
         <br></br>
