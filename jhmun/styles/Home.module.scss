@@ -564,11 +564,14 @@ $black: #1e1e1e;
   align-items: center;
 
 
-  background-image: url("../public/design/Images/JHSS dark mobile.png");
+  background-image: url("../public/design/Images/JHSS dark mobile.png") !important;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -moz-appearace:none;
+  -webkit-appearace:none;
+  appearance:none;
 
   // background-color: rgba(0, 0, 0, 0.2);
   h1 {
