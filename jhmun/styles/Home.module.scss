@@ -551,6 +551,7 @@ $black: #1e1e1e;
 
 .coverMobile {
   animation: loadIn2 2s ease-in-out;
+  min-height:100%;
   
   position: relative;
   width: 100%;
@@ -565,7 +566,10 @@ $black: #1e1e1e;
 
 
   background-image: url("../public/design/Images/JHSS dark mobile.png") !important;
-  background-position: center;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -573,7 +577,7 @@ $black: #1e1e1e;
   -webkit-appearace:none;
   appearance:none;
 
-   background-color: red;
+  background-color: red;
   h1 {
     margin: 0;
     animation: loadIn3 2s ease-in-out;
