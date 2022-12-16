@@ -188,8 +188,9 @@ function MyApp({ Component, pageProps }) {
 
       </main>
       <footer className={styles.footer}>
-        <p>Copyright © Johnston Heights Model United Nations 2023 </p> 
-        <p> Website Created by <a href="https://github.com/manasbir">Manasbir Bagri</a>, Website & Logo Designed by Gordon Li</p>
+        <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}></img>
+        <h2>¡Me gusta comer la hamburguesa con leche!</h2>
+        <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir">Manasbir Bagri</a>, Designed by Gordon Li</p>
       </footer>
       </div>
   )

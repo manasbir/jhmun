@@ -850,12 +850,10 @@ $black: #1e1e1e;
 
 .footer {
   border-top: 2px solid $primary-color;
-  max-width: 100vw;
   width: 100%;
   padding: 1rem;
-  padding-bottom: 0rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 1.5rem;
   align-items: center;
   justify-content: space-between;
@@ -881,6 +879,17 @@ $black: #1e1e1e;
     max-width: fit-content;
     width: 100%;
     color: $black;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $primary-color;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  img {
+    width: 6rem;
+    margin: 1rem;
   }
 }
 

@@ -8,7 +8,31 @@ import { useEffect, useState } from "react";
 export default function Committees() {
     const router = useRouter();
     const { committee } = router.query;
+    const [isMobile, setIsMobile] = useState(false);
 
+    useEffect(() => {
+        const setMobile = () => {
+            if (window.innerWidth < 1000) {
+                setIsMobile(true);
+            } else {
+                setIsMobile(false);
+            }
+        }
+        window.addEventListener('resize', setMobile);
+    }, [])
+
+    const handleMobile = () => {
+        if (!isMobile) {
+            return (
+            <div className={styles.submenu}>
+                <Link href={"/committees/hcc"}>Historical Crisis Committee</Link>
+                <Link href={"/committees/sochum"}>Social, Humanitarian & Cultural Committee</Link>
+                <Link href={"/committees/unodc"}>United Nations Office on Drugs and Crime</Link>
+                <Link href={"/committees/undp"}>United Nations Development Programme</Link>
+            </div>
+            )
+        }
+    }
 
     let title;
     let subTitle;
@@ -176,12 +200,7 @@ export default function Committees() {
                 </div>
             </div>
                 <div className={styles.description}>
-                <div className={styles.submenu}>
-                    <Link href={"/committees/hcc"}>Historical Crisis Committee</Link>
-                    <Link href={"/committees/sochum"}>Social, Humanitarian & Cultural Committee</Link>
-                    <Link href={"/committees/unodc"}>United Nations Office on Drugs and Crime</Link>
-                    <Link href={"/committees/undp"}>United Nations Development Programme</Link>
-                </div>
+                    {handleMobile()}
                 <div className={styles.text}>
                     <h1>Committee Description:</h1>
                     {text}
