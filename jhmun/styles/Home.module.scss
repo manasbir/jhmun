@@ -224,12 +224,12 @@ $black: #1e1e1e;
 
 .logo :hover{
   cursor: pointer;
-  animation: fadeOut2 1.5s;
+  animation: fadeOut2 1s;
   opacity: 50%;
 }
 
 .logo :not(:hover) {
-  animation: fadeIn2 1.5s;
+  animation: fadeIn2 1s;
 }
 
 .header1 {
@@ -245,7 +245,6 @@ $black: #1e1e1e;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  border-radius: 0 0 1.25rem 1.25rem;
 }
 .menu1 {
   color: #ffffff;
@@ -406,7 +405,7 @@ $black: #1e1e1e;
 }
 
 .cover {
-  margin-top: -1.25rem;
+  margin-top: -7rem;
   animation: loadIn2 2s ease-in-out;
   
   position: relative;
