@@ -10,6 +10,17 @@ function MyApp({ Component, pageProps }) {
   const [isCommitteesHovered, setIsComHovered] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const setMobile = () => {
+      if (window.innerWidth < 1000) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+    },[])
 
 
 
@@ -52,7 +63,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   const handleMenuScroll = () => {
-    console.log(isMenuScroll);
+    if (!isMobile) {
     if (!isMenuScroll) {
       return (
         <div className={styles.header1}>
@@ -87,6 +98,37 @@ function MyApp({ Component, pageProps }) {
     } else {
       return (
         <div className={styles.header2}>
+          <div className={styles.logo}>
+            <Link href={"/"}>
+              <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+            </Link>  
+          </div>    
+          <div className={styles.menu2}>
+            <Link
+              onMouseEnter={() => setIsComHovered(true)} 
+              onMouseLeave={() => setIsComHovered(false)}
+              href={"/committees"}>
+                COMMITTEES
+              {handleComHover()}
+            </Link>
+
+            <Link 
+              onMouseEnter={() => setIsAboutHovered(true)} 
+              onMouseLeave={() => setIsAboutHovered(false)}
+              href={"/about"}>
+                ABOUT
+              {handleAboutHover()}
+            </Link>
+
+            <Link href={"/resources"}>RESOURCES</Link>
+
+            <Link href={"/registration"}>REGISTRATION</Link>
+          </div>
+        </div>
+      )
+    }} else {
+      return (
+        <div className={styles.header3}>
           <div className={styles.logo}>
             <Link href={"/"}>
               <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
