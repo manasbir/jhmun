@@ -8,6 +8,20 @@ import mainText from './texts/mainpage';
 
 export default function Home() {
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const setMobile = () => {
+      if (window.innerWidth < 1000) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+    window.addEventListener('resize', setMobile);
+    },[])
+
+
   return (
     <div>
       <Head>
@@ -26,10 +40,10 @@ export default function Home() {
         <p><i>February 11th, 2023</i></p>
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
-      <div className={styles.texts}>
+      <div className={isMobile ? styles.textsMobile : styles.texts}>
         <h1><i>&quot;¡Me gusta comer la hamburguesa con leche!&quot;</i></h1>
-        <div className={styles.background}>
-          <div className={styles.text}>
+        <div className={isMobile ? styles.backgroundMobile : styles.background}>
+          <div className={isMobile ? styles.textMobile : styles.text}>
             <h2>Dear Delegates and Faculty Advisors,</h2>
             {mainText()}
           </div>
