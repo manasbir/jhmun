@@ -411,7 +411,8 @@ $black: #1e1e1e;
   
   position: relative;
   width: 100%;
-  min-height: 110vh;
+  height: 110vh;
+  min-height: 50em;
 
   display: flex;
   color: $white;
