@@ -304,7 +304,7 @@ $black: #1e1e1e;
     padding: 1em;
     animation: menuLoading 0.6s ease-out;
     top: 0;
-    position: fixed;
+    position: relative;
     background-color: rgba(255, 255, 255, 1);
     width: 100%;
     display: flex;
@@ -315,6 +315,23 @@ $black: #1e1e1e;
     border-bottom: 1px solid rgb(213, 213, 213);
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   }
+
+  .header4 {
+    background-color: red;
+    padding: 1em;
+    animation: menuLoading 0.6s ease-out;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  }
+
   .menu2 {
     animation: loadIn5 .5s ease-out;
     align-items: center;
@@ -349,6 +366,8 @@ $black: #1e1e1e;
       color: #39784C;
     }
 
+
+
     .logo2 {
       height: 4rem;
       position: relative;
@@ -370,12 +389,9 @@ $black: #1e1e1e;
       align-items: center;
       justify-content: space-between;
       z-index: 10;
-      border-bottom: 1px solid rgb(213, 213, 213);
-      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
     }
+    
     .menu3 {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
       animation: loadIn5 .5s ease-out;
       align-items: center;
       position: relative;
@@ -399,13 +415,13 @@ $black: #1e1e1e;
       }
       }
     
-      .menu2:hover {
+      .menu3:hover {
         animation: fadeOut3 .25s ease-in-out;
         color: #39784C50;
       }
       
     
-      .menu2 a:hover {
+      .menu3 a:hover {
         animation: fadeIn3 .25s forwards;
         color: #39784C;
       }

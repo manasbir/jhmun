@@ -66,6 +66,7 @@ function MyApp({ Component, pageProps }) {
   const handleMenuScroll = () => {
     if (!isMobile) {
       if (!isMenuScroll) {
+        console.log("not scrolled")
         return (
           <div className={styles.header1}>
             <div className={styles.logo}>
@@ -97,6 +98,7 @@ function MyApp({ Component, pageProps }) {
           </div>
         )
       } else {
+        console.log(" scrolled")
         return (
           <div className={styles.header2}>
             <div className={styles.logo}>
@@ -130,32 +132,38 @@ function MyApp({ Component, pageProps }) {
       }
   } else {
       return (
-        <div className={styles.header3}>
-          <div className={styles.logo2}>
-            <Link href={"/"}>
-              <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
-            </Link>  
-          </div>    
-          <div className={styles.menu3}>
-            <Link
-              onMouseEnter={() => setIsComHovered(true)} 
-              onMouseLeave={() => setIsComHovered(false)}
-              href={"/committees"}>
-                COMMITTEES
-              {handleComHover()}
-            </Link>
+        <div>
+          <div className={styles.header3}>
+            <div className={styles.logo2}>
+              <Link href={"/"}>
+                <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+              </Link>  
+            </div>
+          </div>
+          <div></div>
+          <div className={styles.header4}>
+            <div></div>
+            <div className={styles.menu3}>
+              <Link
+                onMouseEnter={() => setIsComHovered(true)} 
+                onMouseLeave={() => setIsComHovered(false)}
+                href={"/committees"}>
+                  COMMITTEES
+                {handleComHover()}
+              </Link>
 
-            <Link 
-              onMouseEnter={() => setIsAboutHovered(true)} 
-              onMouseLeave={() => setIsAboutHovered(false)}
-              href={"/about"}>
-                ABOUT
-              {handleAboutHover()}
-            </Link>
+              <Link 
+                onMouseEnter={() => setIsAboutHovered(true)} 
+                onMouseLeave={() => setIsAboutHovered(false)}
+                href={"/about"}>
+                  ABOUT
+                {handleAboutHover()}
+              </Link>
 
-            <Link href={"/resources"}>RESOURCES</Link>
+              <Link href={"/resources"}>RESOURCES</Link>
 
-            <Link href={"/registration"}>REGISTRATION</Link>
+              <Link href={"/registration"}>REGISTRATION</Link>
+            </div>
           </div>
         </div>
       )
