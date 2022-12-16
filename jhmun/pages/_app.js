@@ -66,7 +66,6 @@ function MyApp({ Component, pageProps }) {
   const handleMenuScroll = () => {
     if (!isMobile) {
       if (!isMenuScroll) {
-        console.log("not scrolled")
         return (
           <div className={styles.header1}>
             <div className={styles.logo}>
@@ -98,7 +97,6 @@ function MyApp({ Component, pageProps }) {
           </div>
         )
       } else {
-        console.log(" scrolled")
         return (
           <div className={styles.header2}>
             <div className={styles.logo}>
