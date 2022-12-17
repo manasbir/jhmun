@@ -156,13 +156,15 @@ export default function Committees() {
                         :
                         `
                         margin-top: 2rem;
-                        background-image: url("${image}") !important;
-                        background-position: center center;
+                        background-image: url("${image}");
+
                         -webkit-background-size: cover;
                         -moz-background-size: cover;
                         -o-background-size: cover;
                         background-size: cover;
+
                         background-repeat: no-repeat;
+
                         -moz-appearace:none;
                         -webkit-appearace:none;
                         appearance:none;
