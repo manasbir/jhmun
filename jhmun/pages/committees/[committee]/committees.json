@@ -3,7 +3,6 @@
         "title": "Historical Crisis Committee",
         "subTitle": "Berlin Crisis of 1960",
         "image": "/design/Images/Dark Berline Wall.png",
-        "numOfMembers": 2,
         "members": [
             {
                 "name": "Manasbir Bagri",
@@ -24,7 +23,6 @@
         "title": "Social Humanitarian Cultural Committee",
         "subTitle": "Uyghur Muslims Disenfranchisement",
         "image": "/design/Images/sochum.png",
-        "numOfMembers": 2,
         "members": [
             {
                 "name": "Manasbir Bagri",
@@ -45,7 +43,6 @@
         "title": "United Nations Office on Drugs and Crime",
         "subTitle": "Organ Trafficking",
         "image": "/design/Images/Dark Doctors.png",
-        "numOfMembers": 2,
         "members": [
             {
                 "name": "Manasbir Bagri",
@@ -66,7 +63,6 @@
         "title": "United Nations Development Programme",
         "subTitle": "Palestine, Israel Dispute",
         "image": "/design/Images/Palestine Israel.png",
-        "numOfMembers": 2,
         "members": [
             {
                 "name": "Manasbir Bagri",

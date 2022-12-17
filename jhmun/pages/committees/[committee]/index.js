@@ -78,7 +78,7 @@ export default function Committees() {
 
     const staff = () => {
         let staff = [];
-        for (let i = 0; i < numOfMembers; i++) {
+        for (let i = 0; i < currCommittee.members.length; i++) {
             staff.push(
             <div className={isMobile ? styles.cardMobile: styles.card}>
                 <div className={styles.cardText}>

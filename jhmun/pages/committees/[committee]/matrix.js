@@ -35,7 +35,7 @@ export default function Matrix() {
 
     const getMatrix = () => {
         let matrixDivs = [];
-        for (let i = 0; i < numOfDelegations; i++) {
+        for (let i = 0; i < matrix.delegations.length; i++) {
             if (matrix.delegations[i].isTaken == true) {
                 matrixDivs.push(
                 <div className={styles.matrixItemTaken}>
