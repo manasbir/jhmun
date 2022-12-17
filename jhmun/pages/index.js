@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 import { Suspense, useEffect, useState } from "react";
 import mainText from './texts/mainpage';
+import Footer from '../components/footer';
 
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
       <div className={isMobile ? styles.textsMobile : styles.texts}>
-        <h1><i>&quot;¡Me gusta comer la hamburguesa con leche!&quot;</i></h1>
+        <h1>𝙃𝙚𝙡𝙥𝙞𝙣𝙜 𝙎𝙝𝙖𝙥𝙚 𝙩𝙝𝙚 𝙇𝙚𝙖𝙙𝙚𝙧𝙨 𝙤𝙛 𝙏𝙤𝙢𝙤𝙧𝙧𝙤𝙬</h1>
         <div className={isMobile ? styles.backgroundMobile : styles.background}>
           <div className={isMobile ? styles.textMobile : styles.text}>
             <h2>Dear Delegates and Faculty Advisors,</h2>
@@ -50,6 +51,7 @@ export default function Home() {
           <img src={"/design/Images/people/krisha.png"}></img>
         </div>
       </div>
+      <Footer color={{color : "green"}}/>
     </div>
   )
 }

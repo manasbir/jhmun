@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../styles/general.module.scss'
+import Footer from "../../components/footer"
 
 export default function Committees() {
     return (
@@ -68,6 +69,7 @@ export default function Committees() {
                 </div>
 
             </main>
+            <Footer color={{color : "white"}}/>
         </div>
 
     )

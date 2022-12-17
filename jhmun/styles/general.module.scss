@@ -193,7 +193,7 @@ $black: #1e1e1e;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: start;
   h1 {
     font-family: "Roboto Bold";
     font-size: 1.5rem;
@@ -205,20 +205,21 @@ $black: #1e1e1e;
   }
   h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-style: italic;
     color: $secondary-color;
     text-align: left;
-    font-weight: 400;
+    font-weight: 200;
     width: 100%;
     margin: 0;
   }
   p {
-    font-family: "Roboto Condensed";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     color: $secondary-color;
     text-align: left;
     width: 100%;
-    margin: 0;
+    margin-top: 1rem;
   }
 }
 
@@ -298,6 +299,7 @@ $black: #1e1e1e;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 5vh;
@@ -305,7 +307,7 @@ $black: #1e1e1e;
 
 .resources {
   animation: menuLoading 1s ease-in-out;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -313,7 +315,7 @@ $black: #1e1e1e;
   color: white;
   margin: 2vw;
   width: 20rem;
-  height: 35rem;
+  height: 25rem;
   background-color: $primary-color;
   border-radius: 1em;
   box-shadow: 0 0 0.5em $black;
@@ -408,18 +410,4 @@ $black: #1e1e1e;
   text-align: left;
   width: 100%;
   line-height: 200%;
-}
-
-.socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  text-align: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  img {
-    width: 1.5rem;
-    margin: 0.5rem;
-  }
 }

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../../styles/general.module.scss'
 import people from "../../texts/sec.json"
+import Footer from "../../../components/footer"
 
 export default function Secretariat() {
     const getPeople = () => {
@@ -38,6 +39,7 @@ export default function Secretariat() {
             {getPeople()}
         </div>
         </main>
+        <Footer color={{color : "green"}}/>
         </div>
     )
 }

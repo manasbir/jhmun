@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '../../styles/Committess.module.scss'
 import committeeName from '../texts/committees.js';
 import { useEffect, useState } from "react";
+import Footer from "../../components/footer";
 
 export default function Committees() {
     const router = useRouter();
@@ -83,7 +84,7 @@ export default function Committees() {
         let staff = [];
         for (let i = 0; i < names.length; i++) {
             staff.push(
-            <div className={styles.card}>
+            <div className={isMobile ? styles.cardMobile: styles.card}>
                 <div className={styles.cardText}>
                     <h1>{names[i]}</h1>
                     <h2><i>{roles[i]}</i></h2>
@@ -137,6 +138,7 @@ export default function Committees() {
                         margin-top: -1.25rem;
                         animation: loadIn2 2s;
                         z-index: 0;
+                        background-color: #10451D;
                         
                         position: relative;
                         width: 100%;
@@ -147,11 +149,28 @@ export default function Committees() {
                         align-items: center;
                         justify-content: center;
                         
+                        ${!isMobile ? 
+                        `
                         background-image: url("${image}");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-attachment: fixed;
+                        `
+                        :
+                        `
+                        background-image: url("../public/design/Images/JHSS dark.png") !important;
+                        background-position: center center;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        -moz-appearace:none;
+                        -webkit-appearace:none;
+                        appearance:none;
+                        `
+                        }
                     }
                     h1 {
                         color: white;
@@ -207,6 +226,7 @@ export default function Committees() {
                     </div>
                 </div>
                 {staff()}
+                <Footer color = {{ color : "white"}}/>
             </div>
     )
     

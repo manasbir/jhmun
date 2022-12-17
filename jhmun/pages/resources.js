@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/general.module.scss'
+import Footer from "../components/footer.js"
 
 export default function Resources() {
     return (
@@ -42,6 +43,7 @@ export default function Resources() {
             </div>
         </div>
         </main>
+        <Footer color={{color : "green"}}/>
         </div>
     )
 }
