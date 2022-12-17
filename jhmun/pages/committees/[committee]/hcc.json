@@ -1,0 +1,35 @@
+{
+    "numOfDelegations": 5,
+    "delegations": [
+        {
+            "name": "John F. Kennedy",
+            "title": "President of the United States",
+            "image": "/matrixes/hcc/jfk.jpg",
+            "isTaken": true
+        },
+        {
+            "name": "Nikita Khrushchev",
+            "title": "Premier of the Soviet Union",
+            "image": "/matrixes/hcc/nikita.jpg",
+            "isTaken": false
+        },
+        {
+            "name": "Walther Ulbricht",
+            "title": "Former Chairman of the State Council of the GDR",
+            "image": "/matrixes/hcc/walter.jpeg",
+            "isTaken": true
+        },
+        {
+            "name": "Lyndon B. Johnson",
+            "title": "Vice President of the United States",
+            "image": "/matrixes/hcc/lyndon.webp",
+            "isTaken": true
+        },
+        {
+            "name": "Franz Josef Strauss",
+            "title": "Chancellor of the Federal Republic of Germany",
+            "image": "/matrixes/hcc/franz.jpeg",
+            "isTaken": false
+        }
+    ]
+}

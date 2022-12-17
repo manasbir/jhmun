@@ -1,0 +1,17 @@
+{   
+    "numOfDelegations": 2,
+    "delegations": [
+        {
+            "name": "John F. Kennedy",
+            "description": "John Fitzgerald Kennedy was the xth president of the USA",
+            "image": "/matrixes/hcc/jfk.png",
+            "isTaken": false
+        },
+        {
+            "name": "John F. Kennedy",
+            "description": "John Fitzgerald Kennedy was the xth president of the USA",
+            "image": "/matrixes/hcc/jfk.png",
+            "isTaken": false
+        }
+    ]
+}

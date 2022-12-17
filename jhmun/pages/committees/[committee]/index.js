@@ -211,8 +211,8 @@ export default function Committees() {
                     ><button>Backgrounder</button>
                     </Link>
                     <Link
-                    href={`/committees/${committee}/country-matrix`}
-                    ><button>Country Matrix</button>
+                    href={`/committees/${committee}/matrix`}
+                    ><button>Delegate Matrix</button>
                     </Link>
                 </div>
             </div>
