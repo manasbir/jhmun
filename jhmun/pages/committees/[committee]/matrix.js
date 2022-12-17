@@ -3,10 +3,10 @@ import Link from 'next/link'
 import styles from '../../../styles/general.module.scss'
 import Footer from '../../../components/footer'
 import { useRouter } from 'next/router'
-import hcc from './hcc.json';
-import sochum from './sochum.json';
-import unodc from './unodc.json';
-import undp from './undp.json';
+import hcc from '../../../public/jsons/hcc.json';
+import sochum from '../../../public/jsons/sochum.json';
+import unodc from '../../../public/jsons/unodc.json';
+import undp from '../../../public/jsons/undp.json';
 
 export default function Matrix() {
     const router = useRouter();
@@ -35,7 +35,7 @@ export default function Matrix() {
 
     const getMatrix = () => {
         let matrixDivs = [];
-        for (let i = 0; i < matrix.delegations.length; i++) {
+        for (let i = 0; i < numOfDelegations; i++) {
             if (matrix.delegations[i].isTaken == true) {
                 matrixDivs.push(
                 <div className={styles.matrixItemTaken}>

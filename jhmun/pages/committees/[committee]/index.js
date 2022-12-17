@@ -5,7 +5,7 @@ import styles from '../../../styles/Committess.module.scss'
 import committeeDesc from '../../texts/committees.js';
 import { useEffect, useState } from "react";
 import Footer from "../../../components/footer";
-import committees from './committees.json';
+import committees from "../../../public/jsons/committees.json";
 
 export default function Committees() {
     const router = useRouter();
@@ -78,7 +78,7 @@ export default function Committees() {
 
     const staff = () => {
         let staff = [];
-        for (let i = 0; i < currCommittee.members.length; i++) {
+        for (let i = 0; i < numOfMembers; i++) {
             staff.push(
             <div className={isMobile ? styles.cardMobile: styles.card}>
                 <div className={styles.cardText}>
