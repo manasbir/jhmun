@@ -77,6 +77,19 @@ $black: #1e1e1e;
   100% { color: $primary-color-faded; }
 }
 
+.container {
+  //max-width: max(100vw);
+  // background-color: $secondary-color;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .button {
   margin-top: 3rem;
   background-color: red;
