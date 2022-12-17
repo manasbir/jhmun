@@ -79,6 +79,7 @@ $black: #1e1e1e;
 
 .button {
   margin-top: 3rem;
+  background-color: red;
   animation: loadIn 2s ease-in-out;
   width: 70vw;
   display: flex;
@@ -86,7 +87,6 @@ $black: #1e1e1e;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 
   button{
   margin-left: 2rem;
@@ -99,9 +99,6 @@ $black: #1e1e1e;
   animation-iteration-count: 1;
   padding: 15px;
   align-items: center;
-  position: relative;
-  min-width: 150px;
-  min-height: 20px;
   width: fit-content;
   background-color: transparent;
   border: 2px solid #ffffff;
