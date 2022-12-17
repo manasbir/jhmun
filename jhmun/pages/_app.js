@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, useCallback } from "react";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [, updateState] = useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
 
   useEffect(() => {
     const setMobile = () => {
@@ -163,7 +165,7 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onLoad={forceUpdate}>
       <Head>
         <title>JHMUN</title>
         <meta name="description" content="Johnston Heights Model UN" />
