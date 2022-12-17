@@ -1,4 +1,4 @@
-export default function committees(committeeName) {
+export default function committeeDesc(committeeName) {
     if (committeeName == "hcc") {
         return (
             <p>

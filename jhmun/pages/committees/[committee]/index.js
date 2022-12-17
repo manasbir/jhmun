@@ -2,14 +2,31 @@ import { useRouter } from 'next/router';
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../../styles/Committess.module.scss'
-import committeeName from '../../texts/committees.js';
+import committeeDesc from '../../texts/committees.js';
 import { useEffect, useState } from "react";
 import Footer from "../../../components/footer";
+import committees from './committees.json';
 
 export default function Committees() {
     const router = useRouter();
     const { committee } = router.query;
     const [isMobile, setIsMobile] = useState(false);
+
+    let currCommittee;
+
+    if (committee == "hcc") {
+        currCommittee = committees.hcc;
+    }
+    if (committee == "sochum") {
+        currCommittee = committees.sochum;
+    }
+    if (committee == "unodc") {
+        currCommittee = committees.unodc;
+    }
+    if (committee == "undp") {
+        currCommittee = committees.undp;
+    }
+
 
     useEffect(() => {
         const setMobile = () => {
@@ -35,62 +52,18 @@ export default function Committees() {
         }
     }
 
-    let title;
-    let subTitle;
-    let text = committeeName(committee);
-    console.log(committee);
-    let roles = [];
-    let names = [];
-    let images = [];
-    let descriptions = [];
-    let image;
-
-    if (committee == "hcc") {
-        title = "Historical Crisis Committee";
-        subTitle = "Berlin Crisis of 1960";
-        roles = ["Director", "Co-Director"];
-        names = ["Manasbir Bagri", "ma friend"];
-        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them", "hello madam"];
-        image = "/design/Images/Dark Berline Wall.png";
-    } else if (committee == "sochum") {
-        title = "Social Humanitarian Cultural Committee";
-        subTitle = "Uyghur Muslims Disenfranchisement";
-        roles = ["Director", "Co-Director"];
-        names = ["Manasbir Bagri", "ma friend"];
-        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"]
-        image = "/design/Images/sochum.png";
-    } else if (committee == "unodc") {
-        title = "United Nations Office on Drugs and Crime";
-        subTitle = "Organ Trafficking";
-        roles = ["Director", "Co-Director"];
-        names = ["Manasbir Bagri", "ma friend"];
-        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"];
-        image = "/design/Images/Dark Doctors.png";
-    } else if (committee == "undp") {
-        title = "United Nations Development Programme";
-        subTitle = "Palestine, Israel Dispute";
-        roles = ["Director", "Co-Director"];
-        names = ["Gordon Li", "ma friend"];
-        images = ["/design/Images/people/manas.png", "/design/Images/gj.png"];
-        descriptions = ["wassup guys. coolest guy here ong. i love pizza, touching grass etc", "hello madam"];
-        image = "/design/Images/Palestine Israel.png";
-    }
-
 
     const staff = () => {
         let staff = [];
-        for (let i = 0; i < names.length; i++) {
+        for (let i = 0; i < currCommittee.numOfMembers; i++) {
             staff.push(
             <div className={isMobile ? styles.cardMobile: styles.card}>
                 <div className={styles.cardText}>
-                    <h1>{names[i]}</h1>
-                    <h2><i>{roles[i]}</i></h2>
-                    <p>{descriptions[i]}</p>
+                    <h1>{currCommittee.members[i].name}</h1>
+                    <h2><i>{currCommittee.members[i].position}</i></h2>
+                    <p>{currCommittee.members[i].description}</p>
                 </div>
-                <img src={images[i]}/>
+                <img src={currCommittee.members[i].image}/>
             </div>
             )
         }
@@ -105,7 +78,7 @@ export default function Committees() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>{title}</title>
+                <title>{committee}</title>
                 <meta name="description" content="JHMUN HCC" />
                 <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
             </Head>
@@ -140,7 +113,7 @@ export default function Committees() {
                         background-color: #10451D;
                         
                         position: relative;
-                        width: 100%;
+                        width: 100vw;
                         height: 110vh;
                         
                         flex-direction: column;
@@ -151,7 +124,7 @@ export default function Committees() {
                         ${!isMobile ? 
                         `
                         margin-top: -1.25rem;
-                        background-image: url("${image}");
+                        background-image: url("${currCommittee.image}");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -160,7 +133,7 @@ export default function Committees() {
                         :
                         `
                         margin-top: 2rem;
-                        background-image: url("${image}") !important;
+                        background-image: url("${currCommittee.image}") !important;
                         background-position: center center;
                         -webkit-background-size: cover;
                         -moz-background-size: cover;
@@ -184,7 +157,6 @@ export default function Committees() {
                         text-align: center;
                         letter-spacing: 0.05em;
                         margin: 0;
-                        overflow-wrap: break-word;
                     }
                     hr {
                         animation: loadIn 2s ease-in-out;
@@ -205,9 +177,9 @@ export default function Committees() {
                         font-style: italic;
                     }
                 `}</style>
-                <h1>{title}</h1>
+                <h1>{currCommittee.title}</h1>
                 <hr></hr>
-                <p>{subTitle}</p>
+                <p>{currCommittee.subTitle}</p>
                 <div className={styles.button}>
                     <Link
                     href={`/committees/${committee}/backgrounder`}
@@ -223,7 +195,7 @@ export default function Committees() {
                     {handleMobile()}
                 <div className={styles.text}>
                     <h1>Committee Description:</h1>
-                    {text}
+                    {committeeDesc(committee)}
                     </div>
                 </div>
                 {staff()}
