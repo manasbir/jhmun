@@ -13,19 +13,42 @@ export default function Committees() {
     const [isMobile, setIsMobile] = useState(false);
 
     let currCommittee;
+    let image;
+    let title;
+    let subTitle;
+    let numOfMembers;
 
     if (committee == "hcc") {
         currCommittee = committees.hcc;
+        image = currCommittee.image;
+        title = currCommittee.title;
+        subTitle = currCommittee.subTitle;
+        numOfMembers = currCommittee.numOfMembers;
     }
     if (committee == "sochum") {
         currCommittee = committees.sochum;
+        image = currCommittee.image;
+        title = currCommittee.title;
+        subTitle = currCommittee.subTitle;
+        numOfMembers = currCommittee.numOfMembers;
     }
     if (committee == "unodc") {
         currCommittee = committees.unodc;
+        image = currCommittee.image;
+        title = currCommittee.title;
+        subTitle = currCommittee.subTitle;
+        numOfMembers = currCommittee.numOfMembers;
     }
     if (committee == "undp") {
         currCommittee = committees.undp;
+        image = currCommittee.image;
+        title = currCommittee.title;
+        subTitle = currCommittee.subTitle;
+        numOfMembers = currCommittee.numOfMembers;
     }
+
+
+
 
 
     useEffect(() => {
@@ -55,7 +78,7 @@ export default function Committees() {
 
     const staff = () => {
         let staff = [];
-        for (let i = 0; i < currCommittee.numOfMembers; i++) {
+        for (let i = 0; i < numOfMembers; i++) {
             staff.push(
             <div className={isMobile ? styles.cardMobile: styles.card}>
                 <div className={styles.cardText}>
@@ -78,7 +101,7 @@ export default function Committees() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>{committee}</title>
+                <title>{title}</title>
                 <meta name="description" content="JHMUN HCC" />
                 <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
             </Head>
@@ -124,7 +147,7 @@ export default function Committees() {
                         ${!isMobile ? 
                         `
                         margin-top: -1.25rem;
-                        background-image: url("${currCommittee.image}");
+                        background-image: url("${image}");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -133,7 +156,7 @@ export default function Committees() {
                         :
                         `
                         margin-top: 2rem;
-                        background-image: url("${currCommittee.image}") !important;
+                        background-image: url("${image}") !important;
                         background-position: center center;
                         -webkit-background-size: cover;
                         -moz-background-size: cover;
@@ -177,9 +200,9 @@ export default function Committees() {
                         font-style: italic;
                     }
                 `}</style>
-                <h1>{currCommittee.title}</h1>
+                <h1>{title}</h1>
                 <hr></hr>
-                <p>{currCommittee.subTitle}</p>
+                <p>{subTitle}</p>
                 <div className={styles.button}>
                     <Link
                     href={`/committees/${committee}/backgrounder`}
