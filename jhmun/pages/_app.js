@@ -23,8 +23,6 @@ function MyApp({ Component, pageProps }) {
     window.addEventListener('resize', setMobile);
     },[])
 
-
-
   useEffect(() => {
     const setScroll = () => {
       if (window.scrollY > 100) {
@@ -130,17 +128,12 @@ function MyApp({ Component, pageProps }) {
       }
   } else {
       return (
-        <div>
           <div className={styles.header3}>
             <div className={styles.logo2}>
               <Link href={"/"}>
                 <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
               </Link>  
             </div>
-          </div>
-          <div></div>
-          <div className={styles.header4}>
-            <div></div>
             <div className={styles.menu3}>
               <Link
                 onMouseEnter={() => setIsComHovered(true)} 
@@ -163,7 +156,6 @@ function MyApp({ Component, pageProps }) {
               <Link href={"/registration"}>REGISTRATION</Link>
             </div>
           </div>
-        </div>
       )
     }
   }

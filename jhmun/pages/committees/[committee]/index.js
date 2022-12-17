@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../../styles/Committess.module.scss'
-import committeeName from '../texts/committees.js';
+import styles from '../../../styles/Committess.module.scss'
+import committeeName from '../../texts/committees.js';
 import { useEffect, useState } from "react";
-import Footer from "../../components/footer";
+import Footer from "../../../components/footer";
 
 export default function Committees() {
     const router = useRouter();
@@ -135,7 +135,6 @@ export default function Committees() {
                     }
 
                     .background {
-                        margin-top: -1.25rem;
                         animation: loadIn2 2s;
                         z-index: 0;
                         background-color: #10451D;
@@ -151,6 +150,7 @@ export default function Committees() {
                         
                         ${!isMobile ? 
                         `
+                        margin-top: -1.25rem;
                         background-image: url("${image}");
                         background-position: center;
                         background-size: cover;
@@ -159,7 +159,8 @@ export default function Committees() {
                         `
                         :
                         `
-                        background-image: url("../public/design/Images/JHSS dark.png") !important;
+                        margin-top: 2rem;
+                        background-image: url("${image}") !important;
                         background-position: center center;
                         -webkit-background-size: cover;
                         -moz-background-size: cover;
@@ -178,7 +179,7 @@ export default function Committees() {
                         font-family: 'Roboto Bold';
                         font-style: normal;
                         font-weight: 750;
-                        font-size: 4rem;
+                        font-size: 3rem;
                         line-height: 60px;
                         text-align: center;
                         letter-spacing: 0.05em;
@@ -208,14 +209,14 @@ export default function Committees() {
                 <hr></hr>
                 <p>{subTitle}</p>
                 <div className={styles.button}>
-                <Link
-                href={`/committees/${committee}/backgrounder`}
-                ><button>Backgrounder</button>
-                </Link>
-                <Link
-                href={`/committees/${committee}/country-matrix`}
-                ><button>Country Matrix</button>
-                </Link>
+                    <Link
+                    href={`/committees/${committee}/backgrounder`}
+                    ><button>Backgrounder</button>
+                    </Link>
+                    <Link
+                    href={`/committees/${committee}/country-matrix`}
+                    ><button>Country Matrix</button>
+                    </Link>
                 </div>
             </div>
                 <div className={styles.description}>
