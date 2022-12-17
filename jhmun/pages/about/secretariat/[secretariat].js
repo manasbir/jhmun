@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../../styles/general.module.scss'
-import people from "../../texts/sec.json"
+import people from "../../../public/jsons/sec.json"
 import { useEffect, useState } from "react";
 
 export default function Secretariats() {
