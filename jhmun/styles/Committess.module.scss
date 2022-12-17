@@ -78,10 +78,21 @@ $black: #1e1e1e;
 }
 
 .button {
-  animation: loadIn 2s ease-in-out;
-  button{
   margin-top: 3rem;
-  margin: 2.5rem,;
+  animation: loadIn 2s ease-in-out;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+  button{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   position: relative;
   border-radius: 10px;
   animation: loadIn 3s;
