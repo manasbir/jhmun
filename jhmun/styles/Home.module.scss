@@ -178,7 +178,7 @@ $black: #1e1e1e;
 }
 
 @keyframes fadeOut4 {
-  100% { color: #39784C50; }
+  100% { color: #39784C75; }
 }
 
 @keyframes fadeIn3 {
@@ -423,12 +423,16 @@ $black: #1e1e1e;
   position: absolute;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: $white;
-  padding: .5em;
   border-radius: .5rem;
-  color: #39784C50;
+  color: $primary-color;
+  overflow: hidden;
 
   a {
-    margin: 0.25em;
+    max-width: 100%;
+    margin: 0;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 1.1rem;
     text-align: left;
     text-decoration: none;
@@ -436,18 +440,25 @@ $black: #1e1e1e;
 }
 
 @keyframes dropdownHover {
-  0% { color: #39784C50; }
-  100% { color: #39784C; }
+  0% { color: $primary-color; background-color: white; }
+  100% { color: white; background-color: $primary-color;}
+}
+
+@keyframes dropdownNotHover {
+  0%{}
+  100% { color: $primary-color; background-color: white; }
 }
 
 .dropdown a:hover {
   animation: dropdownHover .2s ease-in-out;
-  color: #39784C;
+  color: white;
+  background-color: $primary-color;
 }
 
 .dropdown :not(:hover) {
-  animation: fadeOut4 .2s;
-  color: #39784C50;
+  animation: dropdownNotHover .2s ease-in-out;
+  color: $primary-color;
+  background-color: $white;
 }
 
 
