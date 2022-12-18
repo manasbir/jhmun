@@ -177,10 +177,6 @@ $black: #1e1e1e;
   100% { color: #39784C50; }
 }
 
-@keyframes fadeOut4 {
-  100% { color: #39784C75; }
-}
-
 @keyframes fadeIn3 {
   0% { color: #39784C50; }
   100% { color: #39784C; }
@@ -214,7 +210,7 @@ $black: #1e1e1e;
   position: relative;
   z-index: 30;
   height: 4rem;
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1.5s ease-out;
   img {
     animation: fadeIn 1.5s;
     height: 100%;

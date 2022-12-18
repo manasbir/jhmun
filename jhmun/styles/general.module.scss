@@ -86,6 +86,11 @@ $black: #1e1e1e;
     background-color: $primary-color;
     text-align: left;
     padding: 15vw;
+
+    ::selection {
+      background-color: $white;
+      color: $primary-color;
+    }
 }
 
 .text {
@@ -145,6 +150,11 @@ $black: #1e1e1e;
   flex-direction: column;
 
   text-align: left;
+
+  ::selection {
+    background-color: $white;
+    color: $primary-color;
+  }
   p {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 
@@ -261,6 +271,10 @@ $black: #1e1e1e;
   width: 20rem;
   height: 45rem;
   background-color: $primary-color;
+  ::selection {
+    background-color: $white;
+    color: $primary-color;
+  }
   border-radius: 1em;
   box-shadow: 0 0 0.5em $black;
   transition: 0.5s;
@@ -344,6 +358,10 @@ $black: #1e1e1e;
     width: 18rem;
     object-fit: contain;
     border-radius: .5em;
+  }
+  ::selection {
+    background-color: $white;
+    color: $primary-color;
   }
 }
 
