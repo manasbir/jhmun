@@ -34,8 +34,8 @@ export default function Backgrounder() {
         <h1 className={styles.title}>
             {title}
         </h1>
-        <div className={styles.frameholder}>
-            <iframe src={pdf}></iframe>
+        <div className={styles.pdf}>
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vR4B6K7zjPwelstXyFv_dDF6k9aHcARmmlxk64U0uALd7IVitanDs0supxLCfl4ugBdZzIYGWG4yGvq/pub?embedded=true"></iframe>
         </div>
         </main>
         <Footer color={{color : "green"}}/>

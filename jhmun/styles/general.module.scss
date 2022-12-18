@@ -324,7 +324,7 @@ $black: #1e1e1e;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
   color: white;
   margin: 2vw;
@@ -426,7 +426,7 @@ $black: #1e1e1e;
   line-height: 200%;
 }
 
-.frameholder {
+.pdf {
   padding: 3rem;
   background-color: white;
   display: flex;
@@ -438,6 +438,13 @@ $black: #1e1e1e;
     height: 90vh;
     border-radius: 1rem;
     color: $secondary-color;
+  }
+  iframe:focus {
+    outline: none;
+  }
+  
+  iframe[seamless] {
+    display: block;
   }
 }
 
@@ -455,7 +462,7 @@ $black: #1e1e1e;
 }
 
 .matrixItemTaken {
-  filter: grayscale(50%);
+  filter: brightness(70%) contrast(70%);
   animation: menuLoading 1s ease-in-out;
   padding: 1rem;
   display: flex;
