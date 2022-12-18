@@ -445,18 +445,18 @@ $black: #1e1e1e;
 }
 
 @keyframes dropdownNotHover {
-  0%{}
+  0%{ color: initial; background-color: initial}
   100% { color: $primary-color; background-color: white; }
 }
 
 .dropdown a:hover {
-  animation: dropdownHover .2s ease-in-out;
+  animation: dropdownHover .25s ease-out;
   color: white;
   background-color: $primary-color;
 }
 
 .dropdown :not(:hover) {
-  animation: dropdownNotHover .2s ease-in-out;
+  animation: dropdownNotHover .25s ease-out;
   color: $primary-color;
   background-color: $white;
 }
