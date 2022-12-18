@@ -424,7 +424,7 @@ $black: #1e1e1e;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: $white;
   border-radius: .5rem;
-  color: $primary-color;
+  color: $secondary-color;
   overflow: hidden;
 
   a {
@@ -440,13 +440,13 @@ $black: #1e1e1e;
 }
 
 @keyframes dropdownHover {
-  0% { color: $primary-color; background-color: white; }
+  0% { color: $secondary-color; background-color: white; }
   100% { color: white; background-color: $primary-color;}
 }
 
 @keyframes dropdownNotHover {
   0%{ color: initial; background-color: initial}
-  100% { color: $primary-color; background-color: white; }
+  100% { color: $secondary-color; background-color: white; }
 }
 
 .dropdown a:hover {
@@ -457,7 +457,7 @@ $black: #1e1e1e;
 
 .dropdown :not(:hover) {
   animation: dropdownNotHover .25s ease-out;
-  color: $primary-color;
+  color: $secondary-color;
   background-color: $white;
 }
 
