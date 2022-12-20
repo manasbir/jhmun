@@ -221,19 +221,15 @@ $black: #1e1e1e;
 }
 
 .committeeText {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   h1 {
     font-family: "Roboto Bold";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 100%;
     color: $secondary-color;
     text-align: left;
     width: 100%;
     margin: 0;
+    margin-bottom: 0.25rem;
   }
   h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -241,17 +237,9 @@ $black: #1e1e1e;
     font-style: italic;
     color: $secondary-color;
     text-align: left;
-    font-weight: 200;
+    font-weight: 500;
     width: 100%;
     margin: 0;
-  }
-  p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
-    color: $secondary-color;
-    text-align: left;
-    width: 100%;
-    margin-top: 1rem;
   }
 }
 
@@ -260,11 +248,12 @@ $black: #1e1e1e;
   background-color: $white;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   flex-wrap: wrap;
-  align-items: center;
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .people {
@@ -272,12 +261,11 @@ $black: #1e1e1e;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
   color: white;
   margin: 2vw;
   width: 20rem;
-  height: 45rem;
+  height: 30rem;
   background-color: $primary-color;
   ::selection {
     background-color: $white;
@@ -307,6 +295,7 @@ $black: #1e1e1e;
     text-align: left;
     width: 100%;
     margin: 0;
+    margin-bottom: .25rem;
   }
   h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -317,6 +306,7 @@ $black: #1e1e1e;
     font-weight: 200;
     width: 100%;
     margin: 0;
+    margin-bottom: 0.125rem;
   }
   p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -325,6 +315,7 @@ $black: #1e1e1e;
     text-align: left;
     width: 100%;
     margin-top: 1rem;
+    margin: 0;
   }
 }
 
@@ -373,6 +364,7 @@ $black: #1e1e1e;
 }
 
 .resource {
+  margin: 0;
   h1 {
     font-family: "Roboto Bold";
     font-size: 1.5rem;
@@ -399,6 +391,7 @@ $black: #1e1e1e;
     text-align: left;
     width: 100%;
     margin-top: 1rem;
+    margin-bottom: 0;
     line-height: 200%;
   }
 }
@@ -478,8 +471,8 @@ $black: #1e1e1e;
   background-color: $white;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: stretch;
+  flex-wrap: wrap;
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 5vh;
