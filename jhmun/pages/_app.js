@@ -9,13 +9,11 @@ import "../styles/globals.scss";
 function MyApp({ Component, pageProps }) {
   const [isCommitteesHovered, setIsComHovered] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-
-  let isMobile = false;
-  if (typeof screen.orientation !== 'undefined') {
-    isMobile = true
-  }
+    useEffect(() => {
+        window.innerwidth < 800 ? setIsMobile(true) : setIsMobile(false);
+    }, []);
 
   useEffect(() => {
     const setScroll = () => {

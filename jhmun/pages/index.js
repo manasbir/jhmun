@@ -11,11 +11,11 @@ import Footer from '../components/footer';
 
 
 export default function Home() {
-  let isMobile = false;
-  if (typeof screen.orientation !== 'undefined') {
-    isMobile = true
-  }
-
+  const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        window.innerwidth < 800 ? setIsMobile(true) : setIsMobile(false);
+    }, []);
+  
 
 
   return (

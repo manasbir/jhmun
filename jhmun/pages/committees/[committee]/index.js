@@ -10,10 +10,10 @@ import committees from "../../../public/jsons/committees.json";
 export default function Committees() {
     const router = useRouter();
     const { committee } = router.query;
-    let isMobile = false;
-  if (typeof screen.orientation !== 'undefined') {
-    isMobile = true
-  }
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        window.innerwidth < 800 ? setIsMobile(true) : setIsMobile(false);
+    }, []);
 
     let currCommittee;
     let image;
