@@ -37,7 +37,7 @@ export default function Home() {
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
       <div className={isMobile ? styles.textsMobile : styles.texts}>
-        <h1>𝙃𝙚𝙡𝙥𝙞𝙣𝙜 𝙎𝙝𝙖𝙥𝙚 𝙩𝙝𝙚 𝙇𝙚𝙖𝙙𝙚𝙧𝙨 𝙤𝙛 𝙏𝙤𝙢𝙤𝙧𝙧𝙤𝙬</h1>
+        <h1>Developed by the leaders of today, for the leaders of tomorrow</h1>
         <div className={isMobile ? styles.backgroundMobile : styles.background}>
           <div className={isMobile ? styles.textMobile : styles.text}>
             <h2>Dear Delegates and Faculty Advisors,</h2>
