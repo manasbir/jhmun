@@ -12,7 +12,7 @@ export default function Committees() {
     const { committee } = router.query;
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
-        window.innerwidth < 800 ? setIsMobile(true) : setIsMobile(false);
+        window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
     }, []);
 
     let currCommittee;

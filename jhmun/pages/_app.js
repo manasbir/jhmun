@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
     useEffect(() => {
-        window.innerwidth < 800 ? setIsMobile(true) : setIsMobile(false);
+        window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
     }, []);
 
   useEffect(() => {
