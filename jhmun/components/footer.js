@@ -1,6 +1,5 @@
 import styles from '../styles/Footer.module.scss'
 export default function Footer ({color}) {
-    console.log(color);
     if (color.color == "white") {
     return(
         <footer className={styles.footer1}>
