@@ -3,25 +3,22 @@ $primary-color-faded: #10451D50;
 $secondary-color: #39784C;
 $white: white;
 $black: #1e1e1e;
+
 @font-face {
-  font-family: "Roboto Serif";
-  src: url("../public/design/Fonts/RobotoSerif-VariableFont_GRAD\,opsz\,wdth\,wght.ttf");
+  font-family: "Serif";
+  src: url("../public/design/Fonts/Serif.ttf");
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("../public/design/Fonts/Roboto-Regular.ttf");
+  font-family: "Main";
+  src: url("../public/design/Fonts/Raleway.ttf");
 }
 @font-face {
-  font-family: "Roboto B";
-  src: url("../public/design/Fonts/Roboto-Bold.ttf");
+  font-family: "Secondary";
+  src: url("../public/design/Fonts/Lato.ttf");
 }
 @font-face {
-  font-family: "Roboto Bold";
-  src: url("../public/design/Fonts/RobotoCondensed-Bold.ttf");
-}
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../public/design/Fonts/RobotoCondensed-Regular.ttf");
+  font-family: "Italic";
+  src: url("../public/design/Fonts/Lato Italic.ttf");
 }
 @font-face {
   font-family: "Bebas Neue";
@@ -113,7 +110,7 @@ $black: #1e1e1e;
   width: fit-content;
   background-color: transparent;
   border: 2px solid #ffffff;
-  font-family: 'Roboto Condensed';
+  font-family: 'Secondary', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 1.2rem;
@@ -179,7 +176,7 @@ $black: #1e1e1e;
   color: $primary-color;
   font-style: normal;
   a{
-  font-family: Roboto;
+  font-family: "Secondary", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 }
 
@@ -191,7 +188,8 @@ $black: #1e1e1e;
 .submenu a:hover {
   cursor: pointer;
   animation: fadeIn2 0.5s;
-  font-family: "Roboto B";
+  font-family: "Secondary";
+  font-weight: 700;
   color: $primary-color;
 }
 
@@ -220,7 +218,8 @@ $black: #1e1e1e;
   width: 100%;
   margin-left: 3rem;
   h1 {
-    font-family: "Roboto B";
+    font-family:"Main", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
     font-size: 2rem;
     text-align: left;
     animation: loadIn 3s;
@@ -228,7 +227,7 @@ $black: #1e1e1e;
     color: $secondary-color;
   }
   p {
-    font-family: Roboto;
+    font-family: "Secondary", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.2rem;
     text-align: left;
     animation: loadIn 3s;
@@ -311,7 +310,8 @@ $black: #1e1e1e;
   align-items: center;
   justify-content: flex-start;
   h1 {
-    font-family: "Roboto Bold";
+    font-family: "Main";
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 100%;
     color: $secondary-color;
@@ -320,7 +320,7 @@ $black: #1e1e1e;
     margin: 0;
   }
   h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Italic", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     font-style: italic;
     color: $secondary-color;
@@ -330,7 +330,7 @@ $black: #1e1e1e;
     margin: 0;
   }
   p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Secondary", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     color: $secondary-color;
     text-align: left;
