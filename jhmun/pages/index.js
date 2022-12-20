@@ -11,19 +11,10 @@ import Footer from '../components/footer';
 
 
 export default function Home() {
-  const [width, setWidth] = useState(window.innerWidth);
-
-function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-}
-useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-}, []);
-
-const isMobile = width <= 768;
+  let isMobile = false;
+  if (typeof screen.orientation !== 'undefined') {
+    isMobile = true
+  }
 
 
 
