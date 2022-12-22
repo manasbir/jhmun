@@ -520,7 +520,7 @@ $black: #1e1e1e;
     animation: loadIn3 2s ease-in-out;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 3rem;
     text-align: center;
     letter-spacing: 0.05em;
@@ -528,10 +528,10 @@ $black: #1e1e1e;
   p {
     margin: .5rem;
     animation: loadIn3 2s ease-in-out;
-    font-family: 'Italic';
+    font-family: "Serif", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 1.75rem;
     line-height: 28px;
     text-align: center;
   }
@@ -609,7 +609,7 @@ $black: #1e1e1e;
   h1 {
     margin: 0;
     animation: loadIn3 2s ease-in-out;
-    font-family:'Main';
+    font-family:"Main", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 3rem;
@@ -619,7 +619,7 @@ $black: #1e1e1e;
   p {
     margin: .5rem;
     animation: loadIn3 2s ease-in-out;
-    font-family: 'Italic';
+    font-family: "Serif", Georgia, Times, 'Times New Roman', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 23px;
@@ -744,7 +744,8 @@ $black: #1e1e1e;
     font-size: 2rem;
     color: $primary-color;
     font-weight: 900;
-    font-family: 'Serif', Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-family: "Serif", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-bottom: 0;
   }
 }
@@ -758,7 +759,7 @@ $black: #1e1e1e;
     font-size: 2.25rem;
     color: $primary-color;
     font-weight: 900;
-    font-family: "Serif", Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-bottom: 0;
   }
 }
@@ -798,7 +799,7 @@ $black: #1e1e1e;
     font-style: normal;
     font-weight: 700;
     font-size: 1.75rem;
-    font-family: "Roboto Bold";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   img {
     width: 100%;
@@ -844,7 +845,7 @@ $black: #1e1e1e;
     font-style: normal;
     font-weight: 700;
     font-size: 1.75rem;
-    font-family: "Roboto Bold";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   img {
     width: 100%;
