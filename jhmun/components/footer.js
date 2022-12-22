@@ -10,7 +10,7 @@ export default function Footer ({color}) {
                 <img src={"/design/Icons & Buttons/insta.svg"}></img>@jhmun2023
             </div>
             </a>
-            <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir">Manasbir Bagri</a>, Designed by Gordon Li</p>
+            <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir" target="_blank" rel="noreferrer">Manasbir Bagri</a>, Designed by Gordon Li</p>
         </footer>
     )
     } else {
@@ -23,7 +23,7 @@ export default function Footer ({color}) {
                     <img src={"/design/Icons & Buttons/insta.svg"}></img>@jhmun2023
                 </div>
                 </a>
-                <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir" target="_blank" >Manasbir Bagri</a>, Designed by Gordon Li</p>
+                <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir" target="_blank" rel="noreferrer">Manasbir Bagri</a>, Designed by Gordon Li</p>
             </footer>
         )
     }
