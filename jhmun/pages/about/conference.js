@@ -15,7 +15,7 @@ export default function Conference() {
         </Head>
         <main className={styles.main}>
         <h1 className={styles.title}>
-            About the Conference
+            Conference Details
         </h1>
         <div className={styles.deets}>
         <p>Johnston Heights Secondary School | 15350 99 Ave, Surrey, BC V3R 0R9</p>
