@@ -31,7 +31,7 @@ export default function Home() {
 
     
       <div className={isMobile ? styles.coverMobile : styles.cover}>
-        <h1>JOHNSTON HEIGHTS MODEL UNITED NATIONS 2023</h1>
+        <h1>Johnston Heights Model United Nations 2023</h1>
         <hr></hr>
         <p>February 11th, 2023</p>
         <Link href={"/registration"}><button>Apply</button></Link>
