@@ -92,7 +92,7 @@ export default function Committees() {
             <Head>
                 <title>{title}</title>
                 <meta name="description" content="JHMUN HCC" />
-                <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
+                <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE White.svg"} />
             </Head>
             <div className={"background"}>
                 <style jsx>{`
@@ -163,10 +163,9 @@ export default function Committees() {
                     h1 {
                         color: white;
                         animation: loadIn 2s ease-in-out;
-                        font-family: 'Roboto Bold';
-                        font-style: normal;
-                        font-weight: 750;
-                        font-size: 3rem;
+                        font-family: "Main", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-weight: 700;
+                        font-size: 3em;
                         line-height: 60px;
                         text-align: center;
                         letter-spacing: 0.05em;
