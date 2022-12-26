@@ -452,7 +452,6 @@ $black: #1e1e1e;
 }
 
 @keyframes dropdownNotHover {
-  0%{ color: initial; background-color: initial}
   100% { color: $secondary-color; background-color: white; }
 }
 

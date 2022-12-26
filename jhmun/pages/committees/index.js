@@ -12,7 +12,7 @@ export default function Committees() {
             </Head>
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    Committee Overview
+                    Committees Overview
                 </h1>
                 <div className={styles.text}>
                     <h2>Dear Esteemed Delegates and Faculty Advisors,</h2>
