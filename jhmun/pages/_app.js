@@ -30,11 +30,11 @@ function MyApp({ Component, pageProps }) {
     if (isCommitteesHovered) {
       return (
         <div className={styles.dropdown}>
-          <Link href="/committees" onClick={setIsComHovered(false)}>COMMITTEES OVERVIEW</Link>
-          <Link href="/committees/hcc" onClick={setIsComHovered(false)}>HISTORICAL CRISIS COMMITTEE</Link>
-          <Link href="/committees/sochum" onClick={setIsComHovered(false)}>SOCIAL, HUMANITARIAN, AND CULTURAL COMMITTEE</Link>
-          <Link href="/committees/unodc" onClick={setIsComHovered(false)}>UN OFFICE ON DRUGS & CRIME COMMITTEE</Link>
-          <Link href="/committees/undp" onClick={setIsComHovered(false)}>UN DEVELOPMENT PROGRAMME COMMITTEE</Link>
+          <Link href="/committees" >COMMITTEES OVERVIEW</Link>
+          <Link href="/committees/hcc" >HISTORICAL CRISIS COMMITTEE</Link>
+          <Link href="/committees/sochum" >SOCIAL, HUMANITARIAN, AND CULTURAL COMMITTEE</Link>
+          <Link href="/committees/unodc" >UN OFFICE ON DRUGS & CRIME COMMITTEE</Link>
+          <Link href="/committees/undp">UN DEVELOPMENT PROGRAMME COMMITTEE</Link>
         </div>
 
       )
@@ -45,9 +45,9 @@ function MyApp({ Component, pageProps }) {
     if (isAboutHovered) {
       return (
         <div className={styles.dropdown}>
-          <Link href="/about" onClick={setIsAboutHovered(false)}>ABOUT US</Link>
-          <Link href="/about/secretariat" onClick={setIsAboutHovered(false)}>SECRETARIAT</Link>
-          <Link href="/about/conference" onClick={setIsAboutHovered(false)}>CONFERENCE</Link>
+          <Link href="/about">ABOUT US</Link>
+          <Link href="/about/secretariat">SECRETARIAT</Link>
+          <Link href="/about/conference">CONFERENCE</Link>
         </div>
       )
     }
