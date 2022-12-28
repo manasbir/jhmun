@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 import { Suspense, useEffect, useState, useCallback, useReducer } from "react";
 import "../styles/globals.scss";
+import { NextSeo } from 'next-seo';
 
 function MyApp({ Component, pageProps }) {
   const [isCommitteesHovered, setIsComHovered] = useState(false);
