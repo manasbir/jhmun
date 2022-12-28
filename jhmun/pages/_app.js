@@ -169,7 +169,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href={"/favicon.ico"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="JHMUN" />
+        <meta name="author" content="Johnston Heights Model United Nations" />
         <meta name="description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" />
         <meta name="keywords" content="Johnston Heights Model United Nations,Johnston Heights Model UN,Johnston Heights MUN,JHMUN,Johnston Heights MUN, MUN, Model UN, Model United Nations,Johnston Heights,JH,Surrey,Surrey UN,Johntston Heights Secondary,IB Model UN"/>
         <meta name="robots" content="index, follow" />
