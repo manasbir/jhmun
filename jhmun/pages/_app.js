@@ -159,11 +159,18 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>JHMUN</title>
         <meta name="description" content="Johnston Heights Model UN" />
-        <link rel="icon" href={"/design/Icons & Buttons/MUN Eagle White.svg"} />
+        <meta property="og:image" content={"/design/Images/JHSS dark.png"} key="image" />
+        <meta property="og:title" content="JHMUN" key="title" />
+        <meta property="og:description" content="Johnston Heights Model UN" key="description" />
+        <NextSeo 
+          title="Johnston Heights Model UN"
+          description='Inclusive Model UN experience at Johnston Heights Secondary School'
+        />
+        <link rel="icon" href={"/favicon.ico"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="JHMUN" />
-        <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN"/>
-      </Head>
+        <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN, Johnston Heights Model United Nations"/>
+      </Head> 
       {handleMenuScroll()}
 
       <main className={styles.main}> 

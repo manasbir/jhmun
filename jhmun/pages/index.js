@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Suspense, useEffect, useState, useReducer } from "react";
 import mainText from './texts/mainpage';
 import Footer from '../components/footer';
+import { NextSeo } from 'next-seo';
 
 
 
@@ -23,6 +24,13 @@ export default function Home() {
       <Head>
         <title>JHMUN</title>
         <meta name="description" content="Johnston Heights Model UN" />
+        <meta property="og:image" content={"/design/Images/JHSS dark.png"} key="image" />
+        <meta property="og:title" content="JHMUN" key="title" />
+        <meta property="og:description" content="Johnston Heights Model UN" key="description" />
+        <NextSeo 
+          title="Johnston Heights Model UN"
+          description='Inclusive Model UN experience at Johnston Heights Secondary School'
+        />
         <link rel="icon" href={"/favicon.ico"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="JHMUN" />
