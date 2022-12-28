@@ -157,19 +157,20 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>JHMUN</title>
+        <title>Johnston Heights Model United Nations</title>
         <meta name="description" content="Johnston Heights Model UN" />
         <meta property="og:image" content={"/design/Images/JHSS dark.png"} key="image" />
-        <meta property="og:title" content="JHMUN" key="title" />
-        <meta property="og:description" content="Johnston Heights Model UN" key="description" />
+        <meta property="og:title" content="Johnston Heights Model United Nations" key="title" />
+        <meta property="og:description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" key="description" />
         <NextSeo 
           title="Johnston Heights Model UN"
-          description='Inclusive Model UN experience at Johnston Heights Secondary School'
+          description="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022"
         />
         <link rel="icon" href={"/favicon.ico"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="JHMUN" />
-        <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN, Johnston Heights Model United Nations"/>
+        <meta name="description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" />
+        <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN"/>
       </Head> 
       {handleMenuScroll()}
 
