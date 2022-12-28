@@ -11,7 +11,7 @@ export default function bruh() {
         <Head>
           <title>404</title>
           <meta name="description" content="Johnston Heights Model UN" />
-          <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE.svg"} />
+          <link rel="icon" href={"/favicon.ico"} />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="author" content="JHMUN" />
           <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN"/>
