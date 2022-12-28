@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Johnston Heights Model United Nations</title>
-        <meta name="description" content="Johnston Heights Model UN" />
+        <title>Johnston Heights Model United Nations | JHMUN</title>
+        <meta name="description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" />
         <meta property="og:image" content={"/design/Images/JHSS dark.png"} key="image" />
         <meta property="og:title" content="Johnston Heights Model United Nations" key="title" />
         <meta property="og:description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" key="description" />
@@ -35,7 +35,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="JHMUN" />
         <meta name="description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" />
-        <meta name="keywords" content="Johnston Heights Model United Nations, Johnston Heights Model UN, Johnston Heights MUN, JHMUN, Johnston Heights MUN, MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN"/>
+        <meta name="keywords" content="Johnston Heights Model United Nations,Johnston Heights Model UN,Johnston Heights MUN,JHMUN,Johnston Heights MUN, MUN, Model UN, Model United Nations,Johnston Heights,JH,Surrey,Surrey UN,Johntston Heights Secondary,IB Model UN"/>
+        <link rel="canonical" href="https://jhmun.org" />
       </Head> 
 
     
