@@ -7,7 +7,7 @@ import { Suspense, useEffect, useState } from "react";
 export default function bruh() {
 
     return (
-      <div className={styles.bruh}>
+      <div className={styles.container}>
         <Head>
           <title>404</title>
           <meta name="description" content="Johnston Heights Model UN" />

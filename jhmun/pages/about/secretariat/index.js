@@ -28,7 +28,7 @@ export default function Secretariat() {
     return (
         <div className={styles.container}>
         <Head>
-        <title>About</title>
+        <title>Secretariat</title>
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>
