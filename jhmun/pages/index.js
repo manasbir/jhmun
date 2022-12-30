@@ -28,7 +28,7 @@ export default function Home() {
         <meta property="og:title" content="Johnston Heights Model United Nations" key="title" />
         <meta property="og:description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" key="description" />
         <NextSeo 
-          title="Johnston Heights Model UN"
+          title="Johnston Heights Model UN | JHMUN"
           description="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022"
         />
         <link rel="icon" href={"/favicon.ico"} />
