@@ -158,22 +158,21 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className={styles.container}>
       <Head>
-      <title>Johnston Heights Model United Nations | JHMUN</title>
-      <meta name="description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" />
+        <title>Johnston Heights Model United Nations | JHMUN</title>
+        <meta name="description" content="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2023" />
         <meta property="og:image" content={"/design/Images/JHSS dark.png"} key="image" />
-        <meta property="og:title" content="Johnston Heights Model United Nations" key="title" />
-        <meta property="og:description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" key="description" />
+        <meta property="og:title" content="Johnston Heights Model United Nations | JHMUN" key="title" />
+        <meta property="og:description" content="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2023" key="description" />
         <NextSeo 
-          title="Johnston Heights Model United Nations | JHMUN"
-          description="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022"
+          title="Johnston Heights Model UN | JHMUN"
+          description="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2022"
         />
         <link rel="icon" href={"/favicon.ico"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Johnston Heights Model United Nations" />
-        <meta name="description" content="Inclusive Model UN experience at Johnston Heights Secondary School Model United Nations (JHMUN) on Febuary 11th, 2022" />
+        <meta name="description" content="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2023" />
         <meta name="keywords" content="Johnston Heights Model United Nations,Johnston Heights Model UN,Johnston Heights MUN,JHMUN,Johnston Heights MUN, MUN, Model UN, Model United Nations,Johnston Heights,JH,Surrey,Surrey UN,Johntston Heights Secondary,IB Model UN"/>
-        <meta name="robots" content="index, follow" />
-
+        <link rel="canonical" href="https://jhmun.org" />
       </Head> 
       {handleMenuScroll()}
 
