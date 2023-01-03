@@ -29,7 +29,7 @@ export default function Secretariat() {
         <div className={styles.container}>
         <Head>
         <title>Secretariat</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="//design/Icons & Buttons/MUN Eagle Green.svg" />
         </Head>
         <main className={styles.main}>
         <h1 className={styles.title}>

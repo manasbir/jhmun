@@ -31,7 +31,7 @@ export default function Home() {
           title="Johnston Heights Model UN | JHMUN"
           description="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2022"
         />
-        <link rel="icon" href={"/favicon.ico"} />
+        <link rel="icon" href={"//design/Icons & Buttons/MUN Eagle Green.svg"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Johnston Heights Model United Nations" />
         <meta name="description" content="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2023" />

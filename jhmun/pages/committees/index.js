@@ -8,7 +8,7 @@ export default function Committees() {
         <div className={styles.container}>
             <Head>
                 <title>Committees</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="//design/Icons & Buttons/MUN Eagle Green.svg" />
             </Head>
             <main className={styles.main}>
                 <h1 className={styles.title}>
