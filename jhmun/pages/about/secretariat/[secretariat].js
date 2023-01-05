@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../../styles/general.module.scss'
 import people from "../../../public/jsons/sec.json"

@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../../../styles/Committess.module.scss'
 import committeeDesc from '../../texts/committees.js';
 import { useEffect, useState } from "react";
@@ -75,7 +76,7 @@ export default function Committees() {
                     <h2><i>{currCommittee.members[i].position}</i></h2>
                     <p>{currCommittee.members[i].description}</p>
                 </div>
-                <img src={currCommittee.members[i].image}/>
+                <Image src={currCommittee.members[i].image} width={500} height={400}/>
             </div>
             )
         }
