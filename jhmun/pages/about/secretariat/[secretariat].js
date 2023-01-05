@@ -16,7 +16,7 @@ export default function Secretariats() {
             <div className={styles.container}>
             <Head>
             <title>{people.people[person].name}</title>
-            <link rel="icon" href="//design/Icons & Buttons/MUN Eagle Green.svg" />
+            <link rel="icon" href="/design/Icons & Buttons/MUN Eagle Green.svg" />
             </Head>
             <main className={styles.main}>
             <h1 className={styles.title}>
