@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.header1}>
             <div className={styles.logo}>
               <Link href={"/"}>
-                <img src={"/design/Icons & Buttons/MUN Eagle White.svg"}/>
+                <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={500} height={100}/>
               </Link>  
             </div>    
             <div className={styles.menu1}>
@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.header2}>
             <div className={styles.logo}>
               <Link href={"/"}>
-                <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={500} height={100}/>
               </Link>  
             </div>    
             <div className={styles.menu2}>
@@ -124,7 +124,7 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.header3}>
             <div className={styles.logo2}>
               <Link href={"/"}>
-                <img src={"/design/Icons & Buttons/MUN Eagle Green.svg"}/>
+                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"}width={500} height={100}/>
               </Link>  
             </div>
             <div className={styles.menu3}>

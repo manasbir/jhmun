@@ -24,6 +24,9 @@ $black: #1e1e1e;
   src: url("../public/design/Fonts/BebasNeue-Regular.ttf");
 }
 
+
+
+
 html,body {
   ::selection {
     background-color: $primary-color;
@@ -36,7 +39,7 @@ html,body {
     background-color: #1A3A16;
   }
 
-  background-color: #ffffff;
+  background-color: $primary-color;
 
   scrollbar-width: 0;
 

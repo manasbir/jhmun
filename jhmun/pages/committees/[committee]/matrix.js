@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../../../styles/general.module.scss'
 import Footer from '../../../components/footer'
 import { useRouter } from 'next/router'
@@ -40,7 +41,7 @@ export default function Matrix() {
                 matrixDivs.push(
                 <div className={styles.matrixItemTaken}>
                     <div className={styles.matrixCell}>
-                        <img src={matrix.delegations[i].image}></img>
+                        <Image src={matrix.delegations[i].image} width={500} height={400}/>
                         <h1>{matrix.delegations[i].name}</h1>
                         <h2>{matrix.delegations[i].title}</h2>
                     </div>
@@ -50,7 +51,7 @@ export default function Matrix() {
                 matrixDivs.push(
                 <div className={styles.matrixItem}>
                     <div className={styles.matrixCell}>
-                        <img src={matrix.delegations[i].image}></img>
+                        <Image src={matrix.delegations[i].image}width={500} height={400}/>
                         <h1>{matrix.delegations[i].name}</h1>
                         <h2>{matrix.delegations[i].title}</h2>
                     </div>

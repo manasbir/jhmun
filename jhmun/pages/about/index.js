@@ -7,7 +7,7 @@ return (
     <div className={styles.container}>
     <Head>
         <title>About</title>
-        <link rel="icon" href="//design/Icons & Buttons/MUN Eagle Green.svg" />
+        <link rel="icon" href="/design/Icons & Buttons/MUN Eagle White.svg" />
     </Head>
     <main className={styles.main}>
         <h1 className={styles.title}>

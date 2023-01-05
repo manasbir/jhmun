@@ -8,7 +8,7 @@ export default function Resources() {
         <div className={styles.container}>
         <Head>
         <title>Resources</title>
-        <link rel="icon" href="//design/Icons & Buttons/MUN Eagle Green.svg" />
+        <link rel="icon" href="/design/Icons & Buttons/MUN Eagle White.svg" />
         </Head>
         <main className={styles.main}>
         <h1 className={styles.title}>

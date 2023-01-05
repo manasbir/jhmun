@@ -1,4 +1,5 @@
 import styles from '../../styles/Home.module.scss'
+import Image from 'next/image'
 export default function mainText () {
     return (
         <p>
@@ -21,7 +22,7 @@ From my first experience as a delegate debating with others to now. I consider m
 
 <br></br><br></br>
         Sincerely,<br></br>
-        <img src={"/design/Icons & Buttons/sig.svg"} className={styles.sig}/>
+        <Image src={"/design/Icons & Buttons/sig.svg"} className={styles.sig} width={500} height={100}/>
         <br></br>
         Krishna Verma
         <br></br>

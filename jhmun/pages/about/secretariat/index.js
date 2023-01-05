@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
+
 import styles from '../../../styles/general.module.scss'
 import people from "../../../public/jsons/sec.json"
 import Footer from "../../../components/footer"
+import Image from "next/image"
 
 export default function Secretariat() {
     const getPeople = () => {
@@ -12,7 +13,7 @@ export default function Secretariat() {
             sec.push(
                 <div className={styles.people}>
                     <div className={styles.person}>
-                        <img src={people.people[i].image}/>
+                        <Image src={people.people[i].image} width={500} height={500}/>
                         <h1>{people.people[i].name}</h1>
                         <h2>{people.people[i].role}</h2>
                         <p>{people.people[i].description}</p>
