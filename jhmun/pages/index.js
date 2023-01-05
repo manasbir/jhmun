@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
-import { Suspense, useEffect, useState, useReducer } from "react";
+import { useEffect, useState } from "react";
 import mainText from './texts/mainpage';
 import Footer from '../components/footer';
 import { NextSeo } from 'next-seo';

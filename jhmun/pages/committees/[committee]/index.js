@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../../../styles/Committess.module.scss'
 import committeeDesc from '../../texts/committees.js';
-import { useEffect, useState,useReducer } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../../components/footer";
 import committees from "../../../public/jsons/committees.json";
 

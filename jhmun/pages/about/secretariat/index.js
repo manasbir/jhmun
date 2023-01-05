@@ -10,7 +10,6 @@ export default function Secretariat() {
         let sec = [];
         for (let i = 0; i < people.people.length; i++) {
             sec.push(
-                <Link href={"/about/secretariat/" + people.people[i].name.toLowerCase().replace(" ", "-")}>
                 <div className={styles.people}>
                     <div className={styles.person}>
                         <img src={people.people[i].image}/>
@@ -19,7 +18,6 @@ export default function Secretariat() {
                         <p>{people.people[i].description}</p>
                     </div>
                 </div>
-                </Link>
             )
         }
         console.log(sec);
