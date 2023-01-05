@@ -13,7 +13,7 @@ export default function Secretariat() {
             sec.push(
                 <div className={styles.people}>
                     <div className={styles.person}>
-                        <Image src={people.people[i].image} width={500} height={500} placeholder={"blur"}/>
+                        <Image src={people.people[i].image} width={500} height={500}/>
                         <h1>{people.people[i].name}</h1>
                         <h2>{people.people[i].role}</h2>
                         <p>{people.people[i].description}</p>
