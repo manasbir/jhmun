@@ -210,7 +210,9 @@ $black: #1e1e1e;
   position: relative;
   z-index: 30;
   height: 4rem;
+  width: 4rem;
   animation: fadeIn 1.5s ease-out;
+  object-fit: contain;
   img {
     animation: fadeIn 1.5s;
     height: 100%;
@@ -377,10 +379,12 @@ $black: #1e1e1e;
 
     .logo2 {
       height: 4rem;
+      width: 4rem;
       position: relative;
-      object-fit: cover;
+      object-fit: contain;
       img {
         height: 100%;
+        width: 100%;
       }
     }
     
@@ -718,8 +722,8 @@ $black: #1e1e1e;
   flex-direction: column-reverse;
   justify-content: space-between;
   width: 100%;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   padding-top: 3rem;
   img {
     max-width: 100vw;
