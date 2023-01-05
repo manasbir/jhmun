@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import styles from '../../../styles/general.module.scss'
 import people from "../../../public/jsons/sec.json"
 import Footer from "../../../components/footer"
