@@ -52,7 +52,7 @@ export default function Home() {
             <h2>Dear Delegates and Faculty Advisors,</h2>
             {mainText()}
           </div>
-          <Image src={"/design/Images/people/krisha.png"} width={500} height={500}/>
+          {/* <Image src={"/design/Images/people/krisha.png"} width={500} height={500}/> */}
         </div>
       </div>
       <Footer color={{color : "green"}}/>
