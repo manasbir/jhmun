@@ -34,7 +34,7 @@ export default function Committees() {
                 <div className={styles.committees}>
                 <Link href={"/committees/hcc"}>
                     <div className={styles.committee}>
-                        <Image src={"/design/Images/committees photos/hcc.png"} width={500} height={500} placeholder={blur}/>
+                        <Image src={"/design/Images/committees photos/hcc.png"} width={500} height={500} placeholder={"blur"}/>
                         <div className={styles.committeeText}>
                             <h1>Historical Crisis Committee (HCC)</h1>
                             <h2>Berlin Crisis of 1961</h2>
@@ -43,7 +43,7 @@ export default function Committees() {
                 </Link>
                 <Link href={"/committees/sochum"}>
                     <div className={styles.committee}>
-                        <Image src={"/design/Images/committees photos/sochum.png"} width={500} height={500} placeholder={blur}/>
+                        <Image src={"/design/Images/committees photos/sochum.png"} width={500} height={500} placeholder={"blur"}/>
                         <div className={styles.committeeText}>
                             <h1>Social, Humanitarian & Cultural Committee (SOCHUM)</h1>
                             <h2>Uyghur Muslims Disenfranchisement</h2>
@@ -52,7 +52,7 @@ export default function Committees() {
                 </Link>
                 <Link href={"/committees/unodc"}>
                     <div className={styles.committee}>
-                        <Image src={"/design/Images/committees photos/unodc.png"} width={500} height={500} placeholder={blur}/>
+                        <Image src={"/design/Images/committees photos/unodc.png"} width={500} height={500} placeholder={"blur"}/>
                         <div className={styles.committeeText}>
                             <h1>United Nations Office on Drugs & Crime (UNODC)</h1>
                             <h2>Organ Trafficking</h2>
@@ -61,7 +61,7 @@ export default function Committees() {
                 </Link>
                 <Link href={"/committees/undp"}>
                     <div className={styles.committee}>
-                        <Image src={"/design/Images/committees photos/undp.png"} width={500} height={500} placeholder={blur}/>
+                        <Image src={"/design/Images/committees photos/undp.png"} width={500} height={500} placeholder={"blur"}/>
                         <div className={styles.committeeText}>
                             <h1>United Nations development program (UNDP)</h1>
                             <h2>Palestine, Israel Dispute</h2>
