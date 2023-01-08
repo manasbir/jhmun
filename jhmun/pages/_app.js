@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   const [isAboutOpened, setIsAboutOpen] = useState(false);
     useEffect(() => {
         const setScroll = () => {
-          if (window.scrollY > 75) {
+          if (window.scrollY >= 80) {
             setIsMenuScroll(true);
           } else {
             setIsMenuScroll(false);
