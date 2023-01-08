@@ -1,4 +1,23 @@
 {
+    "title": "United Nations Office on Drugs and Crime",
+        "subTitle": "Organ Trafficking",
+        "image": "/design/Images/Dark Doctors.png",
+        "numOfMembers": 2,
+        "members": [
+            {
+                "name": "Manasbir Bagri",
+                "image": "/design/Images/people/manas.png",
+                "position": "Director",
+                "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
+            },
+            {
+                "name": "Noah Cho",
+                "image": "/images/noah.jpg",
+                "position": "Assistant Director",
+                "description": "Noah Cho, a second-year IB DP student from Johnston Heights Secondary School, is excited to be participating in JHMUN. Despite this being his first time being an assistant director for Model UN, he is still eager to bring an elevated conference experience to all who participate. Outside of MUN, Noah enjoys exercising in the weight room attempting to hit a new personal record or is undergoing his venture of creating 3D digital artwork. He hopes that JHMUN will breed new friendships and memories."
+                
+            }
+        ],
     "numOfDelegations": 2,
     "delegations": [
         {

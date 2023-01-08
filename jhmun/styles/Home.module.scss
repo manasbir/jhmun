@@ -372,10 +372,19 @@ $black: #1e1e1e;
 
 @keyframes mobileMenu {
   0% {
-    width: 20vw;
+    width: 10vw;
   }
   100% {
-    width: 60vw;
+    width: 40vw;
+  }
+}
+
+@keyframes mobileMenuOut {
+  0% {
+    width: 40vw;
+  }
+  100% {
+    width: 20vw;
   }
 }
 
@@ -391,11 +400,12 @@ $black: #1e1e1e;
   background-color: $white;
   top: 0;
   right: 0;
-  width: 60vw;
+  width: 40vw;
   height: 100vh;
   padding-top: 15%;
   color: $secondary-color;
   transition: all .5s ease-in-out;
+  
   a {
     cursor: pointer;
     overflow: hidden;
@@ -443,7 +453,7 @@ $black: #1e1e1e;
   background-color: white;
   top: 0;
   right: 0;
-  width: 65vw;
+  width: 40vw;
   color: $secondary-color;
   animation: height .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -472,7 +482,7 @@ $black: #1e1e1e;
     background-color: white;
     top: 0;
     right: 0;
-    width: 65vw;
+    width: 40vw;
     color: $secondary-color;
     animation: height2 .5s ease-in-out;
     transition: all .5s ease-in-out;
@@ -743,12 +753,14 @@ $black: #1e1e1e;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: $white;
   border-radius: .5rem;
-  color: $secondary-color;
   overflow: hidden;
 
   a {
+    transition: color .3s ease-in;
+    transition: background .3s ease-out;
     max-width: 100%;
     margin: 0;
+    color: $secondary-color;
     padding: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -758,27 +770,15 @@ $black: #1e1e1e;
   }
 }
 
-@keyframes dropdownHover {
-  0% { color: $secondary-color; background-color: white; }
-  100% { color: white; background-color: $primary-color;}
-}
-
-@keyframes dropdownNotHover {
-  100% { color: $secondary-color; background-color: white; }
-}
-
 .dropdown a:hover {
-  animation: dropdownHover .25s ease-out;
   color: white;
   background-color: $primary-color;
 }
 
-.dropdown :not(:hover) {
-  animation: dropdownNotHover .25s ease-out;
-  color: $secondary-color;
-  background-color: $white;
+.dropdown a:active {
+  color: white;
+  background-color: $primary-color;
 }
-
 
 @keyframes loadIn3 {
   0% { 

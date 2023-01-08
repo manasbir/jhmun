@@ -1,87 +1,15 @@
 {
     "hcc": {
-        "title": "Historical Crisis Committee",
-        "subTitle": "Berlin Crisis of 1960",
-        "image": "/design/Images/Dark Berline Wall.png",
-        "numOfMembers": 2,
-        "members": [
-            {
-                "name": "Manasbir Bagri",
-                "image": "/design/Images/people/manas.png",
-                "position": "Director",
-                "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
-            },
-            {
-                "name": "Grant Deng",
-                "image": "/images/grant.jpg",
-                "position": "Chair",
-                "description": "A student currently enrolled in the IB DP program at Johnston Heights secondary, Grant hopes to enjoy life to its fullest. However, this tends to become his way of shirking responsibility. He thinks that he has a sense of humor and always laughs at his own jokes, which, unfortunately are not funny to anybody else. He has engaged in a plethora of random extra-curriculars, and does not remember how he got into any of them. Nonetheless, MUN is something that he is extremely passionate about, particularly the lively, amusing and often quizzical debates."
-                
-            }
-        ]
+        
     },
     "sochum": {
-        "title": "Social Humanitarian Cultural Committee",
-        "subTitle": "Uyghur Muslims Disenfranchisement",
-        "image": "/design/Images/sochum.png",
-        "numOfMembers": 2,
-        "members": [
-            {
-                "name": "Katie Li",
-                "image": "/images/katie.jpg",
-                "position": "Director",
-                "description": "Katie is a Grade 12 IB student at Johnston Heights Secondary and is delighted to be serving as the Director of the Social, Humanitarian, and Cultural Committee (SOCHUM). Upon attending her first conference, she has been drawn by the compelling debates and the fast-paced, energetic environment. Outside of MUN, Katie can be found grinding her coursework, struggling with jazz improvisations on the piano, or undertaking a service project in the community. Katie hopes that JHMUN 2023 will cultivate lasting memories and is ecstatic to be a part of the journey."
-            },
-            {
-                "name": "Manasbir Bagri",
-                "image": "/design/Images/people/manas.png",
-                "position": "Director",
-                "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
-                
-            }
-        ]
+        
     },
     "unodc": {
-        "title": "United Nations Office on Drugs and Crime",
-        "subTitle": "Organ Trafficking",
-        "image": "/design/Images/Dark Doctors.png",
-        "numOfMembers": 2,
-        "members": [
-            {
-                "name": "Manasbir Bagri",
-                "image": "/design/Images/people/manas.png",
-                "position": "Director",
-                "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
-            },
-            {
-                "name": "Noah Cho",
-                "image": "/images/noah.jpg",
-                "position": "Assistant Director",
-                "description": "Noah Cho, a second-year IB DP student from Johnston Heights Secondary School, is excited to be participating in JHMUN. Despite this being his first time being an assistant director for Model UN, he is still eager to bring an elevated conference experience to all who participate. Outside of MUN, Noah enjoys exercising in the weight room attempting to hit a new personal record or is undergoing his venture of creating 3D digital artwork. He hopes that JHMUN will breed new friendships and memories."
-                
-            }
-        ]
+        
     },
     "undp": {
-        "title": "United Nations Development Programme",
-        "subTitle": "Palestine, Israel Dispute",
-        "image": "/design/Images/Palestine Israel.png",
-        "numOfMembers": 2,
-        "members": [
-            {
-                "name": "Manasbir Bagri",
-                "image": "/design/Images/people/manas.png",
-                "position": "Director",
-                "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
-            },
-            {
-                "name": "Manasbir Bagri",
-                "image": "/design/Images/people/manas.png",
-                "position": "Director",
-                "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
-                
-            }
-        ]
+        
     }
     
 

@@ -6,9 +6,20 @@ import styles from '../../../styles/Committess.module.scss'
 import committeeDesc from '../../texts/committees.js';
 import { useEffect, useState } from "react";
 import Footer from "../../../components/footer";
-import committees from "../../../public/jsons/committees.json";
 
-export default function Committees() {
+export async function getStaticPaths() {
+    return {
+        paths: [
+            { params: { committee: 'hcc' } },
+            { params: { committee: 'sochum' } },
+            { params: { committee: 'unodc' } },
+            { params: { committee: 'undp' } },
+        ],
+        fallback: true
+    }
+}
+
+export default function Committees({currCommittee}) {
     const router = useRouter();
     const { committee } = router.query;
     const [isMobile, setIsMobile] = useState(false);
@@ -16,42 +27,8 @@ export default function Committees() {
         window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
     }, []);
 
-    let currCommittee;
-    let image;
-    let title;
-    let subTitle;
-    let numOfMembers;
 
-    if (committee == "hcc") {
-        currCommittee = committees.hcc;
-        image = currCommittee.image;
-        title = currCommittee.title;
-        subTitle = currCommittee.subTitle;
-        numOfMembers = currCommittee.numOfMembers;
-    }
-    if (committee == "sochum") {
-        currCommittee = committees.sochum;
-        image = currCommittee.image;
-        title = currCommittee.title;
-        subTitle = currCommittee.subTitle;
-        numOfMembers = currCommittee.numOfMembers;
-    }
-    if (committee == "unodc") {
-        currCommittee = committees.unodc;
-        image = currCommittee.image;
-        title = currCommittee.title;
-        subTitle = currCommittee.subTitle;
-        numOfMembers = currCommittee.numOfMembers;
-    }
-    if (committee == "undp") {
-        currCommittee = committees.undp;
-        image = currCommittee.image;
-        title = currCommittee.title;
-        subTitle = currCommittee.subTitle;
-        numOfMembers = currCommittee.numOfMembers;
-    }
-
-
+    console.log(currCommittee);
     const handleMobile = () => {
         if (!isMobile) {
             return (
@@ -68,7 +45,7 @@ export default function Committees() {
 
     const staff = () => {
         let staff = [];
-        for (let i = 0; i < numOfMembers; i++) {
+        for (let i = 0; i < currCommittee.numOfMembers; i++) {
             staff.push(
             <div className={styles.card}>
                 <div className={styles.cardText}>
@@ -76,7 +53,7 @@ export default function Committees() {
                     <h2><i>{currCommittee.members[i].position}</i></h2>
                     <p>{currCommittee.members[i].description}</p>
                 </div>
-                <Image src={currCommittee.members[i].image} width={500} height={400} priority={true} loading={"eager"}/>
+                <Image src={currCommittee.members[i].image} width={500} height={400} priority={true} loading={"eager"} alt={currCommittee.members[i].name}/>
             </div>
             )
         }
@@ -91,8 +68,8 @@ export default function Committees() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>{title}</title>
-                <meta name="description" content="JHMUN HCC" />
+                <title>{currCommittee.title}</title>
+                <meta name="description" content={ `JHMUN ${currCommittee.title}` } />
                 <link rel="icon" href={"/design/Icons & Buttons/MUN EAGLE White.svg"} />
             </Head>
             <div className={"background"}>
@@ -137,7 +114,7 @@ export default function Committees() {
                         ${!isMobile ? 
                         `
                         margin-top: -1.25rem;
-                        background-image: url("${image}");
+                        background-image: url("${currCommittee.image}");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -146,7 +123,7 @@ export default function Committees() {
                         :
                         `
                         margin-top: 2rem;
-                        background-image: url("${image}");
+                        background-image: url("${currCommittee.image}");
 
                         -webkit-background-size: cover;
                         -moz-background-size: cover;
@@ -191,9 +168,9 @@ export default function Committees() {
                         font-style: italic;
                     }
                 `}</style>
-                <h1>{title}</h1>
+                <h1>{currCommittee.title}</h1>
                 <hr></hr>
-                <p>{subTitle}</p>
+                <p>{currCommittee.subTitle}</p>
                 <div className={styles.button}>
                     <Link
                     href={`/committees/${committee}/backgrounder`}
@@ -217,4 +194,16 @@ export default function Committees() {
             </div>
     )
     
+}
+
+
+export async function getStaticProps({params}) {
+    const res = await fetch(`https://jhmun.vercel.app/jsons/${params.committee}.json`);
+    console.log(res);
+    const committeeInfo = await res.json();
+    return {
+        props: {
+            currCommittee: committeeInfo
+        }
+    }
 }

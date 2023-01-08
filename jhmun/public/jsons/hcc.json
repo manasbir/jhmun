@@ -1,4 +1,23 @@
 {
+    "title": "Historical Crisis Committee",
+    "subTitle": "Berlin Crisis of 1960",
+    "image": "/design/Images/Dark Berline Wall.png",
+    "numOfMembers": 2,
+    "members": [
+        {
+            "name": "Manasbir Bagri",
+            "image": "/design/Images/people/manas.png",
+            "position": "Director",
+            "description": "wassup guys. coolest guy here ong. i love food, touching grass etc. im also a pretty good programmer, and progamer iykykwim. Did I tell you about green eggs and ham, I don't like them"
+        },
+        {
+            "name": "Grant Deng",
+            "image": "/images/grant.jpg",
+            "position": "Chair",
+            "description": "A student currently enrolled in the IB DP program at Johnston Heights secondary, Grant hopes to enjoy life to its fullest. However, this tends to become his way of shirking responsibility. He thinks that he has a sense of humor and always laughs at his own jokes, which, unfortunately are not funny to anybody else. He has engaged in a plethora of random extra-curriculars, and does not remember how he got into any of them. Nonetheless, MUN is something that he is extremely passionate about, particularly the lively, amusing and often quizzical debates."
+            
+        }
+    ],
     "numOfDelegations": 5,
     "delegations": [
         {

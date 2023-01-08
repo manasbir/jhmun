@@ -3,10 +3,10 @@ import Link from 'next/link'
 import styles from '../../styles/general.module.scss'
 import Footer from "../../components/footer"
 import Image from 'next/image'
-import hccImage from "../../public/design/Images/committees photos/hcc.png"
-import sochumImage from "../../public/design/Images/committees photos/sochum.png"
-import unodcImage from "../../public/design/Images/committees photos/unodc.png"
-import undpImage from "../../public/design/Images/committees photos/undp.png"
+import hccImage from "../../public/design/Images/committees/hcc.png"
+import sochumImage from "../../public/design/Images/committees/sochum.png"
+import unodcImage from "../../public/design/Images/committees/unodc.png"
+import undpImage from "../../public/design/Images/committees/undp.png"
 
 export default function Committees() {
     return (
@@ -79,4 +79,4 @@ export default function Committees() {
         </div>
 
     )
-}    
+}
