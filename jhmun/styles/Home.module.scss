@@ -24,68 +24,6 @@ $black: #1e1e1e;
   src: url("../public/design/Fonts/BebasNeue-Regular.ttf");
 }
 
-@keyframes gradient {
-    0% {
-      rotate: 90deg;
-      width: 50%;
-      height: 50%;
-    }
-    33% {
-      rotate: -180deg;
-    }
-    66% {
-      rotate: 360deg;
-    }
-    100% {
-      rotate: -720deg;
-    }
-}
-
-@keyframes gradient2 {
-  0% {
-  }
-  50% {
-    rotate: -360deg;
-  }
-  100% {
-    rotate: 720deg;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  50% {
-    width: 70%;
-    height: 70%;
-    transform: rotate(0deg);
-  }
-  55% {
-    transform: rotate(180deg);
-  }
-  60% {
-    width: 120%;
-    height: 120%;
-    transform: rotate(360deg);
-  }
-  70% {
-    translate: 50%;
-    filter: invert(1);
-  }
-  80% {
-    translate: -100%;
-    filter: invert(0);
-  }
-  90% {
-    translate: 100%;
-    filter: invert(1);
-  }
-}
-
 @keyframes loadIn {
   0% { 
     opacity: 0; 
@@ -374,67 +312,78 @@ $black: #1e1e1e;
     display: none;
   }
 
-  .mobileHeader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  .logoMobile {
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    object-fit: contain;
+    z-index: 10;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+/*   .mobileHeader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-  }
+    background-color: #fff;
+    height: 100vh;
+    width: 60vw;
+  } */
+
   .menuToggle {
     opacity: 0;
-  }
-
-  .menuToggle:checked {
-    + .menuBtn {
-      span {
-        transform: rotate(45deg);
-        ::before {
-          transform: rotate(0);
-          top: 0;
-        }
-        ::after {
-          transform: rotate(90);
-          top: 0;
-        }
-      }
-    }
-    ~ .menu {
-      left: 0 !important;
-    }
-  }
-
-  .menuBtn {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
-    height: 40px;
-    width: 40px;
-    padding: 0.6rem;
+    left: 0;
+    z-index: 50;
+  }
+
+  .menuToggle:checked ~ .menu {
+    right: 0 !important;
+  }
+
+  .menuToggle
+
+  .hamburger {
+    top: 10px;
+    right: 20px;
+    position: fixed;
+    z-index: 30;
     cursor: pointer;
   }
-
-  .menuBtn > span, .menuBtn > span::before, .menuBtn > span::after {
-    display: block;
-    position: absolute;
+  .hamburger__line {
+    width: 30px;
     height: 2px;
-    width: 100%;
-    background-color: #fff;
+    background-color: white;
+    display: block;
+    margin: 10px auto;
     transition: all 0.2s ease-in-out;
   }
 
-  .menuBtn > span::before {
-    content: '';
-    top: -8px;
+  #toggler:checked ~ .hamburger .hamburger__line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .toggler:checked ~ .hamburger .hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+  .menuToggle:checked ~ .hamburger .hamburger__line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
   }
 
-  .menuBtn > span::after {
-    content: '';
-    top: 8px;
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 200;
+    background-color: #fff;
+    height: 100vh;
+    width: 60vw;
+    transition: transform 0.3s ease-in-out;
   }
 }
 

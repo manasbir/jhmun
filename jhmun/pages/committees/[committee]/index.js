@@ -27,8 +27,6 @@ export default function Committees({currCommittee}) {
         window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
     }, []);
 
-
-    console.log(currCommittee);
     const handleMobile = () => {
         if (!isMobile) {
             return (
@@ -196,7 +194,6 @@ export default function Committees({currCommittee}) {
 
 export async function getStaticProps({params}) {
     const res = await fetch(`https://jhmun.vercel.app/jsons/${params.committee}.json`);
-    console.log(res);
     const committeeInfo = await res.json();
     return {
         props: {

@@ -90,10 +90,12 @@ function MyApp({ Component, pageProps }) {
                   <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true} loading={"eager"}/>
                 </Link>
               </div>
-              <input id={styles.menuToggle} type="checkbox" />
-              <label className={styles.menuBtn} for={styles.menuToggle}>
-              <span></span>
-              </label>
+              <input id={"toggler"} type="checkbox" className={styles.menuToggle}/>
+              <label for={"toggler"} className={styles.hamburger} htmlFor={"toggler"}>
+                <span className={styles.hamburger__line}></span>
+                <span className={styles.hamburger__line}></span>
+                <span className={styles.hamburger__line}></span>
+              </label>     
               <ul className={styles.menu}>
                 <li><Link href={"/committees"}>COMMITTEES</Link></li>
 {/*                 <li><Link href={"/committees/hcc"}>HCC</Link></li> */}
@@ -101,7 +103,7 @@ function MyApp({ Component, pageProps }) {
                 <li><Link href={"/resources"}>RESOURCES</Link></li>
                 <li><Link href={"/registration"}>REGISTRATION</Link></li>
               </ul>
-            </div>
+              </div>
           </>
         )
       } else {
