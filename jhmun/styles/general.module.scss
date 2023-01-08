@@ -464,7 +464,8 @@ $black: #1e1e1e;
 }
 
 .pdf {
-  padding: 3rem;
+  max-width: 100vw;
+  padding: 5vw;
   background-color: white;
   display: flex;
   flex-direction: column;
