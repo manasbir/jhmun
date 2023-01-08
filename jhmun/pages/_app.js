@@ -12,6 +12,9 @@ function MyApp({ Component, pageProps }) {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isComOpened, setIsComOpen] = useState(false);
+  const [isAboutOpened, setIsAboutOpen] = useState(false);
     useEffect(() => {
         window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
     }, []);
@@ -120,35 +123,65 @@ function MyApp({ Component, pageProps }) {
         )
       }
   } else {
-      return (
-          <div className={styles.header3}>
-            <div className={styles.logo2}>
-              <Link href={"/"}>
-                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"}width={100} height={100} priority={true}/>
-              </Link>  
-            </div>
-            <div className={styles.menu3}>
-              <Link
-                onMouseEnter={() => setIsComHovered(true)} 
-                onMouseLeave={() => setIsComHovered(false)}
-                href={"/committees"}>
-                  COMMITTEES
-                {handleComHover()}
-              </Link>
+      const handleMenuOpen = () => {
+        if (isMenuOpen) {
+          const handleComOpen = () => {
+            if (isComOpened) {
+              return (
+                <div className={styles.mobileSubMenu}>
+                  <Link href="/committees" >Committees Overview</Link>
+                  <Link href="/committees/hcc" >HCC</Link>
+                  <Link href="/committees/sochum" >SOCHUM</Link>
+                  <Link href="/committees/unodc" >UNODC</Link>
+                  <Link href="/committees/undp">UNDP</Link>
+                </div>
+              )
+            }
+          }
+          const handleAboutOpen = () => {
+            if (isAboutOpened) {
+              return (
+                <div className={styles.mobileSubMenu2}>
+                  <Link href="/about">About Us</Link>
+                  <Link href="/about/secretariat">Secretariat</Link>
+                  <Link href="/about/conference">Conference</Link>
+                </div>
+              )
+            }
+          }
 
-              <Link 
-                onMouseEnter={() => setIsAboutHovered(true)} 
-                onMouseLeave={() => setIsAboutHovered(false)}
-                href={"/about"}>
-                  ABOUT
-                {handleAboutHover()}
-              </Link>
 
+          return(
+            <div className={styles.mobileMenu}>
+
+              <a onClick={() => setIsComOpen(!isComOpened)}>COMMITTEES +</a>
+              {handleComOpen()}
+
+              <a onClick={() => setIsAboutOpen(!isAboutOpened)}>ABOUT +</a>
+              {handleAboutOpen()}
               <Link href={"/resources"}>RESOURCES</Link>
 
               <Link href={"/registration"}>REGISTRATION</Link>
             </div>
+          )
+        }
+      }
+      return (
+        <div className={styles.mobileHeader}>
+          <div className={styles.logoMobile}>
+            <Link href={"/"}>
+              <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true}/>
+            </Link>
           </div>
+          <div className={isMenuOpen ?  styles.hamburgerMenuActive : styles.hamburgerMenu} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <div className={styles.lines}>
+                  <span className={styles.line1}></span>
+                  <span className={styles.line2}></span>
+                  <span className={styles.line3}></span>
+                </div>
+          </div>
+          {handleMenuOpen()}
+        </div>
       )
     }
   }
@@ -167,7 +200,7 @@ function MyApp({ Component, pageProps }) {
           title="Johnston Heights Model UN | JHMUN"
           description="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2022"
         />
-        <link rel="icon" href={"//design/Icons & Buttons/MUN Eagle Green.svg"} />
+        <link rel="icon" href={"/design/Icons & Buttons/MUN Eagle Green.svg"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Johnston Heights Model United Nations" />
         <meta name="description" content="Johnston Heights Model United Nations 2023 (JHMUN) is an inclusive model UN experience taking place at Johnston Heights Secondary School on Febuary 11th, 2023" />

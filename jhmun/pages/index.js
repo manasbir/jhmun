@@ -39,16 +39,16 @@ export default function Home() {
       </Head> 
 
     
-      <div className={isMobile ? styles.coverMobile : styles.cover}>
+      <div className={styles.cover}>
         <h1>Johnston Heights Model United Nations 2023</h1>
         <hr></hr>
         <p>February 11th, 2023</p>
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
-      <div className={isMobile ? styles.textsMobile : styles.texts}>
-        <h1>Developed by the leaders of today, for the leaders of tomorrow</h1>
-        <div className={isMobile ? styles.backgroundMobile : styles.background}>
-          <div className={isMobile ? styles.textMobile : styles.text}>
+      <div className={styles.texts}>
+        <h1>"Developed by the leaders of today, for the leaders of tomorrow"</h1>
+        <div className={styles.background}>
+          <div className={styles.text}>
             <h2>Dear Delegates and Faculty Advisors,</h2>
             {mainText()}
           </div>
