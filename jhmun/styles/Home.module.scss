@@ -117,6 +117,11 @@ $black: #1e1e1e;
 }
 
 @media screen and (min-width: 1000px) {
+  .mobileHeader {
+    display: none;
+    visibility: hidden;
+  }
+
   .logo {
     position: relative;
     z-index: 30;
@@ -324,16 +329,13 @@ $black: #1e1e1e;
     }
   }
 
-/*   .mobileHeader {
-    position: fixed;
+   .mobileHeader {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    background-color: #fff;
-    height: 100vh;
-    width: 60vw;
-  } */
+  }
 
   .menuToggle {
     opacity: 0;
@@ -344,15 +346,13 @@ $black: #1e1e1e;
   }
 
   .menuToggle:checked ~ .menu {
-    right: 0 !important;
+    transform: translateX(-150%);
   }
-
-  .menuToggle
 
   .hamburger {
     top: 10px;
     right: 20px;
-    position: fixed;
+    position: absolute;
     z-index: 30;
     cursor: pointer;
   }
@@ -365,26 +365,44 @@ $black: #1e1e1e;
     transition: all 0.2s ease-in-out;
   }
 
-  #toggler:checked ~ .hamburger .hamburger__line:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+  .menuToggle:checked ~ .hamburger .hamburger__line:nth-child(1) {
+    transform: translateY(12.5px) rotate(45deg);
+    background-color: $primary-color;
   }
-  .toggler:checked ~ .hamburger .hamburger__line:nth-child(2) {
+  .menuToggle:checked ~ .hamburger .hamburger__line:nth-child(2) {
     opacity: 0;
   }
   .menuToggle:checked ~ .hamburger .hamburger__line:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-12.5px) rotate(-45deg);
+    background-color: $primary-color;
   }
 
   .menu {
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
     top: 0;
+    position: fixed;
     right: -100%;
-    z-index: 200;
+    z-index: 20;
     background-color: #fff;
     height: 100vh;
     width: 60vw;
     transition: transform 0.3s ease-in-out;
+    
+        list-style: none;
+        padding: 1rem;
+        padding-top: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.5rem;
+        text-align: left;
+        text-decoration: none;
+        color: $secondary-color;
+        line-height: 200%;
   }
+  // just need the list to look epic, cuz rn its just a bullet list
 }
 
 @keyframes loadIn3 {
