@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   const [isAboutOpened, setIsAboutOpen] = useState(false);
     useEffect(() => {
         const setScroll = () => {
-          if (window.scrollY > 100) {
+          if (window.scrollY > 75) {
             setIsMenuScroll(true);
           } else {
             setIsMenuScroll(false);
@@ -53,16 +53,15 @@ function MyApp({ Component, pageProps }) {
   }
 
   const handleMenuScroll = () => {
-      if (!isMenuScroll) {
         return (
           <>
-            <div className={styles.header1}>
+            <div className={isMenuScroll ? styles.header2 : styles.header1 }>
               <div className={styles.logo}>
                 <Link href={"/"}>
-                  <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true} loading={"eager"}/>
+                  <Image src={`/design/Icons & Buttons/MUN Eagle ${isMenuScroll? `Green` : `White`}.svg`} width={100} height={100} priority={true} loading={"eager"}/>
                 </Link>  
               </div>    
-              <div className={styles.menu1}>
+              <div className={isMenuScroll ? styles.menu1: styles.menu2}>
                 <Link
                   onMouseEnter={() => setIsComHovered(true)} 
                   onMouseLeave={() => setIsComHovered(false)}
@@ -71,7 +70,7 @@ function MyApp({ Component, pageProps }) {
                   {handleComHover()}
                 </Link>
 
-                <Link 
+                <Link
                   onMouseEnter={() => setIsAboutHovered(true)} 
                   onMouseLeave={() => setIsAboutHovered(false)}
                   href={"/about"}>
@@ -97,47 +96,14 @@ function MyApp({ Component, pageProps }) {
                 <span className={styles.hamburger__line}></span>
               </label>     
               <ul className={styles.menu}>
-                <li><Link href={"/committees"}>COMMITTEES</Link></li>
-{/*                 <li><Link href={"/committees/hcc"}>HCC</Link></li> */}
-                <li><Link href={"/about"}>ABOUT</Link></li>
-                <li><Link href={"/resources"}>RESOURCES</Link></li>
-                <li><Link href={"/registration"}>REGISTRATION</Link></li>
+                <li><Link href={"/committees"}>Committees</Link></li>
+                <li><Link href={"/about"}>About</Link></li>
+                <li><Link href={"/resources"}>Resources</Link></li>
+                <li><Link href={"/registration"}>Registration</Link></li>
               </ul>
               </div>
           </>
         )
-      } else {
-        return (
-          <div className={styles.header2}>
-            <div className={styles.logo}>
-              <Link href={"/"}>
-                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={100} height={100} priority={true} loading={"eager"}/>
-              </Link>  
-            </div>    
-            <div className={styles.menu2}>
-              <Link
-                onMouseEnter={() => setIsComHovered(true)} 
-                onMouseLeave={() => setIsComHovered(false)}
-                href={"/committees"}>
-                  COMMITTEES
-                {handleComHover()}
-              </Link>
-
-              <Link 
-                onMouseEnter={() => setIsAboutHovered(true)} 
-                onMouseLeave={() => setIsAboutHovered(false)}
-                href={"/about"}>
-                  ABOUT
-                {handleAboutHover()}
-              </Link>
-
-              <Link href={"/resources"}>RESOURCES</Link>
-
-              <Link href={"/registration"}>REGISTRATION</Link>
-            </div>
-          </div>
-        )
-      }
   }
 
 
