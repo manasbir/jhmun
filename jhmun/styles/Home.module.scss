@@ -229,7 +229,7 @@ $black: #1e1e1e;
 
     .lines {
       span {
-        background: $white;
+        background: $primary-color;
       }
     }
     .line1 {
@@ -274,12 +274,12 @@ $black: #1e1e1e;
     width: 20vw;
   }
   100% {
-    width: 65vw;
+    width: 60vw;
   }
 }
 
 .mobileMenu {
-  animation: mobileMenu .5s ease;
+  animation: mobileMenu .5s ease-in;
   filter: drop-shadow(-0.25em 0px 10px $black);
   z-index: 50;
   position: fixed;
@@ -287,10 +287,10 @@ $black: #1e1e1e;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: $primary-color;
+  background-color: $white;
   top: 0;
   right: 0;
-  width: 65vw;
+  width: 60vw;
   height: 100vh;
   padding-top: 15%;
   color: $secondary-color;
@@ -302,9 +302,10 @@ $black: #1e1e1e;
     white-space: nowrap;
     width: 100%;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
-    color: white;
+    color: $secondary-color;
+    border-bottom: 1.5px solid $secondary-color;
   }
 }
 
@@ -337,7 +338,7 @@ $black: #1e1e1e;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: left;
   background-color: white;
   top: 0;
   right: 0;
@@ -352,9 +353,10 @@ $black: #1e1e1e;
     padding-left: 3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 1.35rem;
+    font-size: .75rem;
     text-decoration: none;
     color: $secondary-color;
+    border-bottom: $secondary-color .5px solid;
   }
 }
 
@@ -741,7 +743,7 @@ $black: #1e1e1e;
   }
   button {
     position: relative;
-    border-radius: 10px;
+    border-radius: 7.5px;
     animation: loadIn3 2s ease-in-out;
     animation-iteration-count: 1;
     padding: 15px;
@@ -751,10 +753,10 @@ $black: #1e1e1e;
     min-height: 20px;
     width: fit-content;
     background-color: transparent;
-    border: 2px solid #ffffff;
-    font-family: 'Secondary';
+    border: 1px solid #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 1.2rem;
     line-height: 24px;
     text-align: center;
@@ -811,7 +813,7 @@ $black: #1e1e1e;
 
 .cover button:hover {
   cursor: pointer;
-  animation: changeColor 0.5s ease-in-out;
+  animation: changeColor 0.3s ease-in-out;
   background-color: $white;
   color: #0e2b26;
 }
@@ -859,6 +861,7 @@ $black: #1e1e1e;
     font-size: 2rem;
     color: $primary-color;
     font-weight: 900;
+    line-height: 120%;
     font-style: italic;
     font-family: Times, 'Times New Roman', serif;
     margin-bottom: 0;

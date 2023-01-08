@@ -154,14 +154,14 @@ function MyApp({ Component, pageProps }) {
           return(
             <div className={styles.mobileMenu}>
 
-              <a onClick={() => setIsComOpen(!isComOpened)}>COMMITTEES +</a>
+              <a onClick={() => setIsComOpen(!isComOpened)}>Committees +</a>
               {handleComOpen()}
 
-              <a onClick={() => setIsAboutOpen(!isAboutOpened)}>ABOUT +</a>
+              <a onClick={() => setIsAboutOpen(!isAboutOpened)}>About +</a>
               {handleAboutOpen()}
-              <Link href={"/resources"}>RESOURCES</Link>
+              <Link href={"/resources"}>Resources</Link>
 
-              <Link href={"/registration"}>REGISTRATION</Link>
+              <Link href={"/registration"}>Registration</Link>
             </div>
           )
         }

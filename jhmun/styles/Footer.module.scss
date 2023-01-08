@@ -69,6 +69,7 @@ $black: #1e1e1e;
       font-family: Times, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 400;
+      line-height: 120%;
       overflow-wrap: break-word;
     }
   
@@ -140,6 +141,7 @@ $black: #1e1e1e;
   
     h2 {
       font-size: 2rem;
+      line-height: 120%;
       color: $white;
       font-style: italic;
       font-family: Times, 'Times New Roman', serif;
