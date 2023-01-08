@@ -154,10 +154,10 @@ function MyApp({ Component, pageProps }) {
           return(
             <div className={styles.mobileMenu}>
 
-              <a onClick={() => setIsComOpen(!isComOpened)}>Committees +</a>
+              <a onClick={() => setIsComOpen(!isComOpened)}>Committees <Image src={"/design/Icons & Buttons/arrow.svg"} width={10} height={10} priority={true} loading={"eager"}/></a>
               {handleComOpen()}
 
-              <a onClick={() => setIsAboutOpen(!isAboutOpened)}>About +</a>
+              <a onClick={() => setIsAboutOpen(!isAboutOpened)}>About  <Image src={"/design/Icons & Buttons/arrow.svg"} width={10} height={10} priority={true} loading={"eager"}/></a>
               {handleAboutOpen()}
               <Link href={"/resources"}>Resources</Link>
 
