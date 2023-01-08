@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   const [isAboutOpened, setIsAboutOpen] = useState(false);
     useEffect(() => {
         const setScroll = () => {
-          if (window.scrollY >= 80) {
+          if (window.scrollY >= 100) {
             setIsMenuScroll(true);
           } else {
             setIsMenuScroll(false);
@@ -55,13 +55,13 @@ function MyApp({ Component, pageProps }) {
   const handleMenuScroll = () => {
         return (
           <>
-            <div className={isMenuScroll ? styles.header2 : styles.header1 }>
+            <div className={isMenuScroll ? styles.header2 : styles.header1}>
               <div className={styles.logo}>
                 <Link href={"/"}>
                   <Image src={`/design/Icons & Buttons/MUN Eagle ${isMenuScroll? `Green` : `White`}.svg`} width={100} height={100} priority={true} loading={"eager"}/>
                 </Link>  
               </div>    
-              <div className={isMenuScroll ? styles.menu1: styles.menu2}>
+              <div className={isMenuScroll ? styles.menu2: styles.menu1}>
                 <Link
                   onMouseEnter={() => setIsComHovered(true)} 
                   onMouseLeave={() => setIsComHovered(false)}
@@ -83,7 +83,7 @@ function MyApp({ Component, pageProps }) {
                 <Link href={"/registration"}>REGISTRATION</Link>
               </div>
             </div>
-            <div className={styles.mobileHeader}>
+            <div className={isMenuScroll ? styles.mobileHeader : styles.mobileHeader2}>
               <div className={styles.logoMobile}>
                 <Link href={"/"}>
                   <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true} loading={"eager"}/>

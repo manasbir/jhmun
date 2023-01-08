@@ -122,6 +122,16 @@ $black: #1e1e1e;
     visibility: hidden;
   }
 
+  .logoMobile {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menuToggle {
+    display: none;
+    visibility: hidden;
+  }
+
   .logo {
     position: relative;
     z-index: 30;
@@ -147,11 +157,14 @@ $black: #1e1e1e;
   }
   
   .header1 {
-    padding: 1em;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0);
+    // transition: all 0.5s ease-out;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    // animation: menuLoading 0.6s ease-out;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -196,7 +209,7 @@ $black: #1e1e1e;
     @keyframes menuLoading {
       0% {
         opacity: .25;
-        transform: translateY(-3em);
+        transform: translateY(-2em);
       }
       100% {
         opacity: 1;
@@ -205,12 +218,13 @@ $black: #1e1e1e;
     }
   
     .header2 {
+      // transition: all 0.5s ease-out;
       padding: 1em;
       padding-left: 2em;
       padding-right: 2em;
-      animation: menuLoading 0.6s ease-out;
-      top: 0;
+      // animation: menuLoading 0.6s ease-out;
       position: fixed;
+      top: 0;
       background-color: rgba(255, 255, 255, 1);
       width: 100%;
       display: flex;
