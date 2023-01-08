@@ -46,7 +46,7 @@ export default function Home() {
         <Link href={"/registration"}><button>Apply</button></Link>
       </div>
       <div className={styles.texts}>
-        <h1>"Developed by the leaders of today, for the leaders of tomorrow"</h1>
+        <h1>&quot;Developed by the leaders of today, for the leaders of tomorrow&quot;</h1>
         <div className={styles.background}>
           <div className={styles.text}>
             <h2>Dear Delegates and Faculty Advisors,</h2>

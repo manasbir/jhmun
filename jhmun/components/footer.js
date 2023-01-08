@@ -6,7 +6,7 @@ export default function Footer ({color}) {
     if (color.color == "white") {
     return(
         <footer className={styles.footer1}>
-            <h2>Developed by the leaders of today, for the leaders of tomorrow</h2>
+            <h2>&quot;Developed by the leaders of today, for the leaders of tomorrow&quot;</h2>
             <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={500} height={100}/>
             <Link href={"https://www.instagram.com/jhmun2023/"}>
             <div className={styles.socials}>
@@ -19,7 +19,7 @@ export default function Footer ({color}) {
     } else {
         return(
             <footer className={styles.footer2}>
-                <h2>Developed by the leaders of today, for the leaders of tomorrow</h2>
+                <h2>&quot;Developed by the leaders of today, for the leaders of tomorrow&quot;</h2>
                 <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"}width={500} height={100}/>
                 <a href={"https://www.instagram.com/jhmun2023/"}>
                 <div className={styles.socials2}>
