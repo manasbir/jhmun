@@ -111,31 +111,28 @@ export default function Committees({currCommittee}) {
                         align-items: center;
                         justify-content: center;
                         
-                        ${!isMobile ? 
-                        `
-                        margin-top: -1.25rem;
-                        background-image: url("${currCommittee.image}");
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                        `
-                        :
-                        `
-                        margin-top: 2rem;
-                        background-image: url("${currCommittee.image}");
+                        @media (max-width: 800px) {
+                            margin-top: 2rem;
+                            background-image: url("${currCommittee.image}");
 
-                        -webkit-background-size: cover;
-                        -moz-background-size: cover;
-                        -o-background-size: cover;
-                        background-size: cover;
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                            background-size: cover;
 
-                        background-repeat: no-repeat;
+                            background-repeat: no-repeat;
 
-                        -moz-appearace:none;
-                        -webkit-appearace:none;
-                        appearance:none;
-                        `
+                            -moz-appearace:none;
+                            -webkit-appearace:none;
+                            appearance:none;
+                        }
+                        @media (min-width: 800px) {
+                            margin-top: -1.25rem;
+                            background-image: url("${currCommittee.image}");
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-attachment: fixed;
                         }
                     }
                     h1 {

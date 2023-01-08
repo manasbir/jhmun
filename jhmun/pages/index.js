@@ -5,20 +5,12 @@ import { useEffect, useState } from "react";
 import mainText from './texts/mainpage';
 import Footer from '../components/footer';
 import { NextSeo } from 'next-seo';
-import Image from 'next/image';
 
 
 
 
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
-    useEffect(() => {
-        window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
-    }, []);
-  
-
-
   return (
     <div>
       <Head>
