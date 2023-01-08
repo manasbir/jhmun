@@ -17,18 +17,15 @@ function MyApp({ Component, pageProps }) {
   const [isAboutOpened, setIsAboutOpen] = useState(false);
     useEffect(() => {
         window.innerWidth < 800 ? setIsMobile(true) : setIsMobile(false);
+        const setScroll = () => {
+          if (window.scrollY > 100) {
+            setIsMenuScroll(true);
+          } else {
+            setIsMenuScroll(false);
+          }
+        }
+        window.addEventListener('scroll', setScroll);
     }, []);
-
-  useEffect(() => {
-    const setScroll = () => {
-      if (window.scrollY > 100) {
-        setIsMenuScroll(true);
-      } else {
-        setIsMenuScroll(false);
-      }
-    }
-    window.addEventListener('scroll', setScroll);
-  }, [])
 
   const handleComHover = () => {
     if (isCommitteesHovered) {

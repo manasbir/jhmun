@@ -987,9 +987,9 @@ $black: #1e1e1e;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   p {
-    max-width: 40rem;
+    max-width: 60rem;
     color: $secondary-color;
     width: 100%;
     font-weight: 400;
