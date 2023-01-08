@@ -19,6 +19,10 @@ The conference will host 4 captivating committees:
 From my first experience as a delegate debating with others to now. I consider myself lucky to have been granted this valuable opportunity. I have gained a significantly more nuanced understanding of the world and the geopolitical circumstances that are present within the world. JHMUN is an excellent environment for all students like myself to enhance their soft skills. JHMUN firmly believes that every student should have an opportunity to engage in the enriching world of Model United Nations. Together with the executive team, we are dedicated to hosting a great and memorable event for all attendees. Thank you for joining us, we look forward to welcoming you in February. 
 <br></br><br></br>
 ​<b>For any general inquiries, email us at: </b>
+<br></br>
+        <a href="mailto:
+sg@jhmun.org" target="_blank" rel="noreferrer">
+    <u><b>sg@jhmun.org</b></u></a>
 
 <br></br><br></br>
         Sincerely,<br></br>
