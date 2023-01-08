@@ -16,7 +16,7 @@ export default function bruh() {
           <meta name="author" content="JHMUN" />
           <meta name="keywords" content="MUN, Model UN, Model United Nations, Johnston Heights, JH, Surrey, Surrey UN, BC, Fraser heights, Vancouver, Johntston Heights Secondary, IB Model UN"/>
         </Head>
-        <Image src="/design/Images/idk.png" width={500} height={500}/>
+        <Image src="/design/Images/idk.png" width={500} height={500} priority={true} loading={"eager"}/>
         <h1>404</h1>
         <h1>404 page not found or incomplete</h1>  
         </div>

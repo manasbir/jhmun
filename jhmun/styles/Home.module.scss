@@ -382,7 +382,7 @@ $black: #1e1e1e;
       padding-left: 3rem;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      font-size: 1.35rem;
+      font-size: .75rem;
       text-decoration: none;
       color: $secondary-color;
     }
@@ -743,7 +743,7 @@ $black: #1e1e1e;
   }
   button {
     position: relative;
-    border-radius: 7.5px;
+    border-radius: 3.5px;
     animation: loadIn3 2s ease-in-out;
     animation-iteration-count: 1;
     padding: 15px;

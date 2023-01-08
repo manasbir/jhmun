@@ -76,7 +76,7 @@ export default function Committees() {
                     <h2><i>{currCommittee.members[i].position}</i></h2>
                     <p>{currCommittee.members[i].description}</p>
                 </div>
-                <Image src={currCommittee.members[i].image} width={500} height={400}/>
+                <Image src={currCommittee.members[i].image} width={500} height={400} priority={true} loading={"eager"}/>
             </div>
             )
         }

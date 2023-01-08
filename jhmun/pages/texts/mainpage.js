@@ -22,7 +22,7 @@ From my first experience as a delegate debating with others to now. I consider m
 
 <br></br><br></br>
         Sincerely,<br></br>
-        <Image src={"/design/Icons & Buttons/sig.svg"} className={styles.sig} width={500} height={100}/>
+        <Image src={"/design/Icons & Buttons/sig.svg"} className={styles.sig} width={500} height={100} priority={true} loading={"eager"}/>
         <br></br>
         Krishna Verma
         <br></br>

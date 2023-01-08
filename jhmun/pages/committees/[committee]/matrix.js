@@ -41,7 +41,7 @@ export default function Matrix() {
                 matrixDivs.push(
                 <div className={styles.matrixItemTaken}>
                     <div className={styles.matrixCell}>
-                        <Image src={matrix.delegations[i].image} width={500} height={400}/>
+                        <Image src={matrix.delegations[i].image} width={500} height={400} priority={true} loading={"eager"}/>
                         <h1>{matrix.delegations[i].name}</h1>
                         <h2>{matrix.delegations[i].title}</h2>
                     </div>
@@ -51,7 +51,7 @@ export default function Matrix() {
                 matrixDivs.push(
                 <div className={styles.matrixItem}>
                     <div className={styles.matrixCell}>
-                        <Image src={matrix.delegations[i].image}width={500} height={400}/>
+                        <Image src={matrix.delegations[i].image}width={500} height={400} priority={true} loading={"eager"}/>
                         <h1>{matrix.delegations[i].name}</h1>
                         <h2>{matrix.delegations[i].title}</h2>
                     </div>

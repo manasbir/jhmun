@@ -7,10 +7,10 @@ export default function Footer ({color}) {
     return(
         <footer className={styles.footer1}>
             <h2>&quot;Developed by the leaders of today, for the leaders of tomorrow&quot;</h2>
-            <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={500} height={100}/>
+            <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={500} height={100} priority={true} loading={"eager"}/>
             <Link href={"https://www.instagram.com/jhmun2023/"}>
             <div className={styles.socials}>
-                <Image src={"/design/Icons & Buttons/insta.svg"} width={500} height={40}/>@jhmun2023
+                <Image src={"/design/Icons & Buttons/insta.svg"} width={500} height={40} priority={true} loading={"eager"}/>@jhmun2023
             </div>
             </Link>
             <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir" target="_blank" rel="noreferrer">Manasbir Bagri</a>, Designed by Gordon Li</p>
@@ -20,10 +20,10 @@ export default function Footer ({color}) {
         return(
             <footer className={styles.footer2}>
                 <h2>&quot;Developed by the leaders of today, for the leaders of tomorrow&quot;</h2>
-                <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"}width={500} height={100}/>
-                <a href={"https://www.instagram.com/jhmun2023/"}>
+                <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"}width={500} height={100} priority={true} loading={"eager"}/>
+                <a href={"https://www.instagram.com/jhmun2023/"} >
                 <div className={styles.socials2}>
-                    <Image src={"/design/Icons & Buttons/insta.svg"} width={500} height={40}/>@jhmun2023
+                    <Image src={"/design/Icons & Buttons/insta.svg"} width={500} height={40} priority={true} loading={"eager"}/>@jhmun2023
                 </div>
                 </a>
                 <p> Copyright © Johnston Heights Model United Nations 2023 | Website Created by <a href="https://github.com/manasbir" target="_blank" rel="noreferrer">Manasbir Bagri</a>, Designed by Gordon Li</p>

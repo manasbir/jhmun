@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.header1}>
             <div className={styles.logo}>
               <Link href={"/"}>
-                <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true}/>
+                <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true} loading={"eager"}/>
               </Link>  
             </div>    
             <div className={styles.menu1}>
@@ -95,7 +95,7 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.header2}>
             <div className={styles.logo}>
               <Link href={"/"}>
-                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={100} height={100} priority={true}/>
+                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={100} height={100} priority={true} loading={"eager"}/>
               </Link>  
             </div>    
             <div className={styles.menu2}>
@@ -170,7 +170,7 @@ function MyApp({ Component, pageProps }) {
         <div className={styles.mobileHeader}>
           <div className={styles.logoMobile}>
             <Link href={"/"}>
-              <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true}/>
+              <Image src={"/design/Icons & Buttons/MUN Eagle White.svg"} width={100} height={100} priority={true} loading={"eager"}/>
             </Link>
           </div>
           <div className={isMenuOpen ?  styles.hamburgerMenuActive : styles.hamburgerMenu} onClick={() => setIsMenuOpen(!isMenuOpen)}>
