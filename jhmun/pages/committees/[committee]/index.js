@@ -198,7 +198,7 @@ export default function Committees({currCommittee}) {
 
 
 export async function getStaticProps({params}) {
-    const res = await fetch(`https://jhmun.vercel.app/jsons/${params.committee}.json`);
+    const res = await fetch(`http://localhost:3000/jsons/${params.committee}.json`);
     console.log(res);
     const committeeInfo = await res.json();
     return {
