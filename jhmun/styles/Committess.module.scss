@@ -260,7 +260,7 @@ $black: #1e1e1e;
   color: $white;
   margin: 2vw;
   width: 70vw;
-  height: 20rem;
+  
   background-color: $white;
   border-radius: 1em;
   box-shadow: 0 0 0.5em $black;
@@ -269,14 +269,29 @@ $black: #1e1e1e;
     transform: scale(1.1);
   }
   img {
-    margin-left: 1rem;
     margin-top: 0;
     margin-bottom: 0;
     height: 18rem;
-    width: 18rem;
+    width: 100%;
     object-fit: cover;
     border-radius: .5em;
   }
+  @media screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    img {
+      height: 22rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    height: 20rem;
+    img {
+      margin-left: 1rem;
+    }
+  }
+    
 }
 
 .cardMobile {

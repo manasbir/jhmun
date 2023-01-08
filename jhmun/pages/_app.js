@@ -166,6 +166,7 @@ function MyApp({ Component, pageProps }) {
           )
         }
       }
+      if (!isMenuScroll) {
       return (
         <div className={styles.mobileHeader}>
           <div className={styles.logoMobile}>
@@ -183,6 +184,25 @@ function MyApp({ Component, pageProps }) {
           {handleMenuOpen()}
         </div>
       )
+      } else {
+        return (
+          <div className={styles.mobileHeaderScroll}>
+            <div className={styles.logoMobileScroll}>
+              <Link href={"/"}>
+                <Image src={"/design/Icons & Buttons/MUN Eagle Green.svg"} width={100} height={100} priority={true} loading={"eager"}/>
+              </Link>
+            </div>
+            <div className={isMenuOpen ?  styles.hamburgerMenuActiveS : styles.hamburgerMenuS} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  <div className={styles.linesS}>
+                    <span className={styles.line1S}></span>
+                    <span className={styles.line2S}></span>
+                    <span className={styles.line3S}></span>
+                  </div>
+            </div>
+            {handleMenuOpen()}
+          </div>
+        ) 
+      }
     }
   }
 

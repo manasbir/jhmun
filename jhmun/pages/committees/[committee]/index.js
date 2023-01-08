@@ -70,7 +70,7 @@ export default function Committees() {
         let staff = [];
         for (let i = 0; i < numOfMembers; i++) {
             staff.push(
-            <div className={isMobile ? styles.cardMobile: styles.card}>
+            <div className={styles.card}>
                 <div className={styles.cardText}>
                     <h1>{currCommittee.members[i].name}</h1>
                     <h2><i>{currCommittee.members[i].position}</i></h2>
