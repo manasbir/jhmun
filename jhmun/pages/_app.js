@@ -11,15 +11,15 @@ function MyApp({ Component, pageProps }) {
   const [isCommitteesHovered, setIsComHovered] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isMenuScroll, setIsMenuScroll] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isComOpened, setIsComOpen] = useState(false);
-  const [isAboutOpened, setIsAboutOpen] = useState(false);
     useEffect(() => {
         const setScroll = () => {
+          console.log(window.scrollY)
           if (window.scrollY > 100) {
             setIsMenuScroll(true);
-          } else {
+          } else if (window.scrollY < 80) {
             setIsMenuScroll(false);
+          } else {
+            setIsMenuScroll(isMenuScroll);
           }
         }
         window.addEventListener('scroll', setScroll);
