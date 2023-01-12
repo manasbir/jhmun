@@ -109,28 +109,26 @@ export default function Committees({currCommittee}) {
                         align-items: center;
                         justify-content: center;
                         
-                        @media and (max-width: 800px) {
-                            margin-top: 2rem;
-                            background-image: url("${currCommittee.image}");
+                        ${isMobile ? 
+                        `
+                        background-image: url("${currCommittee.image}") !important;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        -moz-appearace:none;
+                        -webkit-appearace:none;
+                        appearance:none;` 
 
-                            -webkit-background-size: cover;
-                            -moz-background-size: cover;
-                            -o-background-size: cover;
-                            background-size: cover;
+                        : 
 
-                            background-repeat: no-repeat;
-
-                            -moz-appearace:none;
-                            -webkit-appearace:none;
-                            appearance:none;
-                        }
-                        @media and (min-width: 800px) {
-                            margin-top: -1.25rem;
-                            background-image: url("${currCommittee.image}");
-                            background-position: center;
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            background-attachment: fixed;
+                        `background-image: url("${currCommittee.image}") !important;
+                        margin-top: -1.25rem;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;`
                         }
                     }
                     h1 {
