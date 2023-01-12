@@ -109,7 +109,7 @@ export default function Committees({currCommittee}) {
                         align-items: center;
                         justify-content: center;
                         
-                        @media (max-width: 800px) {
+                        @media and (max-width: 800px) {
                             margin-top: 2rem;
                             background-image: url("${currCommittee.image}");
 
@@ -124,7 +124,7 @@ export default function Committees({currCommittee}) {
                             -webkit-appearace:none;
                             appearance:none;
                         }
-                        @media (min-width: 800px) {
+                        @media and (min-width: 800px) {
                             margin-top: -1.25rem;
                             background-image: url("${currCommittee.image}");
                             background-position: center;
